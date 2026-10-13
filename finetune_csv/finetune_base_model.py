@@ -122,7 +122,9 @@ class CustomKlineDataset(Dataset):
         x = window_data[self.feature_list].values.astype(np.float32)
         x_stamp = window_data[self.time_feature_list].values.astype(np.float32)
         
-        x_mean, x_std = np.mean(x, axis=0), np.std(x, axis=0)
+        # Normalise with context statistics only (as predict() does), never the targets.
+        ctx = x[:self.lookback_window]
+        x_mean, x_std = np.mean(ctx, axis=0), np.std(ctx, axis=0)
         x = (x - x_mean) / (x_std + 1e-5)
         x = np.clip(x, -self.clip, self.clip)
         
