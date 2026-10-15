@@ -1,0 +1,3 @@
+BTCUSDT corr(past24h,fut)=0.130 corr(RSI14,fut)=0.093 corr(kmean,fut)=-0.183 corr(kmean_resid|past,RSI ; fut)=-0.126
+ETHUSDT corr(past24h,fut)=0.083 corr(RSI14,fut)=0.045 corr(kmean,fut)=-0.132 corr(kmean_resid|past,RSI ; fut)=-0.103
+SOLUSDT corr(past24h,fut)=0.022 corr(RSI14,fut)=0.056 corr(kmean,fut)=-0.156 corr(kmean_resid|past,RSI ; fut)=-0.185

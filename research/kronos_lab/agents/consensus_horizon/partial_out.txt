@@ -1,0 +1,9 @@
+BTCUSDT h=1: corr(K,rev1h)=+0.32 IC_K=+0.093 IC_rev=+0.129 partial IC_K|rev=+0.056
+BTCUSDT h=2: corr(K,rev1h)=+0.29 IC_K=+0.060 IC_rev=+0.127 partial IC_K|rev=+0.025
+BTCUSDT h=3: corr(K,rev1h)=+0.24 IC_K=+0.100 IC_rev=+0.147 partial IC_K|rev=+0.068
+ETHUSDT h=1: corr(K,rev1h)=+0.16 IC_K=+0.157 IC_rev=+0.120 partial IC_K|rev=+0.141
+ETHUSDT h=2: corr(K,rev1h)=+0.16 IC_K=+0.159 IC_rev=+0.160 partial IC_K|rev=+0.136
+ETHUSDT h=3: corr(K,rev1h)=+0.16 IC_K=+0.098 IC_rev=+0.186 partial IC_K|rev=+0.071
+SOLUSDT h=1: corr(K,rev1h)=+0.16 IC_K=+0.065 IC_rev=+0.129 partial IC_K|rev=+0.045
+SOLUSDT h=2: corr(K,rev1h)=+0.15 IC_K=+0.038 IC_rev=+0.149 partial IC_K|rev=+0.016
+SOLUSDT h=3: corr(K,rev1h)=+0.18 IC_K=+0.058 IC_rev=+0.154 partial IC_K|rev=+0.032

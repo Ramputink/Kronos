@@ -1,0 +1,315 @@
+{
+ "BTCUSDT": {
+  "n_windows": 300,
+  "magnet": {
+   "kronos_extreme_dist": 0.0482,
+   "realised_extreme_dist": 0.066,
+   "realised_dist_with_random_shifted_grid": 0.0646,
+   "kronos_high_err_raw": 0.2539,
+   "kronos_high_err_snapped": 0.2622,
+   "kronos_low_err_raw": 0.2583,
+   "kronos_low_err_snapped": 0.2548
+  },
+  "trade": {
+   "fib_alone": {
+    "n": 63,
+    "gross_mean": -0.291,
+    "net_mean": -0.401,
+    "net_sum": -25.23,
+    "win": 0.333,
+    "t": -2.55
+   },
+   "fib_plus_kronos_medianDir": {
+    "n": 25,
+    "gross_mean": -0.714,
+    "net_mean": -0.824,
+    "net_sum": -20.59,
+    "win": 0.28,
+    "t": -4.6
+   },
+   "fib_rejected_by_kronos": {
+    "n": 38,
+    "gross_mean": -0.012,
+    "net_mean": -0.122,
+    "net_sum": -4.65,
+    "win": 0.368,
+    "t": -0.55
+   },
+   "fib_plus_kronos_targetVsStop": {
+    "n": 6,
+    "gross_mean": -0.419,
+    "net_mean": -0.529,
+    "net_sum": -3.18,
+    "win": 0.333,
+    "t": -1.18
+   },
+   "random_dir_same_times_24h": {
+    "n": 63,
+    "gross_mean": -0.213,
+    "net_mean": -0.323,
+    "net_sum": -20.33,
+    "win": 0.397,
+    "t": -1.57
+   },
+   "kronos_alone_24h": {
+    "n": 300,
+    "gross_mean": -0.178,
+    "net_mean": -0.288,
+    "net_sum": -86.3,
+    "win": 0.507,
+    "t": -2.42
+   },
+   "shuffled_conf_p": 0.989,
+   "long_every_window_24h": {
+    "n": 300,
+    "gross_mean": 0.059,
+    "net_mean": -0.051,
+    "net_sum": -15.4,
+    "win": 0.47,
+    "t": -0.43
+   },
+   "buyhold_period_pct": 5.92,
+   "fib_alone_all_hourly_origins": {
+    "n": 782,
+    "gross_mean": -0.255,
+    "net_mean": -0.365,
+    "net_sum": -285.55,
+    "win": 0.362,
+    "t": -8.25
+   }
+  },
+  "holdout_last_third": {
+   "fib_alone": {
+    "n": 31,
+    "gross_mean": 0.008,
+    "net_mean": -0.102,
+    "net_sum": -3.15,
+    "win": 0.419,
+    "t": -0.53
+   },
+   "fib_plus_kronos_medianDir": {
+    "n": 10,
+    "gross_mean": -0.301,
+    "net_mean": -0.411,
+    "net_sum": -4.11,
+    "win": 0.4,
+    "t": -1.5
+   },
+   "fib_plus_kronos_targetVsStop": {
+    "n": 3,
+    "gross_mean": 0.355,
+    "net_mean": 0.245,
+    "net_sum": 0.73,
+    "win": 0.667,
+    "t": 0.4
+   }
+  }
+ },
+ "ETHUSDT": {
+  "n_windows": 300,
+  "magnet": {
+   "kronos_extreme_dist": 0.0476,
+   "realised_extreme_dist": 0.0846,
+   "realised_dist_with_random_shifted_grid": 0.0854,
+   "kronos_high_err_raw": 0.2911,
+   "kronos_high_err_snapped": 0.2967,
+   "kronos_low_err_raw": 0.2794,
+   "kronos_low_err_snapped": 0.2816
+  },
+  "trade": {
+   "fib_alone": {
+    "n": 87,
+    "gross_mean": -0.021,
+    "net_mean": -0.131,
+    "net_sum": -11.41,
+    "win": 0.425,
+    "t": -0.73
+   },
+   "fib_plus_kronos_medianDir": {
+    "n": 42,
+    "gross_mean": -0.021,
+    "net_mean": -0.131,
+    "net_sum": -5.52,
+    "win": 0.429,
+    "t": -0.48
+   },
+   "fib_rejected_by_kronos": {
+    "n": 45,
+    "gross_mean": -0.021,
+    "net_mean": -0.131,
+    "net_sum": -5.89,
+    "win": 0.422,
+    "t": -0.55
+   },
+   "fib_plus_kronos_targetVsStop": {
+    "n": 6,
+    "gross_mean": -0.398,
+    "net_mean": -0.508,
+    "net_sum": -3.05,
+    "win": 0.333,
+    "t": -1.03
+   },
+   "random_dir_same_times_24h": {
+    "n": 87,
+    "gross_mean": -0.038,
+    "net_mean": -0.148,
+    "net_sum": -12.9,
+    "win": 0.494,
+    "t": -0.64
+   },
+   "kronos_alone_24h": {
+    "n": 300,
+    "gross_mean": -0.242,
+    "net_mean": -0.352,
+    "net_sum": -105.74,
+    "win": 0.453,
+    "t": -2.14
+   },
+   "shuffled_conf_p": 0.508,
+   "long_every_window_24h": {
+    "n": 300,
+    "gross_mean": 0.127,
+    "net_mean": 0.017,
+    "net_sum": 5.1,
+    "win": 0.493,
+    "t": 0.1
+   },
+   "buyhold_period_pct": 13.41,
+   "fib_alone_all_hourly_origins": {
+    "n": 996,
+    "gross_mean": -0.103,
+    "net_mean": -0.213,
+    "net_sum": -212.43,
+    "win": 0.408,
+    "t": -4.37
+   }
+  },
+  "holdout_last_third": {
+   "fib_alone": {
+    "n": 39,
+    "gross_mean": -0.17,
+    "net_mean": -0.28,
+    "net_sum": -10.92,
+    "win": 0.359,
+    "t": -1.1
+   },
+   "fib_plus_kronos_medianDir": {
+    "n": 22,
+    "gross_mean": 0.101,
+    "net_mean": -0.009,
+    "net_sum": -0.2,
+    "win": 0.455,
+    "t": -0.02
+   },
+   "fib_plus_kronos_targetVsStop": {
+    "n": 0
+   }
+  }
+ },
+ "SOLUSDT": {
+  "n_windows": 300,
+  "magnet": {
+   "kronos_extreme_dist": 0.0471,
+   "realised_extreme_dist": 0.0676,
+   "realised_dist_with_random_shifted_grid": 0.0672,
+   "kronos_high_err_raw": 0.2521,
+   "kronos_high_err_snapped": 0.2593,
+   "kronos_low_err_raw": 0.2813,
+   "kronos_low_err_snapped": 0.2824
+  },
+  "trade": {
+   "fib_alone": {
+    "n": 63,
+    "gross_mean": 0.006,
+    "net_mean": -0.104,
+    "net_sum": -6.57,
+    "win": 0.413,
+    "t": -0.35
+   },
+   "fib_plus_kronos_medianDir": {
+    "n": 30,
+    "gross_mean": -0.375,
+    "net_mean": -0.485,
+    "net_sum": -14.56,
+    "win": 0.367,
+    "t": -1.17
+   },
+   "fib_rejected_by_kronos": {
+    "n": 33,
+    "gross_mean": 0.352,
+    "net_mean": 0.242,
+    "net_sum": 7.99,
+    "win": 0.455,
+    "t": 0.57
+   },
+   "fib_plus_kronos_targetVsStop": {
+    "n": 5,
+    "gross_mean": -0.961,
+    "net_mean": -1.071,
+    "net_sum": -5.36,
+    "win": 0.4,
+    "t": -0.79
+   },
+   "random_dir_same_times_24h": {
+    "n": 63,
+    "gross_mean": 0.371,
+    "net_mean": 0.261,
+    "net_sum": 16.45,
+    "win": 0.635,
+    "t": 0.69
+   },
+   "kronos_alone_24h": {
+    "n": 300,
+    "gross_mean": -0.439,
+    "net_mean": -0.549,
+    "net_sum": -164.79,
+    "win": 0.457,
+    "t": -3.07
+   },
+   "shuffled_conf_p": 0.889,
+   "long_every_window_24h": {
+    "n": 300,
+    "gross_mean": 0.182,
+    "net_mean": 0.072,
+    "net_sum": 21.75,
+    "win": 0.477,
+    "t": 0.4
+   },
+   "buyhold_period_pct": 20.16,
+   "fib_alone_all_hourly_origins": {
+    "n": 905,
+    "gross_mean": -0.176,
+    "net_mean": -0.286,
+    "net_sum": -258.38,
+    "win": 0.39,
+    "t": -3.88
+   }
+  },
+  "holdout_last_third": {
+   "fib_alone": {
+    "n": 26,
+    "gross_mean": 0.365,
+    "net_mean": 0.255,
+    "net_sum": 6.62,
+    "win": 0.538,
+    "t": 0.51
+   },
+   "fib_plus_kronos_medianDir": {
+    "n": 9,
+    "gross_mean": 0.156,
+    "net_mean": 0.046,
+    "net_sum": 0.42,
+    "win": 0.667,
+    "t": 0.05
+   },
+   "fib_plus_kronos_targetVsStop": {
+    "n": 1,
+    "gross_mean": -5.122,
+    "net_mean": -5.232,
+    "net_sum": -5.23,
+    "win": 0.0,
+    "t": null
+   }
+  }
+ }
+}

@@ -1,0 +1,24 @@
+N trials = 960, daily SR std across trials = 0.0226, expected max SR0 = 0.0732 (annualised 1.40)
+
+('1d', 'SPOT', 'donch100_50', 25, True)
+  DSR(train+val) = 0.631  (annual SR train+val 1.54)
+  TEST 2025-07-01->2026-10-13: cartera CAGR 1.7% total 2.1% Sharpe 0.20 maxDD -9.6%
+        ETH CAGR 23.0% (DD -11.9%)  SOL CAGR -13.6% (DD -24.8%)
+        por activo CAGR: {'BTC': np.float64(-4.0), 'ETH': np.float64(23.0), 'SOL': np.float64(-13.6), 'XRP': np.float64(10.0), 'BNB': np.float64(14.2), 'DOGE': np.float64(-17.6), 'ADA': np.float64(-7.6), 'LINK': np.float64(4.3), 'AVAX': np.float64(2.6)}
+  CRITERIO: no cumple
+
+('1d', 'SPOT', 'ema10_50', 25, True)
+  DSR(train+val) = 0.570  (annual SR train+val 1.48)
+  TEST 2025-07-01->2026-10-13: cartera CAGR 4.1% total 5.3% Sharpe 0.32 maxDD -14.3%
+        ETH CAGR 12.0% (DD -19.1%)  SOL CAGR -5.3% (DD -24.3%)
+        por activo CAGR: {'BTC': np.float64(-12.0), 'ETH': np.float64(12.0), 'SOL': np.float64(-5.3), 'XRP': np.float64(-2.3), 'BNB': np.float64(29.0), 'DOGE': np.float64(-8.6), 'ADA': np.float64(-8.1), 'LINK': np.float64(12.1), 'AVAX': np.float64(13.5)}
+  CRITERIO: no cumple
+
+('1d', 'SPOT', 'rsi55_50', 0, True)
+  DSR(train+val) = 0.550  (annual SR train+val 1.45)
+  TEST 2025-07-01->2026-10-13: cartera CAGR 12.1% total 15.8% Sharpe 0.61 maxDD -25.4%
+        ETH CAGR 26.8% (DD -32.5%)  SOL CAGR 12.1% (DD -29.7%)
+        por activo CAGR: {'BTC': np.float64(2.5), 'ETH': np.float64(26.8), 'SOL': np.float64(12.1), 'XRP': np.float64(10.4), 'BNB': np.float64(38.4), 'DOGE': np.float64(2.0), 'ADA': np.float64(-18.0), 'LINK': np.float64(16.3), 'AVAX': np.float64(6.6)}
+  CRITERIO: no cumple
+
+Buy&hold CAGR en TEST: {'BTC': np.float64(-17.8), 'ETH': np.float64(0.4), 'SOL': np.float64(-25.0), 'XRP': np.float64(-31.8), 'BNB': np.float64(9.8), 'DOGE': np.float64(-40.6), 'ADA': np.float64(-49.8), 'LINK': np.float64(-2.8), 'AVAX': np.float64(-35.4)}

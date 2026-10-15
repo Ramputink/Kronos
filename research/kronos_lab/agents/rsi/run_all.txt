@@ -1,0 +1,138 @@
+
+==== BTCUSDT  windows=300  B&H 24h mean 0.059%  period 5.9%  corr(kmean,ret)=-0.183
+RSI14_30/70 alone(MR)                      n=  31 gross=-0.713% net=-0.823% hit=0.52 sumNet=-25.5%
+RSI14_30/70 momentum(inv)                  n=  31 gross=+0.713% net=+0.603% hit=0.48 sumNet=+18.7%
+RSI14_30/70 +Kronos agree                  n=  27 gross=-0.759% net=-0.869% hit=0.52 sumNet=-23.5% p=0.55
+RSI14_30/70 +Kronos disagree               n=   2 gross=+0.932% net=+0.822% hit=0.50 sumNet=+1.6%
+RSI14_35/65 alone(MR)                      n=  63 gross=-0.228% net=-0.338% hit=0.57 sumNet=-21.3%
+RSI14_35/65 momentum(inv)                  n=  63 gross=+0.228% net=+0.118% hit=0.43 sumNet=+7.4%
+RSI14_35/65 +Kronos agree                  n=  52 gross=-0.252% net=-0.362% hit=0.58 sumNet=-18.8% p=0.56
+RSI14_35/65 +Kronos disagree               n=   6 gross=+0.908% net=+0.798% hit=0.67 sumNet=+4.8%
+RSI14_40/60 alone(MR)                      n= 108 gross=-0.140% net=-0.250% hit=0.51 sumNet=-27.0%
+RSI14_40/60 momentum(inv)                  n= 108 gross=+0.140% net=+0.030% hit=0.49 sumNet=+3.2%
+RSI14_40/60 +Kronos agree                  n=  77 gross=-0.191% net=-0.301% hit=0.55 sumNet=-23.2% p=0.65
+RSI14_40/60 +Kronos disagree               n=  20 gross=+0.622% net=+0.512% hit=0.55 sumNet=+10.2%
+RSI7_30/70 alone(MR)                       n=  73 gross=-0.327% net=-0.437% hit=0.52 sumNet=-31.9%
+RSI7_30/70 momentum(inv)                   n=  73 gross=+0.327% net=+0.217% hit=0.48 sumNet=+15.8%
+RSI7_30/70 +Kronos agree                   n=  55 gross=-0.260% net=-0.370% hit=0.56 sumNet=-20.4% p=0.32
+RSI7_30/70 +Kronos disagree                n=   5 gross=+0.874% net=+0.764% hit=0.80 sumNet=+3.8%
+RSI7_35/65 alone(MR)                       n= 111 gross=-0.277% net=-0.387% hit=0.50 sumNet=-43.0%
+RSI7_35/65 momentum(inv)                   n= 111 gross=+0.277% net=+0.167% hit=0.50 sumNet=+18.6%
+RSI7_35/65 +Kronos agree                   n=  73 gross=-0.207% net=-0.317% hit=0.55 sumNet=-23.1% p=0.28
+RSI7_35/65 +Kronos disagree                n=  24 gross=-0.083% net=-0.193% hit=0.46 sumNet=-4.6%
+RSI7_40/60 alone(MR)                       n= 160 gross=-0.053% net=-0.163% hit=0.53 sumNet=-26.0%
+RSI7_40/60 momentum(inv)                   n= 160 gross=+0.053% net=-0.057% hit=0.47 sumNet=-9.2%
+RSI7_40/60 +Kronos agree                   n=  99 gross=-0.132% net=-0.242% hit=0.56 sumNet=-23.9% p=0.75
+RSI7_40/60 +Kronos disagree                n=  43 gross=+0.381% net=+0.271% hit=0.51 sumNet=+11.7%
+RSI21_30/70 alone(MR)                      n=  15 gross=-1.812% net=-1.922% hit=0.47 sumNet=-28.8%
+RSI21_30/70 momentum(inv)                  n=  15 gross=+1.812% net=+1.702% hit=0.53 sumNet=+25.5%
+RSI21_30/70 +Kronos agree                  n=  14 gross=-1.657% net=-1.767% hit=0.50 sumNet=-24.7% p=0.34
+RSI21_30/70 +Kronos disagree               n=0
+RSI21_35/65 alone(MR)                      n=  42 gross=-0.580% net=-0.690% hit=0.52 sumNet=-29.0%
+RSI21_35/65 momentum(inv)                  n=  42 gross=+0.580% net=+0.470% hit=0.48 sumNet=+19.7%
+RSI21_35/65 +Kronos agree                  n=  38 gross=-0.514% net=-0.624% hit=0.55 sumNet=-23.7% p=0.28
+RSI21_35/65 +Kronos disagree               n=   2 gross=-0.654% net=-0.764% hit=0.00 sumNet=-1.5%
+RSI21_40/60 alone(MR)                      n=  90 gross=-0.219% net=-0.329% hit=0.57 sumNet=-29.6%
+RSI21_40/60 momentum(inv)                  n=  90 gross=+0.219% net=+0.109% hit=0.43 sumNet=+9.8%
+RSI21_40/60 +Kronos agree                  n=  72 gross=-0.337% net=-0.447% hit=0.56 sumNet=-32.2% p=0.83
+RSI21_40/60 +Kronos disagree               n=  12 gross=+1.092% net=+0.982% hit=0.75 sumNet=+11.8%
+Div14 alone                                n=  69 gross=-0.326% net=-0.436% hit=0.45 sumNet=-30.1%
+Div14 +Kronos agree                        n=  41 gross=-0.376% net=-0.486% hit=0.54 sumNet=-19.9% p=0.56
+Kronos consensus alone                     n= 254 gross=-0.188% net=-0.298% hit=0.53 sumNet=-75.6%
+Kronos consensus inverted                  n= 254 gross=+0.188% net=+0.078% hit=0.47 sumNet=+19.7%
+Random long/short (all windows) net_mean pct5/50/95 [-0.2981694053429327, -0.11132797146103003, 0.09217780171943214]
+Always long                                n= 300 gross=+0.059% net=-0.051% hit=0.50 sumNet=-15.4%
+HOLDOUT last1/3 RSI14_35/65 alone          n=  23 gross=+0.401% net=+0.291% hit=0.70 sumNet=+6.7%
+HOLDOUT last1/3 RSI14_35/65 +Kronos agree  n=  19 gross=+0.665% net=+0.555% hit=0.79 sumNet=+10.5%
+
+==== ETHUSDT  windows=300  B&H 24h mean 0.127%  period 13.4%  corr(kmean,ret)=-0.132
+RSI14_30/70 alone(MR)                      n=  27 gross=-0.245% net=-0.355% hit=0.44 sumNet=-9.6%
+RSI14_30/70 momentum(inv)                  n=  27 gross=+0.245% net=+0.135% hit=0.56 sumNet=+3.7%
+RSI14_30/70 +Kronos agree                  n=  25 gross=-0.350% net=-0.460% hit=0.40 sumNet=-11.5% p=0.77
+RSI14_30/70 +Kronos disagree               n=   2 gross=+1.059% net=+0.949% hit=1.00 sumNet=+1.9%
+RSI14_35/65 alone(MR)                      n=  64 gross=-0.015% net=-0.125% hit=0.55 sumNet=-8.0%
+RSI14_35/65 momentum(inv)                  n=  64 gross=+0.015% net=-0.095% hit=0.45 sumNet=-6.1%
+RSI14_35/65 +Kronos agree                  n=  53 gross=-0.155% net=-0.265% hit=0.51 sumNet=-14.0% p=0.83
+RSI14_35/65 +Kronos disagree               n=   8 gross=+0.299% net=+0.189% hit=0.62 sumNet=+1.5%
+RSI14_40/60 alone(MR)                      n= 115 gross=-0.078% net=-0.188% hit=0.55 sumNet=-21.7%
+RSI14_40/60 momentum(inv)                  n= 115 gross=+0.078% net=-0.032% hit=0.45 sumNet=-3.6%
+RSI14_40/60 +Kronos agree                  n=  84 gross=-0.373% net=-0.483% hit=0.49 sumNet=-40.5% p=0.98
+RSI14_40/60 +Kronos disagree               n=  18 gross=+0.845% net=+0.735% hit=0.67 sumNet=+13.2%
+RSI7_30/70 alone(MR)                       n=  66 gross=+0.216% net=+0.106% hit=0.52 sumNet=+7.0%
+RSI7_30/70 momentum(inv)                   n=  66 gross=-0.216% net=-0.326% hit=0.48 sumNet=-21.5%
+RSI7_30/70 +Kronos agree                   n=  46 gross=-0.055% net=-0.165% hit=0.46 sumNet=-7.6% p=0.93
+RSI7_30/70 +Kronos disagree                n=  13 gross=+0.657% net=+0.547% hit=0.62 sumNet=+7.1%
+RSI7_35/65 alone(MR)                       n= 104 gross=+0.098% net=-0.012% hit=0.53 sumNet=-1.3%
+RSI7_35/65 momentum(inv)                   n= 104 gross=-0.098% net=-0.208% hit=0.47 sumNet=-21.6%
+RSI7_35/65 +Kronos agree                   n=  65 gross=-0.114% net=-0.224% hit=0.46 sumNet=-14.6% p=0.89
+RSI7_35/65 +Kronos disagree                n=  25 gross=+0.506% net=+0.396% hit=0.60 sumNet=+9.9%
+RSI7_40/60 alone(MR)                       n= 165 gross=-0.158% net=-0.268% hit=0.55 sumNet=-44.3%
+RSI7_40/60 momentum(inv)                   n= 165 gross=+0.158% net=+0.048% hit=0.45 sumNet=+8.0%
+RSI7_40/60 +Kronos agree                   n= 101 gross=-0.430% net=-0.540% hit=0.50 sumNet=-54.6% p=0.93
+RSI7_40/60 +Kronos disagree                n=  42 gross=+0.370% net=+0.260% hit=0.62 sumNet=+10.9%
+RSI21_30/70 alone(MR)                      n=  21 gross=-0.858% net=-0.968% hit=0.33 sumNet=-20.3%
+RSI21_30/70 momentum(inv)                  n=  21 gross=+0.858% net=+0.748% hit=0.67 sumNet=+15.7%
+RSI21_30/70 +Kronos agree                  n=  21 gross=-0.858% net=-0.968% hit=0.33 sumNet=-20.3%
+RSI21_30/70 +Kronos disagree               n=0
+RSI21_35/65 alone(MR)                      n=  37 gross=-0.404% net=-0.514% hit=0.49 sumNet=-19.0%
+RSI21_35/65 momentum(inv)                  n=  37 gross=+0.404% net=+0.294% hit=0.51 sumNet=+10.9%
+RSI21_35/65 +Kronos agree                  n=  36 gross=-0.430% net=-0.540% hit=0.47 sumNet=-19.4% p=0.56
+RSI21_35/65 +Kronos disagree               n=   1 gross=+0.548% net=+0.438% hit=1.00 sumNet=+0.4%
+RSI21_40/60 alone(MR)                      n=  86 gross=-0.305% net=-0.415% hit=0.55 sumNet=-35.7%
+RSI21_40/60 momentum(inv)                  n=  86 gross=+0.305% net=+0.195% hit=0.45 sumNet=+16.8%
+RSI21_40/60 +Kronos agree                  n=  70 gross=-0.539% net=-0.649% hit=0.49 sumNet=-45.4% p=0.95
+RSI21_40/60 +Kronos disagree               n=   9 gross=+0.919% net=+0.809% hit=0.78 sumNet=+7.3%
+Div14 alone                                n=  59 gross=-1.077% net=-1.187% hit=0.44 sumNet=-70.0%
+Div14 +Kronos agree                        n=  41 gross=-1.400% net=-1.510% hit=0.41 sumNet=-61.9% p=0.78
+Kronos consensus alone                     n= 259 gross=-0.313% net=-0.423% hit=0.48 sumNet=-109.6%
+Kronos consensus inverted                  n= 259 gross=+0.313% net=+0.203% hit=0.52 sumNet=+52.7%
+Random long/short (all windows) net_mean pct5/50/95 [-0.38380500442781224, -0.10726253499592063, 0.16742593710396356]
+Always long                                n= 300 gross=+0.127% net=+0.017% hit=0.52 sumNet=+5.1%
+HOLDOUT last1/3 RSI14_35/65 alone          n=  18 gross=+0.346% net=+0.236% hit=0.61 sumNet=+4.2%
+HOLDOUT last1/3 RSI14_35/65 +Kronos agree  n=  15 gross=-0.003% net=-0.113% hit=0.53 sumNet=-1.7%
+
+==== SOLUSDT  windows=300  B&H 24h mean 0.182%  period 20.2%  corr(kmean,ret)=-0.156
+RSI14_30/70 alone(MR)                      n=  29 gross=-0.251% net=-0.361% hit=0.59 sumNet=-10.5%
+RSI14_30/70 momentum(inv)                  n=  29 gross=+0.251% net=+0.141% hit=0.41 sumNet=+4.1%
+RSI14_30/70 +Kronos agree                  n=  23 gross=-0.588% net=-0.698% hit=0.52 sumNet=-16.1% p=0.88
+RSI14_30/70 +Kronos disagree               n=   4 gross=+1.023% net=+0.913% hit=1.00 sumNet=+3.7%
+RSI14_35/65 alone(MR)                      n=  60 gross=-0.057% net=-0.167% hit=0.58 sumNet=-10.0%
+RSI14_35/65 momentum(inv)                  n=  60 gross=+0.057% net=-0.053% hit=0.42 sumNet=-3.2%
+RSI14_35/65 +Kronos agree                  n=  49 gross=-0.435% net=-0.545% hit=0.53 sumNet=-26.7% p=0.98
+RSI14_35/65 +Kronos disagree               n=   8 gross=+2.134% net=+2.024% hit=1.00 sumNet=+16.2%
+RSI14_40/60 alone(MR)                      n= 130 gross=-0.149% net=-0.259% hit=0.56 sumNet=-33.7%
+RSI14_40/60 momentum(inv)                  n= 130 gross=+0.149% net=+0.039% hit=0.44 sumNet=+5.1%
+RSI14_40/60 +Kronos agree                  n=  93 gross=-0.606% net=-0.716% hit=0.54 sumNet=-66.6% p=0.99
+RSI14_40/60 +Kronos disagree               n=  28 gross=+1.334% net=+1.224% hit=0.71 sumNet=+34.3%
+RSI7_30/70 alone(MR)                       n=  76 gross=-0.159% net=-0.269% hit=0.54 sumNet=-20.5%
+RSI7_30/70 momentum(inv)                   n=  76 gross=+0.159% net=+0.049% hit=0.46 sumNet=+3.8%
+RSI7_30/70 +Kronos agree                   n=  57 gross=-0.375% net=-0.485% hit=0.54 sumNet=-27.7% p=0.87
+RSI7_30/70 +Kronos disagree                n=  13 gross=+1.020% net=+0.910% hit=0.69 sumNet=+11.8%
+RSI7_35/65 alone(MR)                       n= 111 gross=-0.114% net=-0.224% hit=0.52 sumNet=-24.9%
+RSI7_35/65 momentum(inv)                   n= 111 gross=+0.114% net=+0.004% hit=0.48 sumNet=+0.5%
+RSI7_35/65 +Kronos agree                   n=  74 gross=-0.448% net=-0.558% hit=0.51 sumNet=-41.3% p=0.94
+RSI7_35/65 +Kronos disagree                n=  29 gross=+0.940% net=+0.830% hit=0.62 sumNet=+24.1%
+RSI7_40/60 alone(MR)                       n= 171 gross=-0.241% net=-0.351% hit=0.52 sumNet=-60.0%
+RSI7_40/60 momentum(inv)                   n= 171 gross=+0.241% net=+0.131% hit=0.48 sumNet=+22.4%
+RSI7_40/60 +Kronos agree                   n= 105 gross=-0.596% net=-0.706% hit=0.52 sumNet=-74.1% p=0.97
+RSI7_40/60 +Kronos disagree                n=  52 gross=+0.464% net=+0.354% hit=0.58 sumNet=+18.4%
+RSI21_30/70 alone(MR)                      n=  16 gross=+0.072% net=-0.038% hit=0.62 sumNet=-0.6%
+RSI21_30/70 momentum(inv)                  n=  16 gross=-0.072% net=-0.182% hit=0.38 sumNet=-2.9%
+RSI21_30/70 +Kronos agree                  n=  14 gross=-0.048% net=-0.158% hit=0.57 sumNet=-2.2% p=0.63
+RSI21_30/70 +Kronos disagree               n=   2 gross=+0.913% net=+0.803% hit=1.00 sumNet=+1.6%
+RSI21_35/65 alone(MR)                      n=  42 gross=-0.367% net=-0.477% hit=0.57 sumNet=-20.0%
+RSI21_35/65 momentum(inv)                  n=  42 gross=+0.367% net=+0.257% hit=0.43 sumNet=+10.8%
+RSI21_35/65 +Kronos agree                  n=  35 gross=-0.663% net=-0.773% hit=0.51 sumNet=-27.1% p=0.92
+RSI21_35/65 +Kronos disagree               n=   5 gross=+1.124% net=+1.014% hit=1.00 sumNet=+5.1%
+RSI21_40/60 alone(MR)                      n=  89 gross=-0.331% net=-0.441% hit=0.57 sumNet=-39.2%
+RSI21_40/60 momentum(inv)                  n=  89 gross=+0.331% net=+0.221% hit=0.43 sumNet=+19.6%
+RSI21_40/60 +Kronos agree                  n=  72 gross=-0.601% net=-0.711% hit=0.56 sumNet=-51.2% p=0.94
+RSI21_40/60 +Kronos disagree               n=  14 gross=+0.930% net=+0.820% hit=0.71 sumNet=+11.5%
+Div14 alone                                n=  69 gross=+0.517% net=+0.407% hit=0.52 sumNet=+28.1%
+Div14 +Kronos agree                        n=  47 gross=+0.407% net=+0.297% hit=0.53 sumNet=+14.0% p=0.66
+Kronos consensus alone                     n= 272 gross=-0.510% net=-0.620% hit=0.47 sumNet=-168.7%
+Kronos consensus inverted                  n= 272 gross=+0.510% net=+0.400% hit=0.53 sumNet=+108.9%
+Random long/short (all windows) net_mean pct5/50/95 [-0.38930891037401827, -0.10178431557399104, 0.1857150998000647]
+Always long                                n= 300 gross=+0.182% net=+0.072% hit=0.49 sumNet=+21.7%
+HOLDOUT last1/3 RSI14_35/65 alone          n=  19 gross=+0.833% net=+0.723% hit=0.68 sumNet=+13.7%
+HOLDOUT last1/3 RSI14_35/65 +Kronos agree  n=  15 gross=+0.807% net=+0.697% hit=0.67 sumNet=+10.5%

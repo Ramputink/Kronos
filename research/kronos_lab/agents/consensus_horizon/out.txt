@@ -1,0 +1,72 @@
+
+===== BTCUSDT W=300  period 2026-05-15 21:00:00 -> 2026-10-13 09:00:00
+IC(med pred step k, realised step k): 1:+0.09 2:+0.06 3:+0.10 4:+0.05 5:-0.01 6:-0.06 7:-0.06 8:-0.04 9:-0.05 10:-0.02 11:-0.06 12:-0.04 13:-0.08 14:-0.07 15:-0.07 16:-0.09 17:-0.04 18:-0.06 19:-0.04 20:-0.02 21:-0.01 22:-0.03 23:-0.01 24:-0.00
+IC(med pred step k, realised 24h):   1:+0.07 2:+0.02 3:+0.01 4:+0.04 5:+0.04 6:-0.01 7:-0.00 8:-0.02 9:+0.01 10:+0.00 11:-0.00 12:-0.02 13:-0.03 14:-0.02 15:-0.02 16:-0.01 17:-0.00 18:-0.01 19:+0.01 20:+0.01 21:+0.02 22:-0.02 23:+0.00 24:-0.00
+IC slope(median path) vs r24: -0.002
+IC frac paths up vs r24: -0.007
+consensus distribution (#paths up): [65 43 42 46 21 24 59]
+{'name': 'buy&hold(long every origin)', 'n': 300, 'hit': np.float64(0.5), 'gross_bp': np.float64(5.9), 'net_bp': np.float64(-5.1), 't_net': np.float64(-0.43), 'sum_net': np.float64(-0.077), 'sym': 'BTCUSDT'}
+{'name': 'K median sign', 'n': 300, 'hit': np.float64(0.537), 'gross_bp': np.float64(-17.8), 'net_bp': np.float64(-28.8), 't_net': np.float64(-2.42), 'sum_net': np.float64(-0.4315), 'sym': 'BTCUSDT'}
+{'name': 'K median slope sign', 'n': 300, 'hit': np.float64(0.54), 'gross_bp': np.float64(-18.9), 'net_bp': np.float64(-29.9), 't_net': np.float64(-2.52), 'sum_net': np.float64(-0.4481), 'sym': 'BTCUSDT'}
+{'name': 'K consensus>=5/6', 'n': 191, 'hit': np.float64(0.524), 'gross_bp': np.float64(-23.8), 'net_bp': np.float64(-34.8), 't_net': np.float64(-2.37), 'sum_net': np.float64(-0.3325), 'sym': 'BTCUSDT'}
+{'name': 'K consensus 6/6', 'n': 124, 'hit': np.float64(0.524), 'gross_bp': np.float64(-30.3), 'net_bp': np.float64(-41.3), 't_net': np.float64(-2.08), 'sum_net': np.float64(-0.2563), 'sym': 'BTCUSDT'}
+{'name': 'K consensus>=5/6 CONTRARIAN', 'n': 191, 'hit': np.float64(0.476), 'gross_bp': np.float64(23.8), 'net_bp': np.float64(12.8), 't_net': np.float64(0.87), 'sum_net': np.float64(0.1224), 'sym': 'BTCUSDT'}
+{'name': 'MOM24 alone', 'n': 300, 'hit': np.float64(0.497), 'gross_bp': np.float64(16.3), 'net_bp': np.float64(5.3), 't_net': np.float64(0.44), 'sum_net': np.float64(0.0788), 'sym': 'BTCUSDT'}
+{'name': 'MOM24 & K cons agree', 'n': 50, 'hit': np.float64(0.48), 'gross_bp': np.float64(-40.6), 'net_bp': np.float64(-51.6), 't_net': np.float64(-1.81), 'sum_net': np.float64(-0.1289), 'sym': 'BTCUSDT'}
+{'name': 'MOM24 & K sign agree', 'n': 90, 'hit': np.float64(0.556), 'gross_bp': np.float64(-2.5), 'net_bp': np.float64(-13.5), 't_net': np.float64(-0.65), 'sum_net': np.float64(-0.0609), 'sym': 'BTCUSDT'}
+{'name': 'SMA48 alone', 'n': 300, 'hit': np.float64(0.47), 'gross_bp': np.float64(7.5), 'net_bp': np.float64(-3.5), 't_net': np.float64(-0.29), 'sum_net': np.float64(-0.0526), 'sym': 'BTCUSDT'}
+{'name': 'SMA48 & K sign agree', 'n': 90, 'hit': np.float64(0.511), 'gross_bp': np.float64(-17.1), 'net_bp': np.float64(-28.1), 't_net': np.float64(-1.47), 'sum_net': np.float64(-0.1265), 'sym': 'BTCUSDT'}
+{'name': 'K long-only cons>=5', 'n': 83, 'hit': np.float64(0.518), 'gross_bp': np.float64(-31.6), 'net_bp': np.float64(-42.6), 't_net': np.float64(-2.07), 'sum_net': np.float64(-0.1769), 'sym': 'BTCUSDT'}
+random shuffled-cons gross_bp: mean 0.5, 5-95% [-17.6, 20.8]
+  first2/3: IC med24 -0.051  IC slope -0.063  IC npos -0.045 {'name': 'cons', 'n': 126, 'hit': np.float64(0.484), 'gross_bp': np.float64(-28.1), 'net_bp': np.float64(-39.1), 't_net': np.float64(-2.1), 'sum_net': np.float64(-0.2464)}
+  last1/3: IC med24 +0.124  IC slope +0.157  IC npos +0.108 {'name': 'cons', 'n': 65, 'hit': np.float64(0.6), 'gross_bp': np.float64(-15.5), 'net_bp': np.float64(-26.5), 't_net': np.float64(-1.11), 'sum_net': np.float64(-0.0861)}
+  non-overlap IC med24 even/odd: +0.018 -0.028
+  IC dispersion vs |r24|: +0.131 ; IC |med24| vs |r24|: +0.112
+
+===== ETHUSDT W=300  period 2026-05-15 21:00:00 -> 2026-10-13 09:00:00
+IC(med pred step k, realised step k): 1:+0.16 2:+0.16 3:+0.10 4:+0.05 5:+0.02 6:+0.04 7:+0.02 8:-0.02 9:+0.00 10:-0.00 11:-0.00 12:+0.01 13:-0.01 14:-0.01 15:-0.03 16:-0.05 17:-0.06 18:-0.05 19:-0.05 20:-0.07 21:-0.05 22:-0.07 23:-0.03 24:-0.06
+IC(med pred step k, realised 24h):   1:+0.01 2:+0.03 3:+0.00 4:-0.02 5:-0.02 6:+0.02 7:+0.02 8:-0.03 9:-0.02 10:-0.03 11:-0.04 12:-0.04 13:-0.06 14:-0.04 15:-0.05 16:-0.05 17:-0.06 18:-0.04 19:-0.04 20:-0.06 21:-0.06 22:-0.08 23:-0.05 24:-0.06
+IC slope(median path) vs r24: -0.060
+IC frac paths up vs r24: -0.057
+consensus distribution (#paths up): [64 46 52 41 26 17 54]
+{'name': 'buy&hold(long every origin)', 'n': 300, 'hit': np.float64(0.52), 'gross_bp': np.float64(12.7), 'net_bp': np.float64(1.7), 't_net': np.float64(0.1), 'sum_net': np.float64(0.0255), 'sym': 'ETHUSDT'}
+{'name': 'K median sign', 'n': 300, 'hit': np.float64(0.483), 'gross_bp': np.float64(-24.2), 'net_bp': np.float64(-35.2), 't_net': np.float64(-2.14), 'sum_net': np.float64(-0.5287), 'sym': 'ETHUSDT'}
+{'name': 'K median slope sign', 'n': 300, 'hit': np.float64(0.483), 'gross_bp': np.float64(-30.0), 'net_bp': np.float64(-41.0), 't_net': np.float64(-2.49), 'sum_net': np.float64(-0.6145), 'sym': 'ETHUSDT'}
+{'name': 'K consensus>=5/6', 'n': 181, 'hit': np.float64(0.486), 'gross_bp': np.float64(-37.1), 'net_bp': np.float64(-48.1), 't_net': np.float64(-2.19), 'sum_net': np.float64(-0.4349), 'sym': 'ETHUSDT'}
+{'name': 'K consensus 6/6', 'n': 118, 'hit': np.float64(0.517), 'gross_bp': np.float64(-22.9), 'net_bp': np.float64(-33.9), 't_net': np.float64(-1.35), 'sum_net': np.float64(-0.1999), 'sym': 'ETHUSDT'}
+{'name': 'K consensus>=5/6 CONTRARIAN', 'n': 181, 'hit': np.float64(0.514), 'gross_bp': np.float64(37.1), 'net_bp': np.float64(26.1), 't_net': np.float64(1.19), 'sum_net': np.float64(0.2358), 'sym': 'ETHUSDT'}
+{'name': 'MOM24 alone', 'n': 300, 'hit': np.float64(0.467), 'gross_bp': np.float64(25.1), 'net_bp': np.float64(14.1), 't_net': np.float64(0.85), 'sum_net': np.float64(0.2112), 'sym': 'ETHUSDT'}
+{'name': 'MOM24 & K cons agree', 'n': 44, 'hit': np.float64(0.432), 'gross_bp': np.float64(-25.8), 'net_bp': np.float64(-36.8), 't_net': np.float64(-1.07), 'sum_net': np.float64(-0.081), 'sym': 'ETHUSDT'}
+{'name': 'MOM24 & K sign agree', 'n': 101, 'hit': np.float64(0.426), 'gross_bp': np.float64(1.2), 'net_bp': np.float64(-9.8), 't_net': np.float64(-0.46), 'sum_net': np.float64(-0.0493), 'sym': 'ETHUSDT'}
+{'name': 'SMA48 alone', 'n': 299, 'hit': np.float64(0.438), 'gross_bp': np.float64(9.0), 'net_bp': np.float64(-2.0), 't_net': np.float64(-0.12), 'sum_net': np.float64(-0.0299), 'sym': 'ETHUSDT'}
+{'name': 'SMA48 & K sign agree', 'n': 95, 'hit': np.float64(0.379), 'gross_bp': np.float64(-22.8), 'net_bp': np.float64(-33.8), 't_net': np.float64(-1.54), 'sum_net': np.float64(-0.1606), 'sym': 'ETHUSDT'}
+{'name': 'K long-only cons>=5', 'n': 71, 'hit': np.float64(0.521), 'gross_bp': np.float64(-13.2), 'net_bp': np.float64(-24.2), 't_net': np.float64(-0.74), 'sum_net': np.float64(-0.0858), 'sym': 'ETHUSDT'}
+random shuffled-cons gross_bp: mean -4.4, 5-95% [-31.5, 23.5]
+  first2/3: IC med24 -0.113  IC slope -0.102  IC npos -0.124 {'name': 'cons', 'n': 128, 'hit': np.float64(0.453), 'gross_bp': np.float64(-58.6), 'net_bp': np.float64(-69.6), 't_net': np.float64(-2.54), 'sum_net': np.float64(-0.4456)}
+  last1/3: IC med24 +0.054  IC slope +0.030  IC npos +0.091 {'name': 'cons', 'n': 53, 'hit': np.float64(0.566), 'gross_bp': np.float64(15.0), 'net_bp': np.float64(4.0), 't_net': np.float64(0.12), 'sum_net': np.float64(0.0106)}
+  non-overlap IC med24 even/odd: -0.074 -0.041
+  IC dispersion vs |r24|: +0.056 ; IC |med24| vs |r24|: +0.159
+
+===== SOLUSDT W=300  period 2026-05-15 21:00:00 -> 2026-10-13 09:00:00
+IC(med pred step k, realised step k): 1:+0.07 2:+0.04 3:+0.06 4:-0.04 5:+0.01 6:-0.01 7:-0.01 8:-0.06 9:-0.07 10:-0.09 11:-0.11 12:-0.10 13:-0.10 14:-0.10 15:-0.10 16:-0.08 17:-0.11 18:-0.10 19:-0.11 20:-0.12 21:-0.12 22:-0.13 23:-0.12 24:-0.09
+IC(med pred step k, realised 24h):   1:-0.03 2:-0.02 3:-0.04 4:+0.01 5:-0.02 6:-0.02 7:-0.05 8:-0.04 9:-0.05 10:-0.05 11:-0.04 12:-0.03 13:-0.04 14:-0.05 15:-0.05 16:-0.06 17:-0.07 18:-0.05 19:-0.07 20:-0.07 21:-0.08 22:-0.09 23:-0.09 24:-0.09
+IC slope(median path) vs r24: -0.095
+IC frac paths up vs r24: -0.051
+consensus distribution (#paths up): [74 43 51 28 29 21 54]
+{'name': 'buy&hold(long every origin)', 'n': 300, 'hit': np.float64(0.487), 'gross_bp': np.float64(18.2), 'net_bp': np.float64(7.2), 't_net': np.float64(0.4), 'sum_net': np.float64(0.1087), 'sym': 'SOLUSDT'}
+{'name': 'K median sign', 'n': 300, 'hit': np.float64(0.477), 'gross_bp': np.float64(-43.9), 'net_bp': np.float64(-54.9), 't_net': np.float64(-3.07), 'sum_net': np.float64(-0.8239), 'sym': 'SOLUSDT'}
+{'name': 'K median slope sign', 'n': 300, 'hit': np.float64(0.487), 'gross_bp': np.float64(-30.5), 'net_bp': np.float64(-41.5), 't_net': np.float64(-2.31), 'sum_net': np.float64(-0.6223), 'sym': 'SOLUSDT'}
+{'name': 'K consensus>=5/6', 'n': 192, 'hit': np.float64(0.51), 'gross_bp': np.float64(-33.5), 'net_bp': np.float64(-44.5), 't_net': np.float64(-1.91), 'sum_net': np.float64(-0.4276), 'sym': 'SOLUSDT'}
+{'name': 'K consensus 6/6', 'n': 128, 'hit': np.float64(0.516), 'gross_bp': np.float64(-37.8), 'net_bp': np.float64(-48.8), 't_net': np.float64(-1.68), 'sum_net': np.float64(-0.3124), 'sym': 'SOLUSDT'}
+{'name': 'K consensus>=5/6 CONTRARIAN', 'n': 192, 'hit': np.float64(0.49), 'gross_bp': np.float64(33.5), 'net_bp': np.float64(22.5), 't_net': np.float64(0.96), 'sum_net': np.float64(0.2164), 'sym': 'SOLUSDT'}
+{'name': 'MOM24 alone', 'n': 300, 'hit': np.float64(0.493), 'gross_bp': np.float64(23.4), 'net_bp': np.float64(12.4), 't_net': np.float64(0.69), 'sum_net': np.float64(0.1858), 'sym': 'SOLUSDT'}
+{'name': 'MOM24 & K cons agree', 'n': 47, 'hit': np.float64(0.489), 'gross_bp': np.float64(-12.4), 'net_bp': np.float64(-23.4), 't_net': np.float64(-0.52), 'sum_net': np.float64(-0.055), 'sym': 'SOLUSDT'}
+{'name': 'MOM24 & K sign agree', 'n': 101, 'hit': np.float64(0.455), 'gross_bp': np.float64(-30.5), 'net_bp': np.float64(-41.5), 't_net': np.float64(-1.48), 'sum_net': np.float64(-0.2096), 'sym': 'SOLUSDT'}
+{'name': 'SMA48 alone', 'n': 300, 'hit': np.float64(0.463), 'gross_bp': np.float64(7.7), 'net_bp': np.float64(-3.3), 't_net': np.float64(-0.18), 'sum_net': np.float64(-0.0496), 'sym': 'SOLUSDT'}
+{'name': 'SMA48 & K sign agree', 'n': 88, 'hit': np.float64(0.398), 'gross_bp': np.float64(-61.8), 'net_bp': np.float64(-72.8), 't_net': np.float64(-2.46), 'sum_net': np.float64(-0.3202), 'sym': 'SOLUSDT'}
+{'name': 'K long-only cons>=5', 'n': 75, 'hit': np.float64(0.52), 'gross_bp': np.float64(-13.5), 'net_bp': np.float64(-24.5), 't_net': np.float64(-0.7), 'sum_net': np.float64(-0.092), 'sym': 'SOLUSDT'}
+random shuffled-cons gross_bp: mean -2.9, 5-95% [-33.0, 27.4]
+  first2/3: IC med24 -0.123  IC slope -0.128  IC npos -0.069 {'name': 'cons', 'n': 135, 'hit': np.float64(0.504), 'gross_bp': np.float64(-35.0), 'net_bp': np.float64(-46.0), 't_net': np.float64(-1.66), 'sum_net': np.float64(-0.3108)}
+  last1/3: IC med24 -0.034  IC slope -0.024  IC npos -0.005 {'name': 'cons', 'n': 57, 'hit': np.float64(0.526), 'gross_bp': np.float64(-30.0), 'net_bp': np.float64(-41.0), 't_net': np.float64(-0.93), 'sum_net': np.float64(-0.1168)}
+  non-overlap IC med24 even/odd: -0.051 -0.141
+  IC dispersion vs |r24|: +0.119 ; IC |med24| vs |r24|: +0.190

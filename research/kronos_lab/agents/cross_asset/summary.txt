@@ -1,0 +1,75 @@
+Pair IC (pearson): predicted spread vs realised spread; momentum spread vs realised
+ETH/BTC: IC_kronos=+0.012 (holdout -0.052)  IC_mom=-0.078  corr(kronos,mom)=-0.598
+   kronos pair gross mean -9.3bp; percentile vs 2000 shuffled signals = 0.15
+SOL/BTC: IC_kronos=-0.054 (holdout -0.025)  IC_mom=-0.001  corr(kronos,mom)=-0.494
+   kronos pair gross mean -12.9bp; percentile vs 2000 shuffled signals = 0.15
+SOL/ETH: IC_kronos=-0.011 (holdout +0.043)  IC_mom=-0.012  corr(kronos,mom)=-0.402
+   kronos pair gross mean -4.6bp; percentile vs 2000 shuffled signals = 0.34
+
+Cross-asset direction:
+ETHUSDT: IC(BTC kronos fcst, ETHUSDT realised)=-0.158  IC(own fcst)=-0.132  IC(BTC 24h mom)=+0.105
+SOLUSDT: IC(BTC kronos fcst, SOLUSDT realised)=-0.153  IC(own fcst)=-0.156  IC(BTC 24h mom)=+0.057
+
+Pooled OLS realised spread ~ z(kronos spread) + z(mom spread): kronos b=-0.00074 t=-0.82 | mom b=-0.00081 t=-0.90
+
+                                strategy sample   n   hit  gross_bp  net_bp  t_eff   cumG   cumN
+       ETH/BTC kronos long stronger fcst    all 300 0.477    -9.327 -31.327 -0.807 -0.140 -0.470
+       ETH/BTC kronos long stronger fcst   hold 100 0.450    -8.757 -30.757 -0.651 -0.044 -0.154
+                 ETH/BTC kronos INVERTED    all 300 0.523     9.327 -12.673  0.807  0.140 -0.190
+                 ETH/BTC kronos INVERTED   hold 100 0.550     8.757 -13.243  0.651  0.044 -0.066
+                    ETH/BTC momentum 24h    all 300 0.500    -1.562 -23.562 -0.135 -0.023 -0.353
+                    ETH/BTC momentum 24h   hold 100 0.520    -0.724 -22.724 -0.054 -0.004 -0.114
+                    ETH/BTC reversal 24h    all 300 0.500     1.562 -20.438  0.135  0.023 -0.307
+                    ETH/BTC reversal 24h   hold 100 0.480     0.724 -21.276  0.054  0.004 -0.106
+ETH/BTC B&H spread (long alt/short base)    all 300 0.507     6.834 -15.166  0.590  0.103 -0.227
+ETH/BTC B&H spread (long alt/short base)   hold 100 0.420    -9.816 -31.816 -0.731 -0.049 -0.159
+  ETH/BTC kronos&mom agree (trades only)    all 113 0.469   -14.454 -36.454 -0.752 -0.082 -0.206
+  ETH/BTC kronos&mom agree (trades only)   hold  31 0.452   -15.292 -37.292 -0.715 -0.024 -0.058
+       SOL/BTC kronos long stronger fcst    all 300 0.490   -12.854 -34.854 -0.877 -0.193 -0.523
+       SOL/BTC kronos long stronger fcst   hold 100 0.530   -12.016 -34.016 -0.416 -0.060 -0.170
+                 SOL/BTC kronos INVERTED    all 300 0.510    12.854  -9.146  0.877  0.193 -0.137
+                 SOL/BTC kronos INVERTED   hold 100 0.470    12.016  -9.984  0.416  0.060 -0.050
+                    SOL/BTC momentum 24h    all 300 0.493     9.824 -12.176  0.669  0.147 -0.183
+                    SOL/BTC momentum 24h   hold 100 0.460     0.386 -21.614  0.013  0.002 -0.108
+                    SOL/BTC reversal 24h    all 300 0.507    -9.824 -31.824 -0.669 -0.147 -0.477
+                    SOL/BTC reversal 24h   hold 100 0.540    -0.386 -22.386 -0.013 -0.002 -0.112
+SOL/BTC B&H spread (long alt/short base)    all 300 0.503    12.384  -9.616  0.845  0.186 -0.144
+SOL/BTC B&H spread (long alt/short base)   hold 100 0.450    14.137  -7.863  0.489  0.071 -0.039
+  SOL/BTC kronos&mom agree (trades only)    all 109 0.477    -4.170 -26.170 -0.207 -0.023 -0.143
+  SOL/BTC kronos&mom agree (trades only)   hold  37 0.486   -15.716 -37.716 -0.471 -0.029 -0.070
+       SOL/ETH kronos long stronger fcst    all 300 0.457    -4.600 -26.600 -0.326 -0.069 -0.399
+       SOL/ETH kronos long stronger fcst   hold 100 0.520    -3.083 -25.083 -0.112 -0.015 -0.125
+                 SOL/ETH kronos INVERTED    all 300 0.543     4.600 -17.400  0.326  0.069 -0.261
+                 SOL/ETH kronos INVERTED   hold 100 0.480     3.083 -18.917  0.112  0.015 -0.095
+                    SOL/ETH momentum 24h    all 300 0.513     0.661 -21.339  0.047  0.010 -0.320
+                    SOL/ETH momentum 24h   hold 100 0.470   -20.590 -42.590 -0.750 -0.103 -0.213
+                    SOL/ETH reversal 24h    all 300 0.487    -0.661 -22.661 -0.047 -0.010 -0.340
+                    SOL/ETH reversal 24h   hold 100 0.530    20.590  -1.410  0.750  0.103 -0.007
+SOL/ETH B&H spread (long alt/short base)    all 300 0.500     5.550 -16.450  0.393  0.083 -0.247
+SOL/ETH B&H spread (long alt/short base)   hold 100 0.490    23.953   1.953  0.875  0.120  0.010
+  SOL/ETH kronos&mom agree (trades only)    all 119 0.462    -4.965 -26.965 -0.219 -0.030 -0.160
+  SOL/ETH kronos&mom agree (trades only)   hold  41 0.488   -28.870 -50.870 -0.573 -0.059 -0.104
+                 ETH dir from BTC kronos    all 300 0.500   -27.157 -38.157 -1.164 -0.407 -0.572
+                 ETH dir from BTC kronos   hold 100 0.510    -3.513 -14.513 -0.111 -0.018 -0.073
+                 ETH dir from own kronos    all 300 0.470   -36.739 -47.739 -1.581 -0.551 -0.716
+                 ETH dir from own kronos   hold 100 0.520     0.219 -10.781  0.007  0.001 -0.054
+                ETH dir from BTC 24h mom    all 300 0.483    25.732  14.732  1.103  0.386  0.221
+                ETH dir from BTC 24h mom   hold 100 0.410   -18.330 -29.330 -0.581 -0.092 -0.147
+                            ETH buy&hold    all 300 0.520    12.700   1.700  0.543  0.191  0.026
+                            ETH buy&hold   hold 100 0.530     5.338  -5.662  0.169  0.027 -0.028
+                 SOL dir from BTC kronos    all 300 0.540   -20.499 -31.499 -0.804 -0.307 -0.472
+                 SOL dir from BTC kronos   hold 100 0.580    -7.353 -18.353 -0.155 -0.037 -0.092
+                 SOL dir from own kronos    all 300 0.473   -50.948 -61.948 -2.021 -0.764 -0.929
+                 SOL dir from own kronos   hold 100 0.470   -49.522 -60.522 -1.056 -0.248 -0.303
+                SOL dir from BTC 24h mom    all 300 0.470    13.173   2.173  0.516  0.198  0.033
+                SOL dir from BTC 24h mom   hold 100 0.420   -21.496 -32.496 -0.454 -0.107 -0.162
+                            SOL buy&hold    all 300 0.487    18.250   7.250  0.715  0.274  0.109
+                            SOL buy&hold   hold 100 0.460    29.291  18.291  0.620  0.146  0.091
+        XS3 kronos long best/short worst    all 300 0.460   -13.390 -35.390 -1.035 -0.201 -0.531
+        XS3 kronos long best/short worst   hold 100 0.500   -11.928 -33.928 -0.476 -0.060 -0.170
+      XS3 momentum long best/short worst    all 300 0.483     4.461 -17.539  0.326  0.067 -0.263
+      XS3 momentum long best/short worst   hold 100 0.450   -10.464 -32.464 -0.428 -0.052 -0.162
+                            XS3 reversal    all 300 0.517    -4.461 -26.461 -0.326 -0.067 -0.397
+                            XS3 reversal   hold 100 0.550    10.464 -11.536  0.428  0.052 -0.058
+                    XS3 equal-weight B&H    all 300 0.507    12.272   1.272  0.590  0.184  0.019
+                    XS3 equal-weight B&H   hold 100 0.470    16.594   5.594  0.496  0.083  0.028

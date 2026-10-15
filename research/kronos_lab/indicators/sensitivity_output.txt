@@ -1,0 +1,12 @@
+
+=== Global spot 0.10%+5bp ===   entradas totales por activo: {'BTC': 60, 'ETH': 51, 'SOL': 50, 'XRP': 48, 'BNB': 59, 'DOGE': 48, 'ADA': 53, 'LINK': 72, 'AVAX': 47}
+PORT completo 2020-10-21->: CAGR   36.2%  Sharpe 1.30  maxDD  -28.1%  | TEST CAGR   12.1%  | por año {2020: 107.0, 2021: 36.0, 2022: -17.0, 2023: 65.0, 2024: 56.0, 2025: 5.0, 2026: 2.0}
+ETH  completo 2021-10-11->: CAGR   10.7%  Sharpe 0.47  maxDD  -43.4%  | TEST CAGR   26.8%  | por año {2021: 6.0, 2022: -21.0, 2023: 20.0, 2024: 12.0, 2025: 32.0, 2026: 11.0}
+SOL  completo 2022-05-13->: CAGR   25.2%  Sharpe 0.82  maxDD  -33.9%  | TEST CAGR   12.1%  | por año {2022: -25.0, 2023: 145.0, 2024: 23.0, 2025: 9.0, 2026: 9.0}
+BTC  completo 2020-10-21->: CAGR   40.5%  Sharpe 1.24  maxDD  -38.1%  | TEST CAGR    2.5%  | por año {2020: 107.0, 2021: 61.0, 2022: -31.0, 2023: 76.0, 2024: 78.0, 2025: -2.0, 2026: 9.0}
+
+=== EU spot 0.25%+5bp ===   entradas totales por activo: {'BTC': 60, 'ETH': 51, 'SOL': 50, 'XRP': 48, 'BNB': 59, 'DOGE': 48, 'ADA': 53, 'LINK': 72, 'AVAX': 47}
+PORT completo 2020-10-21->: CAGR   33.1%  Sharpe 1.21  maxDD  -29.6%  | TEST CAGR    9.1%  | por año {2020: 106.0, 2021: 33.0, 2022: -19.0, 2023: 60.0, 2024: 51.0, 2025: 2.0, 2026: -0.0}
+ETH  completo 2021-10-11->: CAGR    7.9%  Sharpe 0.39  maxDD  -44.4%  | TEST CAGR   23.0%  | por año {2021: 6.0, 2022: -22.0, 2023: 16.0, 2024: 9.0, 2025: 30.0, 2026: 8.0}
+SOL  completo 2022-05-13->: CAGR   22.1%  Sharpe 0.75  maxDD  -35.7%  | TEST CAGR    9.0%  | por año {2022: -26.0, 2023: 138.0, 2024: 19.0, 2025: 7.0, 2026: 7.0}
+BTC  completo 2020-10-21->: CAGR   37.0%  Sharpe 1.16  maxDD  -39.6%  | TEST CAGR   -0.3%  | por año {2020: 106.0, 2021: 58.0, 2022: -33.0, 2023: 71.0, 2024: 73.0, 2025: -5.0, 2026: 6.0}

@@ -1,0 +1,123 @@
+ALL
+              n   hit   corr  k_gross  k_net  mom_net    bh  cover  volcorr
+sym                                                                        
+BTCUSDT 300.000 0.520 -0.183   -0.199 -0.309    0.053 0.059  0.623    0.027
+ETHUSDT 300.000 0.470 -0.132   -0.367 -0.477    0.141 0.127  0.607    0.009
+
+== trend_adx
+                             n   hit   corr  ...     bh  cover  volcorr
+        trend_adx                            ...                       
+BTCUSDT range(ADX<=25) 152.000 0.520  0.026  ... -0.106  0.618    0.019
+        trend(ADX>25)  148.000 0.520 -0.236  ...  0.228  0.628    0.028
+ETHUSDT range(ADX<=25) 167.000 0.479 -0.019  ...  0.119  0.629   -0.040
+        trend(ADX>25)  133.000 0.459 -0.186  ...  0.137  0.579    0.058
+ALL     range(ADX<=25) 319.000 0.498 -0.006  ...  0.012  0.624    0.006
+        trend(ADX>25)  281.000 0.491 -0.203  ...  0.185  0.605    0.066
+
+[6 rows x 9 columns]
+
+== trend_er
+                       n   hit   corr  k_gross  ...  mom_net     bh  cover  volcorr
+        trend_er                                ...                                
+BTCUSDT ER<=0.2  205.000 0.541  0.039    0.071  ...   -0.025 -0.017  0.634    0.065
+        ER>0.2    95.000 0.474 -0.279   -0.780  ...    0.221  0.221  0.600   -0.025
+ETHUSDT ER<=0.2  213.000 0.455 -0.028   -0.362  ...    0.171  0.195  0.606   -0.064
+        ER>0.2    87.000 0.506 -0.253   -0.380  ...    0.067 -0.039  0.609    0.187
+ALL     ER<=0.2  418.000 0.498 -0.011   -0.150  ...    0.075  0.091  0.620   -0.001
+        ER>0.2   182.000 0.489 -0.261   -0.589  ...    0.147  0.097  0.604    0.094
+
+[6 rows x 9 columns]
+
+== vr_reg
+                           n   hit   corr  ...    bh  cover  volcorr
+        vr_reg                             ...                      
+BTCUSDT VR<=1 revert 236.000 0.504 -0.157  ... 0.014  0.610    0.018
+        VR>1 persist  64.000 0.578 -0.233  ... 0.222  0.672    0.026
+ETHUSDT VR<=1 revert 231.000 0.472 -0.128  ... 0.042  0.589    0.034
+        VR>1 persist  69.000 0.464 -0.143  ... 0.411  0.667   -0.059
+ALL     VR<=1 revert 467.000 0.488 -0.136  ... 0.028  0.600    0.055
+        VR>1 persist 133.000 0.519 -0.179  ... 0.320  0.669   -0.006
+
+[6 rows x 9 columns]
+
+== vol_reg
+                      n   hit   corr  k_gross  ...  mom_net     bh  cover  volcorr
+        vol_reg                                ...                                
+BTCUSDT hi vol  148.000 0.561 -0.265   -0.165  ...    0.106 -0.092  0.622   -0.056
+        lo vol  152.000 0.480 -0.002   -0.232  ...    0.000  0.205  0.625    0.095
+ETHUSDT hi vol  146.000 0.507 -0.186   -0.290  ...    0.138 -0.153  0.596   -0.007
+        lo vol  154.000 0.435 -0.057   -0.441  ...    0.144  0.392  0.617   -0.038
+ALL     hi vol  294.000 0.534 -0.214   -0.227  ...    0.122 -0.122  0.609    0.010
+        lo vol  306.000 0.458 -0.042   -0.337  ...    0.073  0.299  0.621    0.024
+
+[6 rows x 9 columns]
+
+== wk
+                      n   hit   corr  k_gross  ...  mom_net     bh  cover  volcorr
+        wk                                     ...                                
+BTCUSDT weekday 190.000 0.511 -0.260   -0.304  ...    0.327 -0.120  0.584   -0.034
+        weekend 110.000 0.536  0.089   -0.016  ...   -0.422  0.368  0.691    0.162
+ETHUSDT weekday 190.000 0.474 -0.226   -0.487  ...    0.487 -0.119  0.563   -0.044
+        weekend 110.000 0.464  0.151   -0.161  ...   -0.458  0.551  0.682    0.142
+ALL     weekday 380.000 0.492 -0.238   -0.396  ...    0.407 -0.119  0.574   -0.013
+        weekend 220.000 0.500  0.129   -0.088  ...   -0.440  0.459  0.686    0.169
+
+[6 rows x 9 columns]
+
+== agree_reg
+                               n   hit   corr  ...     bh  cover  volcorr
+        agree_reg                              ...                       
+BTCUSDT paths agree>=5/6 190.000 0.521 -0.236  ... -0.032  0.600    0.059
+        paths mixed      110.000 0.518  0.009  ...  0.214  0.664   -0.019
+ETHUSDT paths agree>=5/6 181.000 0.486 -0.161  ...  0.267  0.525    0.066
+        paths mixed      119.000 0.445 -0.032  ... -0.086  0.731   -0.071
+ALL     paths agree>=5/6 371.000 0.504 -0.186  ...  0.114  0.563    0.091
+        paths mixed      229.000 0.480 -0.017  ...  0.058  0.699   -0.039
+
+[6 rows x 9 columns]
+
+== permutation p-values (pooled, hit rate of sign(pred) vs sign(real) within cell, 2000 shuffles)
+trend_adx  range(ADX<=25)       n= 319 hit=0.498 p(>=)=0.561 p(<=)=0.527
+trend_adx  trend(ADX>25)        n= 281 hit=0.491 p(>=)=0.649 p(<=)=0.447
+trend_er   ER<=0.2              n= 418 hit=0.498 p(>=)=0.540 p(<=)=0.541
+trend_er   ER>0.2               n= 182 hit=0.489 p(>=)=0.695 p(<=)=0.411
+vr_reg     VR<=1 revert         n= 467 hit=0.488 p(>=)=0.714 p(<=)=0.350
+vr_reg     VR>1 persist         n= 133 hit=0.519 p(>=)=0.334 p(<=)=0.772
+vol_reg    hi vol               n= 294 hit=0.534 p(>=)=0.150 p(<=)=0.893
+vol_reg    lo vol               n= 306 hit=0.458 p(>=)=0.881 p(<=)=0.177
+wk         weekday              n= 380 hit=0.492 p(>=)=0.822 p(<=)=0.234
+wk         weekend              n= 220 hit=0.500 p(>=)=0.232 p(<=)=0.848
+agree_reg  paths agree>=5/6     n= 371 hit=0.504 p(>=)=0.447 p(<=)=0.638
+agree_reg  paths mixed          n= 229 hit=0.480 p(>=)=0.739 p(<=)=0.354
+
+== holdout trend_adx
+                           n   hit   corr  k_net  mom_net    bh
+trend_adx      half                                            
+range(ADX<=25) test  116.000 0.457  0.045 -0.228    0.024 0.029
+               train 203.000 0.522 -0.024 -0.222   -0.008 0.002
+trend(ADX>25)  test   84.000 0.643  0.072 -0.087   -0.389 0.204
+               train 197.000 0.426 -0.254 -0.796    0.454 0.177
+
+== holdout vol_reg
+                    n   hit   corr  k_net  mom_net     bh
+vol_reg half                                             
+hi vol  test  113.000 0.575  0.093  0.019   -0.357 -0.026
+        train 181.000 0.508 -0.279 -0.559    0.421 -0.182
+lo vol  test   87.000 0.483 -0.016 -0.414    0.120  0.269
+        train 219.000 0.447 -0.053 -0.460    0.054  0.311
+
+== holdout vr_reg
+                         n   hit   corr  k_net  mom_net     bh
+vr_reg       half                                             
+VR<=1 revert test  123.000 0.496  0.036 -0.209    0.065  0.163
+             train 344.000 0.485 -0.161 -0.460    0.237 -0.020
+VR>1 persist test   77.000 0.597  0.061 -0.105   -0.491  0.006
+             train  56.000 0.411 -0.241 -0.782    0.114  0.751
+
+== holdout agree_reg
+                             n   hit   corr  k_net  mom_net     bh
+agree_reg        half                                             
+paths agree>=5/6 test  118.000 0.585  0.087 -0.128   -0.185  0.284
+                 train 253.000 0.466 -0.247 -0.551    0.116  0.035
+paths mixed      test   82.000 0.463 -0.081 -0.228   -0.098 -0.159
+                 train 147.000 0.490  0.022 -0.426    0.399  0.179

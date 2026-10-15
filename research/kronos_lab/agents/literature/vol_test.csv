@@ -1,0 +1,4 @@
+sym,n,rho_rv24_vs_RV,rho_rv168_vs_RV,rho_k_path_vs_RV,rho_k_disp_vs_RV,rho_k_rng_vs_RV,oosR2_HAR,oosR2_Konly,oosR2_HAR+K,oosR2_HAR+Krng,cov_6path_minmax(nominal~0.71),rho_kdisp_vs_absret,rho_rv24_vs_absret,median_kpath/RV
+BTCUSDT,300,0.344,0.339,0.408,0.272,0.367,-0.073,0.003,-0.027,-0.033,0.39,0.132,0.206,0.711
+ETHUSDT,300,0.375,0.347,0.381,0.275,0.361,-0.064,-0.034,-0.049,-0.053,0.387,0.056,0.225,0.715
+SOLUSDT,300,0.529,0.542,0.513,0.298,0.446,-0.042,-0.206,-0.092,-0.093,0.343,0.114,0.316,0.758

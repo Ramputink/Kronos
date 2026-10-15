@@ -1,0 +1,78 @@
+===== BTCUSDT windows 300 BH mean24h 0.059% total 5.9% | Kronos-alone sign: net -0.288% hit 54%
+  MR strict(%B<0,>1)
+    alone  n= 35 gross=-0.425% net=-0.535% hit=51% sumNet=-18.7%
+    k_end  n= 31 gross=-0.516% net=-0.626% hit=52% sumNet=-19.4% | rej n=4 net=0.173% | randPct=23
+    k_path n= 23 gross=-0.588% net=-0.698% hit=48% sumNet=-16.1% | rej n=12 net=-0.222% | randPct=28
+    k_prob n= 31 gross=-0.516% net=-0.626% hit=52% sumNet=-19.4% | rej n=4 net=0.173% | randPct=24
+  BO strict(%B<0,>1)
+    alone  n= 35 gross=0.425% net=0.315% hit=49% sumNet=11.0%
+    k_end  n=  4 gross=-0.283% net=-0.393% hit=50% sumNet=-1.6% | rej n=31 net=0.406% | randPct=24
+    k_path n= 35 gross=0.425% net=0.315% hit=49% sumNet=11.0%
+    k_prob n=  9 gross=0.306% net=0.196% hit=44% sumNet=1.8% | rej n=26 net=0.356% | randPct=45
+  MR relaxed(%B<.2,>.8)
+    alone  n=114 gross=-0.126% net=-0.236% hit=54% sumNet=-26.9%
+    k_end  n= 86 gross=-0.133% net=-0.243% hit=56% sumNet=-20.9% | rej n=28 net=-0.213% | randPct=48
+    k_path n= 73 gross=0.047% net=-0.063% hit=59% sumNet=-4.6% | rej n=41 net=-0.544% | randPct=91
+    k_prob n= 90 gross=-0.148% net=-0.258% hit=54% sumNet=-23.2% | rej n=24 net=-0.154% | randPct=41
+  BO relaxed(%B<.2,>.8)
+    alone  n=114 gross=0.126% net=0.016% hit=46% sumNet=1.8%
+    k_end  n= 28 gross=0.103% net=-0.007% hit=54% sumNet=-0.2% | rej n=86 net=0.023% | randPct=48
+    k_path n= 89 gross=0.169% net=0.059% hit=47% sumNet=5.3% | rej n=25 net=-0.138% | randPct=68
+    k_prob n= 42 gross=0.293% net=0.183% hit=55% sumNet=7.7% | rej n=72 net=-0.082% | randPct=78
+===== ETHUSDT windows 300 BH mean24h 0.127% total 13.4% | Kronos-alone sign: net -0.352% hit 48%
+  MR strict(%B<0,>1)
+    alone  n= 28 gross=-0.333% net=-0.443% hit=46% sumNet=-12.4%
+    k_end  n= 20 gross=-0.354% net=-0.464% hit=45% sumNet=-9.3% | rej n=8 net=-0.392% | randPct=47
+    k_path n= 13 gross=0.229% net=0.119% hit=54% sumNet=1.5% | rej n=15 net=-0.930% | randPct=87
+    k_prob n= 21 gross=-0.484% net=-0.594% hit=43% sumNet=-12.5% | rej n=7 net=0.009% | randPct=30
+  BO strict(%B<0,>1)
+    alone  n= 28 gross=0.333% net=0.223% hit=54% sumNet=6.3%
+    k_end  n=  8 gross=0.282% net=0.172% hit=50% sumNet=1.4% | rej n=20 net=0.244% | randPct=48
+    k_path n= 27 gross=0.294% net=0.184% hit=52% sumNet=5.0% | rej n=1 net=1.281% | randPct=26
+    k_prob n= 10 gross=0.762% net=0.652% hit=60% sumNet=6.5% | rej n=18 net=-0.015% | randPct=76
+  MR relaxed(%B<.2,>.8)
+    alone  n=123 gross=-0.024% net=-0.134% hit=52% sumNet=-16.4%
+    k_end  n= 85 gross=-0.107% net=-0.217% hit=48% sumNet=-18.4% | rej n=38 net=0.052% | randPct=32
+    k_path n= 68 gross=-0.125% net=-0.235% hit=44% sumNet=-16.0% | rej n=55 net=-0.008% | randPct=35
+    k_prob n= 92 gross=-0.076% net=-0.186% hit=50% sumNet=-17.1% | rej n=31 net=0.022% | randPct=38
+  BO relaxed(%B<.2,>.8)
+    alone  n=123 gross=0.024% net=-0.086% hit=48% sumNet=-10.6%
+    k_end  n= 38 gross=-0.162% net=-0.272% hit=39% sumNet=-10.4% | rej n=85 net=-0.003% | randPct=33
+    k_path n= 96 gross=-0.114% net=-0.224% hit=46% sumNet=-21.5% | rej n=27 net=0.404% | randPct=17
+    k_prob n= 46 gross=-0.112% net=-0.222% hit=41% sumNet=-10.2% | rej n=77 net=-0.005% | randPct=35
+===== SOLUSDT windows 300 BH mean24h 0.182% total 20.2% | Kronos-alone sign: net -0.549% hit 48%
+  MR strict(%B<0,>1)
+    alone  n= 32 gross=-0.213% net=-0.323% hit=47% sumNet=-10.3%
+    k_end  n= 22 gross=-0.538% net=-0.648% hit=45% sumNet=-14.3% | rej n=10 net=0.393% | randPct=21
+    k_path n= 14 gross=-1.245% net=-1.355% hit=43% sumNet=-19.0% | rej n=18 net=0.479% | randPct=5
+    k_prob n= 25 gross=-0.682% net=-0.792% hit=40% sumNet=-19.8% | rej n=7 net=1.353% | randPct=5
+  BO strict(%B<0,>1)
+    alone  n= 32 gross=0.213% net=0.103% hit=53% sumNet=3.3%
+    k_end  n= 10 gross=-0.503% net=-0.613% hit=50% sumNet=-6.1% | rej n=22 net=0.428% | randPct=20
+    k_path n= 31 gross=0.188% net=0.078% hit=52% sumNet=2.4% | rej n=1 net=0.871% | randPct=36
+    k_prob n= 12 gross=-0.233% net=-0.343% hit=58% sumNet=-4.1% | rej n=20 net=0.371% | randPct=27
+  MR relaxed(%B<.2,>.8)
+    alone  n=133 gross=-0.240% net=-0.350% hit=51% sumNet=-46.5%
+    k_end  n= 87 gross=-0.635% net=-0.745% hit=49% sumNet=-64.8% | rej n=46 net=0.399% | randPct=2
+    k_path n= 81 gross=-0.689% net=-0.799% hit=49% sumNet=-64.7% | rej n=52 net=0.350% | randPct=2
+    k_prob n= 95 gross=-0.647% net=-0.757% hit=47% sumNet=-71.9% | rej n=38 net=0.670% | randPct=1
+  BO relaxed(%B<.2,>.8)
+    alone  n=133 gross=0.240% net=0.130% hit=49% sumNet=17.2%
+    k_end  n= 46 gross=-0.509% net=-0.619% hit=46% sumNet=-28.5% | rej n=87 net=0.525% | randPct=3
+    k_path n=105 gross=-0.116% net=-0.226% hit=48% sumNet=-23.7% | rej n=28 net=1.462% | randPct=1
+    k_prob n= 50 gross=-0.546% net=-0.656% hit=48% sumNet=-32.8% | rej n=83 net=0.603% | randPct=1
+BTCUSDT_60_ohlcv.csv origins 747 BH mean24h -0.076%
+  strict  MR n= 71 gross=0.116% net=0.006% hit=48%
+  strict  BO n= 71 gross=-0.116% net=-0.226% hit=52%
+  relaxed MR n=314 gross=0.061% net=-0.049% hit=51%
+  relaxed BO n=314 gross=-0.061% net=-0.171% hit=49%
+ETHUSDT_60_ohlcv.csv origins 747 BH mean24h -0.100%
+  strict  MR n= 70 gross=0.570% net=0.460% hit=61%
+  strict  BO n= 70 gross=-0.570% net=-0.680% hit=39%
+  relaxed MR n=304 gross=0.185% net=0.075% hit=55%
+  relaxed BO n=304 gross=-0.185% net=-0.295% hit=45%
+SOLUSDT_60_ohlcv.csv origins 747 BH mean24h -0.132%
+  strict  MR n= 85 gross=0.758% net=0.648% hit=59%
+  strict  BO n= 85 gross=-0.758% net=-0.868% hit=41%
+  relaxed MR n=327 gross=0.293% net=0.183% hit=54%
+  relaxed BO n=327 gross=-0.293% net=-0.403% hit=46%

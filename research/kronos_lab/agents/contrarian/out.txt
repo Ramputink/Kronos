@@ -1,0 +1,132 @@
+
+== BTCUSDT h=1 n=300  corr(pred,real)=+0.078 CI[-0.05,+0.21] first2/3=+0.050 hold=+0.169 | corr(pred,z)=-0.29 corr(pred,past24)=-0.51 | resid corr=+0.084 CI[-0.05,+0.21] corr(-z,real)=-0.115
+   fade_kronos    n=300 gross=   -1.8bp net=  -12.8bp CI[ -16.2,  -9.4] hit=0.46 | holdout n=100 net=  -13.6bp CI[ -19.0,  -9.4]
+   follow_kronos  n=300 gross=   +1.8bp net=   -9.2bp CI[ -12.5,  -5.9] hit=0.54 | holdout n=100 net=   -8.4bp CI[ -12.4,  -2.7]
+   zscore_revert  n=300 gross=   -4.2bp net=  -15.2bp CI[ -19.7, -11.2] hit=0.46 | holdout n=100 net=  -13.0bp CI[ -18.5,  -7.6]
+   rsi_revert     n=300 gross=   +0.3bp net=  -10.7bp CI[ -15.0,  -6.7] hit=0.54 | holdout n=100 net=   -6.9bp CI[ -13.4,  -0.6]
+   fade_AND_z     n=153 gross=   -3.0bp net=   -8.6bp CI[ -11.2,  -6.2] hit=0.21 | holdout n=44 net=   -7.2bp CI[ -11.7,  -3.4]
+   buyhold        n=300 gross=   -2.9bp net=  -13.9bp CI[ -18.1, -10.5] hit=0.49 | holdout n=100 net=  -11.6bp CI[ -16.7,  -6.4]
+   random-shuffled fade net bp p5/p50/p95: [-14.1 -10.9  -7.7]
+
+== BTCUSDT h=4 n=300  corr(pred,real)=+0.011 CI[-0.08,+0.15] first2/3=-0.007 hold=+0.090 | corr(pred,z)=-0.50 corr(pred,past24)=-0.64 | resid corr=+0.034 CI[-0.08,+0.15] corr(-z,real)=-0.096
+   fade_kronos    n=300 gross=   -0.8bp net=  -11.8bp CI[ -22.0,  -0.8] hit=0.49 | holdout n=100 net=  -20.3bp CI[ -39.0,  -7.4]
+   follow_kronos  n=300 gross=   +0.8bp net=  -10.2bp CI[ -20.5,  -0.2] hit=0.51 | holdout n=100 net=   -1.7bp CI[ -16.6, +17.0]
+   zscore_revert  n=300 gross=   -5.5bp net=  -16.5bp CI[ -26.9,  -6.0] hit=0.47 | holdout n=100 net=   -7.4bp CI[ -19.4,  +7.8]
+   rsi_revert     n=300 gross=   -1.8bp net=  -12.8bp CI[ -22.2,  -3.7] hit=0.52 | holdout n=100 net=  -10.0bp CI[ -22.8,  +6.6]
+   fade_AND_z     n=143 gross=   -3.1bp net=   -8.4bp CI[ -15.3,  -2.1] hit=0.22 | holdout n=42 net=   -7.4bp CI[ -16.4,  +0.2]
+   buyhold        n=300 gross=   -4.8bp net=  -15.8bp CI[ -26.3,  -5.5] hit=0.52 | holdout n=100 net=   -7.1bp CI[ -19.8,  +5.4]
+   random-shuffled fade net bp p5/p50/p95: [-19.7 -10.8  -3.4]
+
+== BTCUSDT h=12 n=300  corr(pred,real)=-0.208 CI[-0.35,+0.03] first2/3=-0.241 hold=-0.091 | corr(pred,z)=-0.57 corr(pred,past24)=-0.71 | resid corr=-0.168 CI[-0.32,+0.04] corr(-z,real)=-0.103
+   fade_kronos    n=300 gross=  +17.2bp net=   +6.2bp CI[ -10.2, +25.9] hit=0.54 | holdout n=100 net=  +15.0bp CI[  -6.1, +35.8]
+   follow_kronos  n=300 gross=  -17.2bp net=  -28.2bp CI[ -47.4, -11.6] hit=0.46 | holdout n=100 net=  -37.0bp CI[ -57.6, -16.0]
+   zscore_revert  n=300 gross=   -7.0bp net=  -18.0bp CI[ -37.5,  -0.7] hit=0.54 | holdout n=100 net=   +0.6bp CI[ -20.1, +26.0]
+   rsi_revert     n=300 gross=  -13.2bp net=  -24.2bp CI[ -42.6,  -8.6] hit=0.51 | holdout n=100 net=  -23.6bp CI[ -41.8,  -1.7]
+   fade_AND_z     n=140 gross=   +5.1bp net=   -0.0bp CI[  -7.8,  +9.1] hit=0.27 | holdout n=48 net=  +13.5bp CI[  +0.6, +29.9]
+   buyhold        n=300 gross=   +2.4bp net=   -8.6bp CI[ -25.3, +11.1] hit=0.53 | holdout n=100 net=   -4.4bp CI[ -26.4, +21.5]
+   random-shuffled fade net bp p5/p50/p95: [-22.  -10.7   0.7]
+
+== BTCUSDT h=24 n=300  corr(pred,real)=-0.186 CI[-0.34,+0.07] first2/3=-0.251 hold=+0.059 | corr(pred,z)=-0.70 corr(pred,past24)=-0.71 | resid corr=-0.129 CI[-0.29,+0.01] corr(-z,real)=-0.115
+   fade_kronos    n=300 gross=  +17.8bp net=   +6.8bp CI[ -23.1, +41.3] hit=0.46 | holdout n=100 net=   +4.3bp CI[ -39.7, +47.7]
+   follow_kronos  n=300 gross=  -17.8bp net=  -28.8bp CI[ -64.9,  +2.6] hit=0.54 | holdout n=100 net=  -26.3bp CI[ -69.2, +17.7]
+   zscore_revert  n=300 gross=   -8.9bp net=  -19.9bp CI[ -53.7, +13.9] hit=0.52 | holdout n=100 net=  +22.2bp CI[ -15.5, +68.2]
+   rsi_revert     n=300 gross=   -8.9bp net=  -19.9bp CI[ -51.3,  +7.3] hit=0.53 | holdout n=100 net=  +10.8bp CI[ -11.2, +39.9]
+   fade_AND_z     n=118 gross=   +4.4bp net=   +0.1bp CI[ -13.2, +13.4] hit=0.19 | holdout n=43 net=  +19.5bp CI[  -0.4, +45.5]
+   buyhold        n=300 gross=   +5.9bp net=   -5.1bp CI[ -38.7, +32.5] hit=0.50 | holdout n=100 net=   +4.2bp CI[ -39.9, +46.6]
+   random-shuffled fade net bp p5/p50/p95: [-28.7 -10.3  10.2]
+
+== ETHUSDT h=1 n=300  corr(pred,real)=+0.217 CI[-0.01,+0.39] first2/3=+0.228 hold=+0.176 | corr(pred,z)=-0.28 corr(pred,past24)=-0.38 | resid corr=+0.237 CI[+0.04,+0.39] corr(-z,real)=-0.022
+   fade_kronos    n=300 gross=   -1.8bp net=  -12.8bp CI[ -17.3,  -8.2] hit=0.45 | holdout n=100 net=  -12.5bp CI[ -18.5,  -6.9]
+   follow_kronos  n=300 gross=   +1.8bp net=   -9.2bp CI[ -13.9,  -4.8] hit=0.55 | holdout n=100 net=   -9.5bp CI[ -15.1,  -3.5]
+   zscore_revert  n=300 gross=   -0.4bp net=  -11.4bp CI[ -17.0,  -6.3] hit=0.50 | holdout n=100 net=   -9.8bp CI[ -19.0,  -1.0]
+   rsi_revert     n=300 gross=   +2.8bp net=   -8.2bp CI[ -13.9,  -2.5] hit=0.58 | holdout n=100 net=   -4.3bp CI[ -13.3,  +5.0]
+   fade_AND_z     n=170 gross=   -1.1bp net=   -7.3bp CI[ -11.2,  -3.5] hit=0.26 | holdout n=49 net=   -5.6bp CI[ -12.0,  +1.1]
+   buyhold        n=300 gross=   -4.3bp net=  -15.3bp CI[ -20.6, -10.4] hit=0.48 | holdout n=100 net=  -13.2bp CI[ -21.8,  -4.4]
+   random-shuffled fade net bp p5/p50/p95: [-15.7 -11.4  -7.2]
+
+== ETHUSDT h=4 n=300  corr(pred,real)=+0.044 CI[-0.07,+0.14] first2/3=+0.056 hold=-0.056 | corr(pred,z)=-0.46 corr(pred,past24)=-0.64 | resid corr=+0.063 CI[-0.05,+0.16] corr(-z,real)=-0.055
+   fade_kronos    n=300 gross=   -0.8bp net=  -11.8bp CI[ -25.2,  +2.2] hit=0.49 | holdout n=100 net=   +2.1bp CI[ -20.7, +24.0]
+   follow_kronos  n=300 gross=   +0.8bp net=  -10.2bp CI[ -25.5,  +2.6] hit=0.51 | holdout n=100 net=  -24.1bp CI[ -45.9,  -1.6]
+   zscore_revert  n=300 gross=   -6.4bp net=  -17.4bp CI[ -30.4,  -5.4] hit=0.55 | holdout n=100 net=   -9.4bp CI[ -28.9,  +6.9]
+   rsi_revert     n=300 gross=   -0.6bp net=  -11.6bp CI[ -26.5,  +1.9] hit=0.52 | holdout n=100 net=   -9.8bp CI[ -33.5, +10.1]
+   fade_AND_z     n=160 gross=   -3.6bp net=   -9.5bp CI[ -18.5,  -1.1] hit=0.29 | holdout n=48 net=   +2.0bp CI[  -9.7, +12.8]
+   buyhold        n=300 gross=   -1.8bp net=  -12.8bp CI[ -26.4,  +0.3] hit=0.52 | holdout n=100 net=   -6.6bp CI[ -24.0, +12.7]
+   random-shuffled fade net bp p5/p50/p95: [-21.8 -11.1  -0.2]
+
+== ETHUSDT h=12 n=300  corr(pred,real)=-0.063 CI[-0.17,+0.10] first2/3=-0.075 hold=+0.037 | corr(pred,z)=-0.58 corr(pred,past24)=-0.71 | resid corr=-0.021 CI[-0.13,+0.12] corr(-z,real)=-0.068
+   fade_kronos    n=300 gross=   +1.3bp net=   -9.7bp CI[ -29.5, +15.1] hit=0.45 | holdout n=100 net=  -28.9bp CI[ -50.9,  -5.7]
+   follow_kronos  n=300 gross=   -1.3bp net=  -12.3bp CI[ -36.0,  +8.2] hit=0.55 | holdout n=100 net=   +6.9bp CI[ -16.1, +29.2]
+   zscore_revert  n=300 gross=   -7.8bp net=  -18.8bp CI[ -43.5,  +4.1] hit=0.53 | holdout n=100 net=   +5.4bp CI[ -18.7, +33.3]
+   rsi_revert     n=300 gross=  -12.1bp net=  -23.1bp CI[ -48.8,  -1.2] hit=0.56 | holdout n=100 net=   -4.0bp CI[ -34.7, +22.4]
+   fade_AND_z     n=141 gross=   -3.3bp net=   -8.4bp CI[ -18.0,  +2.2] hit=0.23 | holdout n=42 net=   -5.4bp CI[ -16.6,  +8.4]
+   buyhold        n=300 gross=   +5.8bp net=   -5.2bp CI[ -29.0, +21.4] hit=0.55 | holdout n=100 net=   -9.1bp CI[ -35.9, +21.0]
+   random-shuffled fade net bp p5/p50/p95: [-29.2 -11.6   7.9]
+
+== ETHUSDT h=24 n=300  corr(pred,real)=-0.134 CI[-0.29,+0.07] first2/3=-0.165 hold=+0.038 | corr(pred,z)=-0.72 corr(pred,past24)=-0.69 | resid corr=-0.098 CI[-0.28,+0.05] corr(-z,real)=-0.085
+   fade_kronos    n=300 gross=  +24.2bp net=  +13.2bp CI[ -28.3, +66.1] hit=0.52 | holdout n=100 net=  -19.4bp CI[ -65.1, +27.1]
+   follow_kronos  n=300 gross=  -24.2bp net=  -35.2bp CI[ -80.9,  +5.0] hit=0.48 | holdout n=100 net=   -2.6bp CI[ -50.8, +43.9]
+   zscore_revert  n=300 gross=  -14.3bp net=  -25.3bp CI[ -73.0, +15.8] hit=0.51 | holdout n=100 net=  +29.6bp CI[  -7.9, +73.8]
+   rsi_revert     n=300 gross=  -12.2bp net=  -23.2bp CI[ -72.5, +17.5] hit=0.54 | holdout n=100 net=  +23.3bp CI[ -23.3, +68.2]
+   fade_AND_z     n=112 gross=   +5.0bp net=   +0.9bp CI[ -15.0, +17.1] hit=0.20 | holdout n=35 net=  +12.2bp CI[  -6.0, +37.1]
+   buyhold        n=300 gross=  +12.7bp net=   +1.7bp CI[ -43.3, +54.9] hit=0.52 | holdout n=100 net=   -5.7bp CI[ -57.6, +49.2]
+   random-shuffled fade net bp p5/p50/p95: [-37.9  -9.8  15. ]
+
+== SOLUSDT h=1 n=300  corr(pred,real)=+0.073 CI[-0.10,+0.21] first2/3=+0.091 hold=+0.009 | corr(pred,z)=-0.36 corr(pred,past24)=-0.41 | resid corr=+0.096 CI[-0.06,+0.23] corr(-z,real)=-0.080
+   fade_kronos    n=300 gross=   +0.3bp net=  -10.7bp CI[ -16.4,  -4.7] hit=0.43 | holdout n=100 net=  -12.2bp CI[ -23.1,  -0.5]
+   follow_kronos  n=300 gross=   -0.3bp net=  -11.3bp CI[ -17.2,  -5.4] hit=0.56 | holdout n=100 net=   -9.8bp CI[ -20.8,  +0.9]
+   zscore_revert  n=300 gross=   -5.7bp net=  -16.7bp CI[ -22.4, -11.3] hit=0.48 | holdout n=100 net=  -22.2bp CI[ -31.3, -14.4]
+   rsi_revert     n=300 gross=   +4.0bp net=   -7.0bp CI[ -12.9,  -0.9] hit=0.59 | holdout n=100 net=   -4.7bp CI[ -13.4,  +5.7]
+   fade_AND_z     n=149 gross=   -2.7bp net=   -8.2bp CI[ -12.0,  -4.8] hit=0.20 | holdout n=46 net=  -11.3bp CI[ -16.9,  -6.0]
+   buyhold        n=300 gross=   -1.6bp net=  -12.6bp CI[ -18.4,  -6.9] hit=0.48 | holdout n=100 net=   -6.7bp CI[ -16.8,  +4.2]
+   random-shuffled fade net bp p5/p50/p95: [-16.1 -11.4  -5.8]
+
+== SOLUSDT h=4 n=300  corr(pred,real)=-0.004 CI[-0.13,+0.09] first2/3=+0.014 hold=-0.078 | corr(pred,z)=-0.47 corr(pred,past24)=-0.50 | resid corr=-0.012 CI[-0.13,+0.09] corr(-z,real)=-0.070
+   fade_kronos    n=300 gross=   +5.1bp net=   -5.9bp CI[ -18.4,  +5.9] hit=0.47 | holdout n=100 net=   -2.7bp CI[ -21.8, +19.7]
+   follow_kronos  n=300 gross=   -5.1bp net=  -16.1bp CI[ -28.7,  -4.0] hit=0.52 | holdout n=100 net=  -19.3bp CI[ -41.0,  -2.4]
+   zscore_revert  n=300 gross=   -6.2bp net=  -17.2bp CI[ -29.9,  -5.6] hit=0.49 | holdout n=100 net=  -12.1bp CI[ -32.7,  +7.9]
+   rsi_revert     n=300 gross=   +4.9bp net=   -6.1bp CI[ -19.3,  +7.9] hit=0.51 | holdout n=100 net=   -6.8bp CI[ -29.9, +16.1]
+   fade_AND_z     n=153 gross=   -0.6bp net=   -6.2bp CI[ -13.7,  +1.7] hit=0.24 | holdout n=50 net=   -1.9bp CI[ -16.7, +15.3]
+   buyhold        n=300 gross=   +4.8bp net=   -6.2bp CI[ -18.7,  +6.7] hit=0.51 | holdout n=100 net=   +2.4bp CI[ -17.5, +24.9]
+   random-shuffled fade net bp p5/p50/p95: [-21.9  -9.5   1.2]
+
+== SOLUSDT h=12 n=300  corr(pred,real)=-0.148 CI[-0.26,-0.02] first2/3=-0.187 hold=-0.055 | corr(pred,z)=-0.64 corr(pred,past24)=-0.61 | resid corr=-0.102 CI[-0.22,+0.00] corr(-z,real)=-0.123
+   fade_kronos    n=300 gross=   +8.9bp net=   -2.1bp CI[ -24.4, +28.2] hit=0.50 | holdout n=100 net=  -17.8bp CI[ -53.6, +30.4]
+   follow_kronos  n=300 gross=   -8.9bp net=  -19.9bp CI[ -49.2,  +3.1] hit=0.50 | holdout n=100 net=   -4.2bp CI[ -55.1, +33.2]
+   zscore_revert  n=300 gross=  -10.1bp net=  -21.1bp CI[ -46.2,  +3.7] hit=0.52 | holdout n=100 net=   -1.7bp CI[ -35.2, +40.3]
+   rsi_revert     n=300 gross=  -19.2bp net=  -30.2bp CI[ -56.5,  -6.6] hit=0.50 | holdout n=100 net=  -21.6bp CI[ -66.4, +20.3]
+   fade_AND_z     n=138 gross=   -0.6bp net=   -5.7bp CI[ -17.3, +10.2] hit=0.24 | holdout n=43 net=   -3.5bp CI[ -23.0, +25.3]
+   buyhold        n=300 gross=   +8.3bp net=   -2.7bp CI[ -25.4, +25.9] hit=0.50 | holdout n=100 net=   +2.9bp CI[ -36.9, +46.7]
+   random-shuffled fade net bp p5/p50/p95: [-27.6  -9.    9.1]
+
+== SOLUSDT h=24 n=300  corr(pred,real)=-0.171 CI[-0.34,+0.03] first2/3=-0.241 hold=-0.011 | corr(pred,z)=-0.72 corr(pred,past24)=-0.64 | resid corr=-0.143 CI[-0.32,+0.03] corr(-z,real)=-0.134
+   fade_kronos    n=300 gross=  +43.9bp net=  +32.9bp CI[  -5.4, +86.7] hit=0.52 | holdout n=100 net=  +14.4bp CI[ -58.4, +91.6]
+   follow_kronos  n=300 gross=  -43.9bp net=  -54.9bp CI[-104.7, -13.1] hit=0.48 | holdout n=100 net=  -36.4bp CI[-119.1, +34.1]
+   zscore_revert  n=300 gross=  -12.0bp net=  -23.0bp CI[ -72.5, +24.7] hit=0.53 | holdout n=100 net=  +12.7bp CI[ -57.2,+100.1]
+   rsi_revert     n=300 gross=  -16.2bp net=  -27.2bp CI[ -72.1, +11.4] hit=0.52 | holdout n=100 net=  +11.0bp CI[ -54.9, +70.4]
+   fade_AND_z     n=130 gross=  +16.0bp net=  +11.2bp CI[  -8.2, +38.6] hit=0.24 | holdout n=44 net=  +19.7bp CI[ -25.0, +79.8]
+   buyhold        n=300 gross=  +18.2bp net=   +7.2bp CI[ -40.1, +60.9] hit=0.49 | holdout n=100 net=  +18.3bp CI[ -55.6, +98.6]
+   random-shuffled fade net bp p5/p50/p95: [-35.9  -7.6  19.5]
+
+mechanism: {
+ "BTCUSDT": {
+  "corr_opengap_z": -0.4935516271057387,
+  "mean_opengap_bp": -0.9114526716826369,
+  "corr_opengap_real24": -0.11048775446264705,
+  "slope_predz24_on_z": 0.48193755907925817,
+  "slope_realz24_on_z": 1.0548782599277238
+ },
+ "ETHUSDT": {
+  "corr_opengap_z": -0.38476337052551535,
+  "mean_opengap_bp": -4.96731084162492,
+  "corr_opengap_real24": -0.004046586612293051,
+  "slope_predz24_on_z": 0.39172020998231805,
+  "slope_realz24_on_z": 1.0672448588959207
+ },
+ "SOLUSDT": {
+  "corr_opengap_z": -0.4580565098044649,
+  "mean_opengap_bp": -5.662046328625891,
+  "corr_opengap_real24": -0.05324650747704612,
+  "slope_predz24_on_z": 0.44552677245897065,
+  "slope_realz24_on_z": 1.1699468463240037
+ }
+}

@@ -1,0 +1,7 @@
+BTCUSDT n=300 IC(pred mean,real)=-0.010 hit=0.517 6path-range coverage=0.39 (ideal 5/7=0.71) | vol corr kronos=0.383 trailing24h=0.449 | range corr=0.317 pred/real range ratio=0.98 pv/rv=0.76 | CRPS kronos=1.895% vs point-zero=1.420%
+ETHUSDT n=300 IC(pred mean,real)=-0.065 hit=0.470 6path-range coverage=0.39 (ideal 5/7=0.71) | vol corr kronos=0.317 trailing24h=0.383 | range corr=0.273 pred/real range ratio=1.01 pv/rv=0.80 | CRPS kronos=2.705% vs point-zero=1.855%
+SOLUSDT n=300 IC(pred mean,real)=-0.081 hit=0.477 6path-range coverage=0.34 (ideal 5/7=0.71) | vol corr kronos=0.478 trailing24h=0.548 | range corr=0.406 pred/real range ratio=1.01 pv/rv=0.77 | CRPS kronos=3.001% vs point-zero=2.286%
+--- fair ensemble CRPS (6 members, diag excluded) Kronos vs Gaussian(0, trailing-24h vol*sqrt24) with 6 draws ---
+BTCUSDT n=300 CRPS kronos=1.814%  gauss-trailing7d=1.059%  kronos endpoint spread / trailing vol=0.39
+ETHUSDT n=300 CRPS kronos=2.596%  gauss-trailing7d=1.419%  kronos endpoint spread / trailing vol=0.39
+SOLUSDT n=300 CRPS kronos=2.873%  gauss-trailing7d=1.561%  kronos endpoint spread / trailing vol=0.41

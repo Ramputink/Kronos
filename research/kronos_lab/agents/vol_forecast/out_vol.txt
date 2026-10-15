@@ -1,0 +1,150 @@
+===== BTCUSDT n 300 n_test 200 garch [9.782893471897303e-07, 0.09, 0.8650000000000002]
+ target rv
+   k_rv {'pearson_log_all': np.float64(0.433), 'spearman_all': np.float64(0.408), 'oos_r2': np.float64(0.009), 'oos_qlike': np.float64(0.528)}
+   k_disp {'pearson_log_all': np.float64(0.263), 'spearman_all': np.float64(0.272), 'oos_r2': np.float64(-0.199), 'oos_qlike': np.float64(0.492)}
+   k_hl {'pearson_log_all': np.float64(0.434), 'spearman_all': np.float64(0.423), 'oos_r2': np.float64(0.048), 'oos_qlike': np.float64(0.578)}
+   k_rng {'pearson_log_all': np.float64(0.403), 'spearman_all': np.float64(0.367), 'oos_r2': np.float64(0.012), 'oos_qlike': np.float64(0.526)}
+   trail24 {'pearson_log_all': np.float64(0.394), 'spearman_all': np.float64(0.344), 'oos_r2': np.float64(-0.002), 'oos_qlike': np.float64(0.462)}
+   trail168 {'pearson_log_all': np.float64(0.366), 'spearman_all': np.float64(0.339), 'oos_r2': np.float64(-0.014), 'oos_qlike': np.float64(0.508)}
+   atr {'pearson_log_all': np.float64(0.432), 'spearman_all': np.float64(0.412), 'oos_r2': np.float64(0.032), 'oos_qlike': np.float64(0.52)}
+   ewma {'pearson_log_all': np.float64(0.389), 'spearman_all': np.float64(0.344), 'oos_r2': np.float64(0.01), 'oos_qlike': np.float64(0.487)}
+   garch {'pearson_log_all': np.float64(0.393), 'spearman_all': np.float64(0.404), 'oos_r2': np.float64(-0.042), 'oos_qlike': np.float64(0.465)}
+   ewma+k_rv {'oos_r2': np.float64(0.026), 'coef': [np.float64(-1.473), np.float64(0.077), np.float64(0.514)]}
+   ewma+k_rng {'oos_r2': np.float64(0.045), 'coef': [np.float64(-1.984), np.float64(0.212), np.float64(0.33)]}
+   garch+k_rv {'oos_r2': np.float64(0.041), 'coef': [np.float64(-0.272), np.float64(0.505), np.float64(0.415)]}
+   garch+k_rng {'oos_r2': np.float64(0.039), 'coef': [np.float64(-0.312), np.float64(0.708), np.float64(0.274)]}
+   trail24+k_rv {'oos_r2': np.float64(0.045), 'coef': [np.float64(-1.488), np.float64(0.12), np.float64(0.47)]}
+   trail24+k_rng {'oos_r2': np.float64(0.057), 'coef': [np.float64(-2.067), np.float64(0.212), np.float64(0.304)]}
+   atr+k_rv {'oos_r2': np.float64(0.071), 'coef': [np.float64(-0.77), np.float64(0.366), np.float64(0.313)]}
+   atr+k_rng {'oos_r2': np.float64(0.067), 'coef': [np.float64(-0.969), np.float64(0.474), np.float64(0.169)]}
+ target rng
+   k_rv {'pearson_log_all': np.float64(0.36), 'spearman_all': np.float64(0.329), 'oos_r2': np.float64(0.03), 'oos_qlike': np.float64(0.655)}
+   k_disp {'pearson_log_all': np.float64(0.214), 'spearman_all': np.float64(0.217), 'oos_r2': np.float64(-0.136), 'oos_qlike': np.float64(0.65)}
+   k_hl {'pearson_log_all': np.float64(0.368), 'spearman_all': np.float64(0.363), 'oos_r2': np.float64(0.044), 'oos_qlike': np.float64(0.776)}
+   k_rng {'pearson_log_all': np.float64(0.328), 'spearman_all': np.float64(0.29), 'oos_r2': np.float64(0.011), 'oos_qlike': np.float64(0.676)}
+   trail24 {'pearson_log_all': np.float64(0.33), 'spearman_all': np.float64(0.296), 'oos_r2': np.float64(0.003), 'oos_qlike': np.float64(0.628)}
+   trail168 {'pearson_log_all': np.float64(0.31), 'spearman_all': np.float64(0.29), 'oos_r2': np.float64(-0.013), 'oos_qlike': np.float64(0.696)}
+   atr {'pearson_log_all': np.float64(0.372), 'spearman_all': np.float64(0.365), 'oos_r2': np.float64(0.038), 'oos_qlike': np.float64(0.714)}
+   ewma {'pearson_log_all': np.float64(0.323), 'spearman_all': np.float64(0.294), 'oos_r2': np.float64(0.005), 'oos_qlike': np.float64(0.66)}
+   garch {'pearson_log_all': np.float64(0.322), 'spearman_all': np.float64(0.35), 'oos_r2': np.float64(-0.03), 'oos_qlike': np.float64(0.633)}
+   ewma+k_rv {'oos_r2': np.float64(0.044), 'coef': [np.float64(-1.65), np.float64(0.103), np.float64(0.338)]}
+   ewma+k_rng {'oos_r2': np.float64(0.036), 'coef': [np.float64(-1.985), np.float64(0.188), np.float64(0.223)]}
+   garch+k_rv {'oos_r2': np.float64(0.04), 'coef': [np.float64(-0.508), np.float64(0.492), np.float64(0.262)]}
+   garch+k_rng {'oos_r2': np.float64(0.023), 'coef': [np.float64(-0.543), np.float64(0.614), np.float64(0.176)]}
+   trail24+k_rv {'oos_r2': np.float64(0.055), 'coef': [np.float64(-1.675), np.float64(0.153), np.float64(0.286)]}
+   trail24+k_rng {'oos_r2': np.float64(0.042), 'coef': [np.float64(-2.027), np.float64(0.209), np.float64(0.184)]}
+   atr+k_rv {'oos_r2': np.float64(0.058), 'coef': [np.float64(-0.8), np.float64(0.448), np.float64(0.099)]}
+   atr+k_rng {'oos_r2': np.float64(0.045), 'coef': [np.float64(-0.842), np.float64(0.502), np.float64(0.031)]}
+  VT buy_hold {'gross': {'tot': 0.3044, 'sharpe_ann': 2.659, 'vol_d': 0.0206, 'maxdd': 0.0752}, 'net': {'tot': 0.3037, 'sharpe_ann': 2.654, 'vol_d': 0.0206, 'maxdd': 0.0752}, 'avg_pos': 1.0, 'vol_of_ret_std': 0.0206}
+  VT vt_k_rv {'gross': {'tot': 0.3615, 'sharpe_ann': 2.562, 'vol_d': 0.0254, 'maxdd': 0.0783}, 'net': {'tot': 0.3464, 'sharpe_ann': 2.478, 'vol_d': 0.0254, 'maxdd': 0.0806}, 'avg_pos': 1.251, 'vol_of_ret_std': 0.0254}
+  VT vt_k_disp {'gross': {'tot': 0.3496, 'sharpe_ann': 2.795, 'vol_d': 0.0222, 'maxdd': 0.0757}, 'net': {'tot': 0.3424, 'sharpe_ann': 2.749, 'vol_d': 0.0222, 'maxdd': 0.0761}, 'avg_pos': 1.064, 'vol_of_ret_std': 0.0222}
+  VT vt_k_hl {'gross': {'tot': 0.3828, 'sharpe_ann': 2.544, 'vol_d': 0.027, 'maxdd': 0.0815}, 'net': {'tot': 0.369, 'sharpe_ann': 2.473, 'vol_d': 0.027, 'maxdd': 0.0837}, 'avg_pos': 1.295, 'vol_of_ret_std': 0.027}
+  VT vt_k_rng {'gross': {'tot': 0.3635, 'sharpe_ann': 2.55, 'vol_d': 0.0257, 'maxdd': 0.0798}, 'net': {'tot': 0.3479, 'sharpe_ann': 2.464, 'vol_d': 0.0257, 'maxdd': 0.081}, 'avg_pos': 1.247, 'vol_of_ret_std': 0.0257}
+  VT vt_trail24 {'gross': {'tot': 0.3878, 'sharpe_ann': 2.844, 'vol_d': 0.0239, 'maxdd': 0.0754}, 'net': {'tot': 0.3679, 'sharpe_ann': 2.726, 'vol_d': 0.0239, 'maxdd': 0.0774}, 'avg_pos': 1.227, 'vol_of_ret_std': 0.0239}
+  VT vt_trail168 {'gross': {'tot': 0.3833, 'sharpe_ann': 2.742, 'vol_d': 0.0247, 'maxdd': 0.0857}, 'net': {'tot': 0.38, 'sharpe_ann': 2.724, 'vol_d': 0.0247, 'maxdd': 0.0858}, 'avg_pos': 1.187, 'vol_of_ret_std': 0.0247}
+  VT vt_atr {'gross': {'tot': 0.3937, 'sharpe_ann': 2.766, 'vol_d': 0.0251, 'maxdd': 0.072}, 'net': {'tot': 0.3716, 'sharpe_ann': 2.643, 'vol_d': 0.0251, 'maxdd': 0.0743}, 'avg_pos': 1.288, 'vol_of_ret_std': 0.0251}
+  VT vt_ewma {'gross': {'tot': 0.3576, 'sharpe_ann': 2.605, 'vol_d': 0.0246, 'maxdd': 0.0823}, 'net': {'tot': 0.3424, 'sharpe_ann': 2.518, 'vol_d': 0.0246, 'maxdd': 0.0836}, 'avg_pos': 1.217, 'vol_of_ret_std': 0.0246}
+  VT vt_garch {'gross': {'tot': 0.338, 'sharpe_ann': 2.579, 'vol_d': 0.0236, 'maxdd': 0.0799}, 'net': {'tot': 0.3265, 'sharpe_ann': 2.509, 'vol_d': 0.0236, 'maxdd': 0.0809}, 'avg_pos': 1.154, 'vol_of_ret_std': 0.0236}
+  VT vt_ewma+k_rv {'gross': {'tot': 0.3622, 'sharpe_ann': 2.554, 'vol_d': 0.0255, 'maxdd': 0.0796}, 'net': {'tot': 0.3469, 'sharpe_ann': 2.469, 'vol_d': 0.0255, 'maxdd': 0.0819}, 'avg_pos': 1.259, 'vol_of_ret_std': 0.0255}
+  VT shuffled_k_rv_sizing_net_sharpe {'mean': 2.416, 'p5': 1.698, 'p95': 3.104}
+  VT n_days 100
+===== ETHUSDT n 300 n_test 200 garch [2.917596502065101e-06, 0.1, 0.8200000000000002]
+ target rv
+   k_rv {'pearson_log_all': np.float64(0.37), 'spearman_all': np.float64(0.381), 'oos_r2': np.float64(-0.082), 'oos_qlike': np.float64(0.57)}
+   k_disp {'pearson_log_all': np.float64(0.245), 'spearman_all': np.float64(0.275), 'oos_r2': np.float64(-0.263), 'oos_qlike': np.float64(0.549)}
+   k_hl {'pearson_log_all': np.float64(0.381), 'spearman_all': np.float64(0.383), 'oos_r2': np.float64(-0.043), 'oos_qlike': np.float64(0.6)}
+   k_rng {'pearson_log_all': np.float64(0.349), 'spearman_all': np.float64(0.361), 'oos_r2': np.float64(-0.109), 'oos_qlike': np.float64(0.548)}
+   trail24 {'pearson_log_all': np.float64(0.382), 'spearman_all': np.float64(0.375), 'oos_r2': np.float64(-0.059), 'oos_qlike': np.float64(0.503)}
+   trail168 {'pearson_log_all': np.float64(0.352), 'spearman_all': np.float64(0.347), 'oos_r2': np.float64(-0.053), 'oos_qlike': np.float64(0.607)}
+   atr {'pearson_log_all': np.float64(0.423), 'spearman_all': np.float64(0.408), 'oos_r2': np.float64(-0.01), 'oos_qlike': np.float64(0.563)}
+   ewma {'pearson_log_all': np.float64(0.379), 'spearman_all': np.float64(0.353), 'oos_r2': np.float64(-0.032), 'oos_qlike': np.float64(0.544)}
+   garch {'pearson_log_all': np.float64(0.329), 'spearman_all': np.float64(0.379), 'oos_r2': np.float64(-0.159), 'oos_qlike': np.float64(0.508)}
+   ewma+k_rv {'oos_r2': np.float64(-0.01), 'coef': [np.float64(-2.033), np.float64(0.278), np.float64(0.16)]}
+   ewma+k_rng {'oos_r2': np.float64(-0.019), 'coef': [np.float64(-2.188), np.float64(0.355), np.float64(0.063)]}
+   garch+k_rv {'oos_r2': np.float64(-0.067), 'coef': [np.float64(0.088), np.float64(0.864), np.float64(0.18)]}
+   garch+k_rng {'oos_r2': np.float64(-0.093), 'coef': [np.float64(0.164), np.float64(0.997), np.float64(0.1)]}
+   trail24+k_rv {'oos_r2': np.float64(-0.017), 'coef': [np.float64(-2.17), np.float64(0.241), np.float64(0.156)]}
+   trail24+k_rng {'oos_r2': np.float64(-0.035), 'coef': [np.float64(-2.379), np.float64(0.296), np.float64(0.064)]}
+   atr+k_rv {'oos_r2': np.float64(-0.016), 'coef': [np.float64(-0.846), np.float64(0.607), np.float64(-0.025)]}
+   atr+k_rng {'oos_r2': np.float64(-0.038), 'coef': [np.float64(-0.727), np.float64(0.66), np.float64(-0.073)]}
+ target rng
+   k_rv {'pearson_log_all': np.float64(0.341), 'spearman_all': np.float64(0.333), 'oos_r2': np.float64(-0.036), 'oos_qlike': np.float64(0.83)}
+   k_disp {'pearson_log_all': np.float64(0.208), 'spearman_all': np.float64(0.219), 'oos_r2': np.float64(-0.178), 'oos_qlike': np.float64(0.777)}
+   k_hl {'pearson_log_all': np.float64(0.354), 'spearman_all': np.float64(0.342), 'oos_r2': np.float64(-0.007), 'oos_qlike': np.float64(0.877)}
+   k_rng {'pearson_log_all': np.float64(0.321), 'spearman_all': np.float64(0.318), 'oos_r2': np.float64(-0.062), 'oos_qlike': np.float64(0.791)}
+   trail24 {'pearson_log_all': np.float64(0.353), 'spearman_all': np.float64(0.33), 'oos_r2': np.float64(-0.015), 'oos_qlike': np.float64(0.744)}
+   trail168 {'pearson_log_all': np.float64(0.345), 'spearman_all': np.float64(0.346), 'oos_r2': np.float64(-0.034), 'oos_qlike': np.float64(0.824)}
+   atr {'pearson_log_all': np.float64(0.403), 'spearman_all': np.float64(0.372), 'oos_r2': np.float64(0.042), 'oos_qlike': np.float64(0.843)}
+   ewma {'pearson_log_all': np.float64(0.351), 'spearman_all': np.float64(0.311), 'oos_r2': np.float64(0.004), 'oos_qlike': np.float64(0.819)}
+   garch {'pearson_log_all': np.float64(0.29), 'spearman_all': np.float64(0.314), 'oos_r2': np.float64(-0.101), 'oos_qlike': np.float64(0.718)}
+   ewma+k_rv {'oos_r2': np.float64(0.019), 'coef': [np.float64(-1.719), np.float64(0.296), np.float64(0.1)]}
+   ewma+k_rng {'oos_r2': np.float64(0.009), 'coef': [np.float64(-1.812), np.float64(0.354), np.float64(0.029)]}
+   garch+k_rv {'oos_r2': np.float64(-0.037), 'coef': [np.float64(0.37), np.float64(0.861), np.float64(0.131)]}
+   garch+k_rng {'oos_r2': np.float64(-0.06), 'coef': [np.float64(0.438), np.float64(0.963), np.float64(0.07)]}
+   trail24+k_rv {'oos_r2': np.float64(0.011), 'coef': [np.float64(-1.87), np.float64(0.249), np.float64(0.1)]}
+   trail24+k_rng {'oos_r2': np.float64(-0.005), 'coef': [np.float64(-2.008), np.float64(0.292), np.float64(0.032)]}
+   atr+k_rv {'oos_r2': np.float64(0.026), 'coef': [np.float64(-0.573), np.float64(0.599), np.float64(-0.069)]}
+   atr+k_rng {'oos_r2': np.float64(0.013), 'coef': [np.float64(-0.432), np.float64(0.635), np.float64(-0.096)]}
+  VT buy_hold {'gross': {'tot': 0.392, 'sharpe_ann': 2.418, 'vol_d': 0.0294, 'maxdd': 0.1043}, 'net': {'tot': 0.3912, 'sharpe_ann': 2.414, 'vol_d': 0.0294, 'maxdd': 0.1043}, 'avg_pos': 1.0, 'vol_of_ret_std': 0.0294}
+  VT vt_k_rv {'gross': {'tot': 0.5273, 'sharpe_ann': 2.392, 'vol_d': 0.0395, 'maxdd': 0.1216}, 'net': {'tot': 0.518, 'sharpe_ann': 2.362, 'vol_d': 0.0395, 'maxdd': 0.1226}, 'avg_pos': 1.185, 'vol_of_ret_std': 0.0395}
+  VT vt_k_disp {'gross': {'tot': 0.5106, 'sharpe_ann': 2.543, 'vol_d': 0.0354, 'maxdd': 0.1198}, 'net': {'tot': 0.5007, 'sharpe_ann': 2.508, 'vol_d': 0.0354, 'maxdd': 0.1207}, 'avg_pos': 1.103, 'vol_of_ret_std': 0.0354}
+  VT vt_k_hl {'gross': {'tot': 0.5554, 'sharpe_ann': 2.383, 'vol_d': 0.0416, 'maxdd': 0.1282}, 'net': {'tot': 0.5459, 'sharpe_ann': 2.355, 'vol_d': 0.0416, 'maxdd': 0.1291}, 'avg_pos': 1.221, 'vol_of_ret_std': 0.0416}
+  VT vt_k_rng {'gross': {'tot': 0.5071, 'sharpe_ann': 2.385, 'vol_d': 0.0382, 'maxdd': 0.1157}, 'net': {'tot': 0.4989, 'sharpe_ann': 2.358, 'vol_d': 0.0382, 'maxdd': 0.1165}, 'avg_pos': 1.164, 'vol_of_ret_std': 0.0382}
+  VT vt_trail24 {'gross': {'tot': 0.5285, 'sharpe_ann': 2.582, 'vol_d': 0.0359, 'maxdd': 0.1227}, 'net': {'tot': 0.5113, 'sharpe_ann': 2.521, 'vol_d': 0.0359, 'maxdd': 0.1243}, 'avg_pos': 1.217, 'vol_of_ret_std': 0.0359}
+  VT vt_trail168 {'gross': {'tot': 0.5266, 'sharpe_ann': 2.347, 'vol_d': 0.0405, 'maxdd': 0.1375}, 'net': {'tot': 0.5227, 'sharpe_ann': 2.335, 'vol_d': 0.0405, 'maxdd': 0.1377}, 'avg_pos': 1.224, 'vol_of_ret_std': 0.0405}
+  VT vt_atr {'gross': {'tot': 0.5627, 'sharpe_ann': 2.546, 'vol_d': 0.0387, 'maxdd': 0.1303}, 'net': {'tot': 0.5416, 'sharpe_ann': 2.478, 'vol_d': 0.0387, 'maxdd': 0.1325}, 'avg_pos': 1.272, 'vol_of_ret_std': 0.0387}
+  VT vt_ewma {'gross': {'tot': 0.518, 'sharpe_ann': 2.433, 'vol_d': 0.038, 'maxdd': 0.1331}, 'net': {'tot': 0.5039, 'sharpe_ann': 2.386, 'vol_d': 0.038, 'maxdd': 0.1345}, 'avg_pos': 1.229, 'vol_of_ret_std': 0.038}
+  VT vt_garch {'gross': {'tot': 0.4836, 'sharpe_ann': 2.502, 'vol_d': 0.0344, 'maxdd': 0.1256}, 'net': {'tot': 0.4745, 'sharpe_ann': 2.468, 'vol_d': 0.0344, 'maxdd': 0.126}, 'avg_pos': 1.148, 'vol_of_ret_std': 0.0344}
+  VT vt_ewma+k_rv {'gross': {'tot': 0.5405, 'sharpe_ann': 2.413, 'vol_d': 0.04, 'maxdd': 0.1311}, 'net': {'tot': 0.5278, 'sharpe_ann': 2.373, 'vol_d': 0.04, 'maxdd': 0.1323}, 'avg_pos': 1.233, 'vol_of_ret_std': 0.04}
+  VT shuffled_k_rv_sizing_net_sharpe {'mean': 2.302, 'p5': 1.897, 'p95': 2.711}
+  VT n_days 100
+===== SOLUSDT n 300 n_test 200 garch [2.0126341217031705e-07, 0.02, 0.9750000000000003]
+ target rv
+   k_rv {'pearson_log_all': np.float64(0.5), 'spearman_all': np.float64(0.513), 'oos_r2': np.float64(0.044), 'oos_qlike': np.float64(0.317)}
+   k_disp {'pearson_log_all': np.float64(0.272), 'spearman_all': np.float64(0.298), 'oos_r2': np.float64(-0.317), 'oos_qlike': np.float64(0.365)}
+   k_hl {'pearson_log_all': np.float64(0.544), 'spearman_all': np.float64(0.551), 'oos_r2': np.float64(0.114), 'oos_qlike': np.float64(0.311)}
+   k_rng {'pearson_log_all': np.float64(0.45), 'spearman_all': np.float64(0.446), 'oos_r2': np.float64(-0.02), 'oos_qlike': np.float64(0.322)}
+   trail24 {'pearson_log_all': np.float64(0.532), 'spearman_all': np.float64(0.529), 'oos_r2': np.float64(0.119), 'oos_qlike': np.float64(0.292)}
+   trail168 {'pearson_log_all': np.float64(0.508), 'spearman_all': np.float64(0.542), 'oos_r2': np.float64(0.127), 'oos_qlike': np.float64(0.326)}
+   atr {'pearson_log_all': np.float64(0.562), 'spearman_all': np.float64(0.559), 'oos_r2': np.float64(0.169), 'oos_qlike': np.float64(0.3)}
+   ewma {'pearson_log_all': np.float64(0.545), 'spearman_all': np.float64(0.54), 'oos_r2': np.float64(0.166), 'oos_qlike': np.float64(0.297)}
+   garch {'pearson_log_all': np.float64(0.544), 'spearman_all': np.float64(0.548), 'oos_r2': np.float64(0.162), 'oos_qlike': np.float64(0.299)}
+   ewma+k_rv {'oos_r2': np.float64(0.173), 'coef': [np.float64(-1.221), np.float64(0.402), np.float64(0.234)]}
+   ewma+k_rng {'oos_r2': np.float64(0.17), 'coef': [np.float64(-1.46), np.float64(0.461), np.float64(0.146)]}
+   garch+k_rv {'oos_r2': np.float64(0.165), 'coef': [np.float64(-0.713), np.float64(0.515), np.float64(0.271)]}
+   garch+k_rng {'oos_r2': np.float64(0.163), 'coef': [np.float64(-0.841), np.float64(0.621), np.float64(0.178)]}
+   trail24+k_rv {'oos_r2': np.float64(0.157), 'coef': [np.float64(-1.358), np.float64(0.347), np.float64(0.245)]}
+   trail24+k_rng {'oos_r2': np.float64(0.147), 'coef': [np.float64(-1.645), np.float64(0.399), np.float64(0.152)]}
+   atr+k_rv {'oos_r2': np.float64(0.183), 'coef': [np.float64(-0.333), np.float64(0.582), np.float64(0.127)]}
+   atr+k_rng {'oos_r2': np.float64(0.177), 'coef': [np.float64(-0.392), np.float64(0.632), np.float64(0.062)]}
+ target rng
+   k_rv {'pearson_log_all': np.float64(0.441), 'spearman_all': np.float64(0.456), 'oos_r2': np.float64(0.049), 'oos_qlike': np.float64(0.516)}
+   k_disp {'pearson_log_all': np.float64(0.216), 'spearman_all': np.float64(0.244), 'oos_r2': np.float64(-0.219), 'oos_qlike': np.float64(0.549)}
+   k_hl {'pearson_log_all': np.float64(0.475), 'spearman_all': np.float64(0.49), 'oos_r2': np.float64(0.094), 'oos_qlike': np.float64(0.519)}
+   k_rng {'pearson_log_all': np.float64(0.382), 'spearman_all': np.float64(0.386), 'oos_r2': np.float64(-0.018), 'oos_qlike': np.float64(0.519)}
+   trail24 {'pearson_log_all': np.float64(0.476), 'spearman_all': np.float64(0.478), 'oos_r2': np.float64(0.109), 'oos_qlike': np.float64(0.497)}
+   trail168 {'pearson_log_all': np.float64(0.47), 'spearman_all': np.float64(0.514), 'oos_r2': np.float64(0.12), 'oos_qlike': np.float64(0.563)}
+   atr {'pearson_log_all': np.float64(0.498), 'spearman_all': np.float64(0.499), 'oos_r2': np.float64(0.145), 'oos_qlike': np.float64(0.513)}
+   ewma {'pearson_log_all': np.float64(0.484), 'spearman_all': np.float64(0.487), 'oos_r2': np.float64(0.135), 'oos_qlike': np.float64(0.528)}
+   garch {'pearson_log_all': np.float64(0.486), 'spearman_all': np.float64(0.504), 'oos_r2': np.float64(0.136), 'oos_qlike': np.float64(0.533)}
+   ewma+k_rv {'oos_r2': np.float64(0.145), 'coef': [np.float64(-0.873), np.float64(0.464), np.float64(0.142)]}
+   ewma+k_rng {'oos_r2': np.float64(0.138), 'coef': [np.float64(-1.013), np.float64(0.541), np.float64(0.043)]}
+   garch+k_rv {'oos_r2': np.float64(0.145), 'coef': [np.float64(-0.295), np.float64(0.59), np.float64(0.187)]}
+   garch+k_rng {'oos_r2': np.float64(0.139), 'coef': [np.float64(-0.327), np.float64(0.712), np.float64(0.086)]}
+   trail24+k_rv {'oos_r2': np.float64(0.134), 'coef': [np.float64(-1.042), np.float64(0.386), np.float64(0.165)]}
+   trail24+k_rng {'oos_r2': np.float64(0.119), 'coef': [np.float64(-1.25), np.float64(0.456), np.float64(0.056)]}
+   atr+k_rv {'oos_r2': np.float64(0.153), 'coef': [np.float64(-0.099), np.float64(0.559), np.float64(0.088)]}
+   atr+k_rng {'oos_r2': np.float64(0.144), 'coef': [np.float64(-0.057), np.float64(0.647), np.float64(-0.009)]}
+  VT buy_hold {'gross': {'tot': 0.3074, 'sharpe_ann': 1.937, 'vol_d': 0.0311, 'maxdd': 0.1329}, 'net': {'tot': 0.3067, 'sharpe_ann': 1.934, 'vol_d': 0.0311, 'maxdd': 0.1329}, 'avg_pos': 1.0, 'vol_of_ret_std': 0.0311}
+  VT vt_k_rv {'gross': {'tot': 0.3059, 'sharpe_ann': 1.766, 'vol_d': 0.0355, 'maxdd': 0.1577}, 'net': {'tot': 0.2959, 'sharpe_ann': 1.725, 'vol_d': 0.0355, 'maxdd': 0.159}, 'avg_pos': 1.158, 'vol_of_ret_std': 0.0355}
+  VT vt_k_disp {'gross': {'tot': 0.2959, 'sharpe_ann': 1.859, 'vol_d': 0.0317, 'maxdd': 0.139}, 'net': {'tot': 0.2871, 'sharpe_ann': 1.818, 'vol_d': 0.0316, 'maxdd': 0.1404}, 'avg_pos': 1.026, 'vol_of_ret_std': 0.0317}
+  VT vt_k_hl {'gross': {'tot': 0.3527, 'sharpe_ann': 1.885, 'vol_d': 0.0374, 'maxdd': 0.1673}, 'net': {'tot': 0.3431, 'sharpe_ann': 1.848, 'vol_d': 0.0374, 'maxdd': 0.1687}, 'avg_pos': 1.185, 'vol_of_ret_std': 0.0374}
+  VT vt_k_rng {'gross': {'tot': 0.3271, 'sharpe_ann': 1.834, 'vol_d': 0.036, 'maxdd': 0.1687}, 'net': {'tot': 0.3169, 'sharpe_ann': 1.792, 'vol_d': 0.036, 'maxdd': 0.1701}, 'avg_pos': 1.137, 'vol_of_ret_std': 0.036}
+  VT vt_trail24 {'gross': {'tot': 0.3933, 'sharpe_ann': 2.101, 'vol_d': 0.0358, 'maxdd': 0.151}, 'net': {'tot': 0.3754, 'sharpe_ann': 2.032, 'vol_d': 0.0358, 'maxdd': 0.1539}, 'avg_pos': 1.205, 'vol_of_ret_std': 0.0358}
+  VT vt_trail168 {'gross': {'tot': 0.3659, 'sharpe_ann': 1.928, 'vol_d': 0.0376, 'maxdd': 0.1618}, 'net': {'tot': 0.3623, 'sharpe_ann': 1.915, 'vol_d': 0.0376, 'maxdd': 0.1621}, 'avg_pos': 1.2, 'vol_of_ret_std': 0.0376}
+  VT vt_atr {'gross': {'tot': 0.4166, 'sharpe_ann': 2.123, 'vol_d': 0.0374, 'maxdd': 0.1557}, 'net': {'tot': 0.3986, 'sharpe_ann': 2.058, 'vol_d': 0.0374, 'maxdd': 0.1585}, 'avg_pos': 1.254, 'vol_of_ret_std': 0.0374}
+  VT vt_ewma {'gross': {'tot': 0.3633, 'sharpe_ann': 1.926, 'vol_d': 0.0374, 'maxdd': 0.1552}, 'net': {'tot': 0.349, 'sharpe_ann': 1.872, 'vol_d': 0.0375, 'maxdd': 0.1578}, 'avg_pos': 1.223, 'vol_of_ret_std': 0.0374}
+  VT vt_garch {'gross': {'tot': 0.3471, 'sharpe_ann': 1.856, 'vol_d': 0.0377, 'maxdd': 0.1619}, 'net': {'tot': 0.3401, 'sharpe_ann': 1.829, 'vol_d': 0.0377, 'maxdd': 0.163}, 'avg_pos': 1.212, 'vol_of_ret_std': 0.0377}
+  VT vt_ewma+k_rv {'gross': {'tot': 0.3444, 'sharpe_ann': 1.848, 'vol_d': 0.0377, 'maxdd': 0.1605}, 'net': {'tot': 0.3314, 'sharpe_ann': 1.799, 'vol_d': 0.0377, 'maxdd': 0.1627}, 'avg_pos': 1.231, 'vol_of_ret_std': 0.0377}
+  VT shuffled_k_rv_sizing_net_sharpe {'mean': 1.828, 'p5': 1.322, 'p95': 2.353}
+  VT n_days 100

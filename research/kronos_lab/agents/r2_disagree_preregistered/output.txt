@@ -1,0 +1,163 @@
+/Users/matveypro/kronos_lab/agents/r2_disagree_preregistered/run.py:105: RuntimeWarning: invalid value encountered in divide
+  se = np.sqrt(np.diag(XtXi @ meat @ XtXi)*adj); return b, b/se
+{"n": 300, "mean_24h_bp": 16.6, "by_sym": {"BTCUSDT": 15.2, "ETHUSDT": 5.3, "SOLUSDT": 29.3}}
+== bb_relaxed_BO
+  alone              n= 125 L%= 48.8 g=  -11.5 net=  -22.5 hit=0.46 t=-0.64 CI=[np.float64(-68.2), np.float64(26.9)] SR=-1.00 long=61/-17.1 short=64/-27.6 rp=None
+  kronos_agree       n=  39 L%= 30.8 g=  -19.2 net=  -30.2 hit=0.54 t=-0.48 CI=[np.float64(-122.5), np.float64(54.8)] SR=-0.76 long=12/-51.0 short=27/-20.9 rp=41.8
+  kronos_disagree    n=  86 L%= 57.0 g=   -8.0 net=  -19.0 hit=0.43 t=-0.44 CI=[np.float64(-81.1), np.float64(44.9)] SR=-0.70 long=49/-8.8 short=37/-32.5 rp=57.0
+  mom_agree          n= 113 L%= 48.7 g=  -21.7 net=  -32.7 hit=0.45 t=-0.91 CI=[np.float64(-80.4), np.float64(17.6)] SR=-1.42 long=55/-33.8 short=58/-31.7 rp=11.5
+  mom_agree&kdis     n=  81 L%= 56.8 g=  -18.4 net=  -29.4 hit=0.42 t=-0.69 CI=[np.float64(-91.3), np.float64(36.6)] SR=-1.09 long=46/-24.3 short=35/-36.0 rp=34.4
+  mom_disagree&kdis  n=   5 L%= 60.0 g= +160.1 net= +149.1 hit=0.60 t=+0.56 CI=[np.float64(-123.3), np.float64(510.0)] SR=+0.91 long=3/229.6 short=2/28.4 rp=90.6
+== bb_relaxed_MR
+  alone              n= 125 L%= 51.2 g=  +11.5 net=   +0.5 hit=0.54 t=+0.01 CI=[np.float64(-45.1), np.float64(46.7)] SR=+0.02 long=64/5.6 short=61/-4.9 rp=None
+  kronos_agree       n=  86 L%= 43.0 g=   +8.0 net=   -3.0 hit=0.57 t=-0.07 CI=[np.float64(-67.5), np.float64(62.2)] SR=-0.11 long=37/10.5 short=49/-13.2 rp=41.5
+  kronos_disagree    n=  39 L%= 69.2 g=  +19.2 net=   +8.2 hit=0.46 t=+0.13 CI=[np.float64(-80.4), np.float64(96.6)] SR=+0.21 long=27/-1.1 short=12/29.0 rp=58.1
+  mom_agree          n=  12 L%= 50.0 g=  -84.6 net=  -95.6 hit=0.42 t=-0.68 CI=[np.float64(-286.1), np.float64(63.5)] SR=-1.07 long=6/-33.6 short=6/-157.5 rp=11.6
+  mom_agree&kdis     n=   7 L%= 57.1 g=  -30.6 net=  -41.6 hit=0.43 t=-0.26 CI=[np.float64(-214.8), np.float64(147.5)] SR=-0.44 long=4/-25.3 short=3/-63.5 rp=34.0
+  mom_disagree&kdis  n=  32 L%= 71.9 g=  +30.1 net=  +19.1 hit=0.47 t=+0.28 CI=[np.float64(-73.1), np.float64(123.1)] SR=+0.44 long=23/3.1 short=9/59.9 rp=67.2
+== donchian48
+  alone              n= 300 L%= 58.7 g=  -32.3 net=  -43.3 hit=0.39 t=-2.08 CI=[np.float64(-76.8), np.float64(-8.5)] SR=-3.26 long=176/-24.4 short=124/-70.1 rp=None
+  kronos_agree       n=  85 L%= 50.6 g=  -76.0 net=  -87.0 hit=0.36 t=-2.27 CI=[np.float64(-156.9), np.float64(-25.7)] SR=-3.42 long=43/-36.0 short=42/-139.2 rp=3.0
+  kronos_disagree    n= 215 L%= 61.9 g=  -15.0 net=  -26.0 hit=0.40 t=-1.06 CI=[np.float64(-66.1), np.float64(15.6)] SR=-1.65 long=133/-20.6 short=82/-34.7 rp=96.8
+  mom_agree          n= 179 L%= 59.8 g=  -33.4 net=  -44.4 hit=0.36 t=-1.82 CI=[np.float64(-83.3), np.float64(-4.7)] SR=-2.83 long=107/-54.5 short=72/-29.4 rp=47.1
+  mom_agree&kdis     n= 146 L%= 61.0 g=  -27.4 net=  -38.4 hit=0.38 t=-1.38 CI=[np.float64(-84.7), np.float64(7.9)] SR=-2.14 long=89/-45.1 short=57/-27.9 rp=62.3
+  mom_disagree&kdis  n=  69 L%= 63.8 g=  +11.2 net=   +0.2 hit=0.43 t=+0.00 CI=[np.float64(-65.9), np.float64(77.2)] SR=+0.01 long=44/28.9 short=25/-50.3 rp=94.0
+== ema12_48
+  alone              n= 300 L%= 51.7 g=  -46.0 net=  -57.0 hit=0.37 t=-2.77 CI=[np.float64(-94.6), np.float64(-20.6)] SR=-4.33 long=155/-39.5 short=145/-75.8 rp=None
+  kronos_agree       n=  92 L%= 39.1 g=  -92.6 net= -103.6 hit=0.35 t=-3.01 CI=[np.float64(-162.9), np.float64(-51.3)] SR=-4.42 long=36/-114.8 short=56/-96.4 rp=1.5
+  kronos_disagree    n= 208 L%= 57.2 g=  -25.4 net=  -36.4 hit=0.38 t=-1.44 CI=[np.float64(-81.0), np.float64(8.2)] SR=-2.24 long=119/-16.7 short=89/-62.8 rp=98.0
+  mom_agree          n= 230 L%= 53.0 g=  -35.0 net=  -46.0 hit=0.38 t=-2.01 CI=[np.float64(-85.7), np.float64(0.2)] SR=-3.12 long=122/-40.9 short=108/-51.7 rp=91.4
+  mom_agree&kdis     n= 168 L%= 58.3 g=  -21.3 net=  -32.3 hit=0.39 t=-1.18 CI=[np.float64(-80.8), np.float64(18.4)] SR=-1.84 long=98/-21.1 short=70/-48.0 rp=97.8
+  mom_disagree&kdis  n=  40 L%= 52.5 g=  -42.6 net=  -53.6 hit=0.33 t=-0.83 CI=[np.float64(-139.8), np.float64(48.5)] SR=-1.29 long=21/4.0 short=19/-117.3 rp=53.6
+== macd
+  alone              n= 300 L%= 51.7 g=  +18.1 net=   +7.1 hit=0.54 t=+0.34 CI=[np.float64(-16.5), np.float64(32.6)] SR=+0.53 long=155/22.5 short=145/-9.5 rp=None
+  kronos_agree       n= 148 L%= 43.2 g=   +7.4 net=   -3.6 hit=0.57 t=-0.12 CI=[np.float64(-42.5), np.float64(34.0)] SR=-0.19 long=64/2.3 short=84/-8.1 rp=23.8
+  kronos_disagree    n= 152 L%= 59.9 g=  +28.5 net=  +17.5 hit=0.50 t=+0.59 CI=[np.float64(-23.6), np.float64(64.6)] SR=+0.92 long=91/36.8 short=61/-11.3 rp=75.4
+  mom_agree          n= 194 L%= 53.6 g=   +8.1 net=   -2.9 hit=0.49 t=-0.11 CI=[np.float64(-40.3), np.float64(41.0)] SR=-0.17 long=104/15.6 short=90/-24.3 rp=18.8
+  mom_agree&kdis     n= 122 L%= 59.0 g=   +5.3 net=   -5.7 hit=0.43 t=-0.17 CI=[np.float64(-55.9), np.float64(53.6)] SR=-0.26 long=72/17.3 short=50/-38.8 rp=24.0
+  mom_disagree&kdis  n=  30 L%= 63.3 g= +122.6 net= +111.6 hit=0.77 t=+2.03 CI=[np.float64(45.2), np.float64(199.0)] SR=+2.88 long=19/110.6 short=11/113.3 rp=99.2
+== pitchfork_rev_k6
+  alone              n= 214 L%= 56.5 g=   +9.1 net=   -1.9 hit=0.55 t=-0.08 CI=[np.float64(-30.6), np.float64(25.3)] SR=-0.13 long=121/15.2 short=93/-24.2 rp=None
+  kronos_agree       n= 112 L%= 48.2 g=   -4.7 net=  -15.7 hit=0.58 t=-0.49 CI=[np.float64(-61.9), np.float64(26.6)] SR=-0.77 long=54/1.8 short=58/-32.0 rp=20.8
+  kronos_disagree    n= 102 L%= 65.7 g=  +24.2 net=  +13.2 hit=0.52 t=+0.38 CI=[np.float64(-37.1), np.float64(61.4)] SR=+0.59 long=67/26.0 short=35/-11.3 rp=80.2
+  mom_agree          n=  84 L%= 60.7 g=   -5.0 net=  -16.0 hit=0.51 t=-0.47 CI=[np.float64(-66.8), np.float64(33.3)] SR=-0.74 long=51/2.4 short=33/-44.4 rp=26.2
+  mom_agree&kdis     n=  58 L%= 69.0 g=  +17.0 net=   +6.0 hit=0.53 t=+0.15 CI=[np.float64(-50.3), np.float64(65.4)] SR=+0.23 long=40/15.9 short=18/-15.9 rp=62.6
+  mom_disagree&kdis  n=  44 L%= 61.4 g=  +33.7 net=  +22.7 hit=0.50 t=+0.37 CI=[np.float64(-67.4), np.float64(117.9)] SR=+0.58 long=27/40.9 short=17/-6.3 rp=77.5
+== rsi14_35_65
+  alone              n=  60 L%= 45.0 g=  +52.1 net=  +41.1 hit=0.67 t=+1.01 CI=[np.float64(-24.6), np.float64(103.4)] SR=+1.57 long=27/39.6 short=33/42.4 rp=None
+  kronos_agree       n=  52 L%= 42.3 g=  +34.8 net=  +23.8 hit=0.64 t=+0.53 CI=[np.float64(-37.9), np.float64(93.3)] SR=+0.83 long=22/27.2 short=30/21.3 rp=5.5
+  kronos_disagree    n=   8 L%= 62.5 g= +165.0 net= +154.0 hit=0.88 t=+2.13 CI=[np.float64(65.4), np.float64(257.6)] SR=+2.36 long=5/94.5 short=3/253.2 rp=94.2
+  mom_agree          n=0
+  mom_agree&kdis     n=0
+  mom_disagree&kdis  n=   8 L%= 62.5 g= +165.0 net= +154.0 hit=0.88 t=+2.13 CI=[np.float64(63.2), np.float64(249.8)] SR=+2.36 long=5/94.5 short=3/253.2 rp=94.7
+== ALL_RULES_STACKED
+  alone              n=1424 L%= 53.3 g=   -9.1 net=  -20.1 hit=0.47 t=-2.09 CI=[np.float64(-31.7), np.float64(-8.6)] SR=-4.10 long=759/-6.2 short=665/-36.1 rp=None
+  kronos_agree       n= 614 L%= 43.6 g=  -20.6 net=  -31.6 hit=0.52 t=-2.19 CI=[np.float64(-69.8), np.float64(2.2)] SR=-1.46 long=268/-18.9 short=346/-41.5 rp=7.3
+  kronos_disagree    n= 810 L%= 60.6 g=   -0.4 net=  -11.4 hit=0.44 t=-0.89 CI=[np.float64(-50.3), np.float64(29.0)] SR=-0.11 long=491/0.7 short=319/-30.1 rp=92.7
+  mom_agree          n= 812 L%= 54.8 g=  -20.1 net=  -31.1 hit=0.43 t=-2.51 CI=[np.float64(-65.8), np.float64(5.2)] SR=-1.34 long=445/-25.0 short=367/-38.5 rp=3.1
+  mom_agree&kdis     n= 582 L%= 60.0 g=  -13.1 net=  -24.1 hit=0.42 t=-1.65 CI=[np.float64(-67.5), np.float64(23.1)] SR=-0.66 long=349/-15.6 short=233/-37.0 rp=30.8
+  mom_disagree&kdis  n= 228 L%= 62.3 g=  +32.1 net=  +21.1 hit=0.50 t=+0.80 CI=[np.float64(-43.7), np.float64(90.2)] SR=+0.71 long=142/40.8 short=86/-11.5 rp=99.6
+{
+ "primary_kmed": {
+  "coef_bp": {
+   "const": -29.6,
+   "kdis": 28.2,
+   "mom_agree": -36.2,
+   "long": 26.4
+  },
+  "t": {
+   "kdis": 0.82,
+   "mom_agree": -1.0,
+   "long": 0.72
+  }
+ },
+ "sec_kmean": {
+  "coef_bp": {
+   "const": -40.4,
+   "kdis": 53.6,
+   "mom_agree": -41.3,
+   "long": 24.7
+  },
+  "t": {
+   "kdis": 1.55,
+   "mom_agree": -1.19,
+   "long": 0.67
+  }
+ },
+ "sec_kcons": {
+  "coef_bp": {
+   "const": -30.7,
+   "kdis": 38.9,
+   "mom_agree": -38.5,
+   "long": 25.0
+  },
+  "t": {
+   "kdis": 1.24,
+   "mom_agree": -1.09,
+   "long": 0.68
+  }
+ },
+ "per_rule": {
+  "bb_relaxed_BO": {
+   "kdis_bp": 23.7,
+   "t_kdis": 0.46,
+   "t_mom": -1.18,
+   "t_long": 0.09,
+   "n": 125
+  },
+  "bb_relaxed_MR": {
+   "kdis_bp": 23.7,
+   "t_kdis": 0.46,
+   "t_mom": -1.18,
+   "t_long": 0.09,
+   "n": 125
+  },
+  "donchian48": {
+   "kdis_bp": 62.0,
+   "t_kdis": 1.84,
+   "t_mom": -0.55,
+   "t_long": 1.14,
+   "n": 300
+  },
+  "ema12_48": {
+   "kdis_bp": 57.6,
+   "t_kdis": 1.82,
+   "t_mom": 0.93,
+   "t_long": 0.74,
+   "n": 300
+  },
+  "macd": {
+   "kdis_bp": 28.8,
+   "t_kdis": 0.89,
+   "t_mom": -1.18,
+   "t_long": 0.83,
+   "n": 300
+  },
+  "pitchfork_rev_k6": {
+   "kdis_bp": 35.5,
+   "t_kdis": 0.9,
+   "t_mom": -0.96,
+   "t_long": 0.92,
+   "n": 214
+  },
+  "rsi14_35_65": {
+   "kdis_bp": 133.3,
+   "t_kdis": 2.36,
+   "t_mom": NaN,
+   "t_long": -0.27,
+   "n": 60
+  }
+ },
+ "IC_disagree_strength_vs_tradeRet": -0.054,
+ "IC_per_rule": {
+  "bb_relaxed_BO": -0.068,
+  "bb_relaxed_MR": -0.068,
+  "donchian48": 0.047,
+  "ema12_48": 0.08,
+  "macd": -0.047,
+  "pitchfork_rev_k6": -0.062,
+  "rsi14_35_65": 0.077
+ },
+ "IC_kronos_raw_vs_ret_holdout": 0.041,
+ "corr_kdis_magree": 0.344
+}

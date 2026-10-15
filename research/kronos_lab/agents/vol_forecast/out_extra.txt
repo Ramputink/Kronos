@@ -1,0 +1,42 @@
+== BTCUSDT n 300
+ raw scale: mean k_rv/rv=0.89  ewma/rv=1.23 garch/rv=1.53
+ corr(log k_rv, log atr)=0.70, corr(log k_rv, log ewma)=0.75
+ partial corr(k_rv, rv | atr) = 0.201  block-boot 90% CI [0.115, 0.279]
+ partial corr(k_rv, rv | ewma) = 0.232  block-boot 90% CI [0.122, 0.326]
+ partial corr(k_rv, rv | garch) = 0.243  block-boot 90% CI [0.149, 0.342]
+ corr(k_rv - ewma (log), log rv - log ewma) = 0.254
+ partial corr(k_rv, rv | atr, ewma, weekend share, origin hour) = 0.299
+ corr(k_rv, weekend share)=-0.08 corr(rv, weekend share)=-0.58
+ OOS R2 (calib first 1/3): atr+ewma+cal=0.296  +k_rv=0.354  | cal only=0.065  k_rv+cal=0.348
+ VT net n=100 | B&H sharpe=2.66 tot=0.304 maxdd=0.075 std=0.0206
+   atr+ewma+cal        sharpe=2.88 tot=0.359 maxdd=0.064 std=0.0219
+   atr+ewma+cal+k_rv   sharpe=2.87 tot=0.363 maxdd=0.064 std=0.0222
+   k_rv only           sharpe=2.48 tot=0.346 maxdd=0.081 std=0.0254
+== ETHUSDT n 300
+ raw scale: mean k_rv/rv=0.93  ewma/rv=1.22 garch/rv=1.55
+ corr(log k_rv, log atr)=0.73, corr(log k_rv, log ewma)=0.75
+ partial corr(k_rv, rv | atr) = 0.097  block-boot 90% CI [0.029, 0.206]
+ partial corr(k_rv, rv | ewma) = 0.140  block-boot 90% CI [0.060, 0.242]
+ partial corr(k_rv, rv | garch) = 0.224  block-boot 90% CI [0.129, 0.338]
+ corr(k_rv - ewma (log), log rv - log ewma) = 0.155
+ partial corr(k_rv, rv | atr, ewma, weekend share, origin hour) = 0.181
+ corr(k_rv, weekend share)=-0.06 corr(rv, weekend share)=-0.48
+ OOS R2 (calib first 1/3): atr+ewma+cal=0.106  +k_rv=0.136  | cal only=-0.136  k_rv+cal=0.144
+ VT net n=100 | B&H sharpe=2.42 tot=0.392 maxdd=0.104 std=0.0294
+   atr+ewma+cal        sharpe=2.81 tot=0.540 maxdd=0.105 std=0.0329
+   atr+ewma+cal+k_rv   sharpe=2.80 tot=0.566 maxdd=0.103 std=0.0343
+   k_rv only           sharpe=2.36 tot=0.518 maxdd=0.123 std=0.0395
+== SOLUSDT n 300
+ raw scale: mean k_rv/rv=0.86  ewma/rv=1.12 garch/rv=1.23
+ corr(log k_rv, log atr)=0.77, corr(log k_rv, log ewma)=0.79
+ partial corr(k_rv, rv | atr) = 0.123  block-boot 90% CI [0.027, 0.254]
+ partial corr(k_rv, rv | ewma) = 0.133  block-boot 90% CI [0.049, 0.251]
+ partial corr(k_rv, rv | garch) = 0.128  block-boot 90% CI [0.036, 0.253]
+ corr(k_rv - ewma (log), log rv - log ewma) = 0.178
+ partial corr(k_rv, rv | atr, ewma, weekend share, origin hour) = 0.130
+ corr(k_rv, weekend share)=-0.02 corr(rv, weekend share)=-0.32
+ OOS R2 (calib first 1/3): atr+ewma+cal=0.242  +k_rv=0.255  | cal only=-0.365  k_rv+cal=0.135
+ VT net n=100 | B&H sharpe=1.94 tot=0.307 maxdd=0.133 std=0.0311
+   atr+ewma+cal        sharpe=2.32 tot=0.441 maxdd=0.145 std=0.0351
+   atr+ewma+cal+k_rv   sharpe=2.25 tot=0.426 maxdd=0.148 std=0.0353
+   k_rv only           sharpe=1.72 tot=0.296 maxdd=0.159 std=0.0355

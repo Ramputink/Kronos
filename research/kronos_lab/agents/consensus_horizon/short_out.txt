@@ -1,0 +1,48 @@
+== BTCUSDT W=300
+ h=1: IC=+0.093 (1st2/3 +0.068, last1/3 +0.154)  IC(past 1h ret)=-0.090 IC(last-1h ret)=-0.129
+    K sign: n=300 gross=+1.8bp net=-9.2bp hit=0.54 | K cons>=5: n=142 gross=-1.0bp net=-12.0bp hit=0.51 | K sign last1/3: n=100 gross=+2.6bp net=-8.4bp hit=0.56
+    mom_h: n=300 gross=-2.1bp net=-13.1bp hit=0.46 | K&mom agree: n=120 gross=-0.3bp net=-11.3bp hit=0.51 | mean|r_h|=22bp
+ h=2: IC=+0.060 (1st2/3 +0.038, last1/3 +0.096)  IC(past 2h ret)=-0.091 IC(last-1h ret)=-0.127
+    K sign: n=300 gross=+4.6bp net=-6.4bp hit=0.52 | K cons>=5: n=129 gross=+5.8bp net=-5.2bp hit=0.57 | K sign last1/3: n=100 gross=+3.3bp net=-7.7bp hit=0.54
+    mom_h: n=300 gross=-2.6bp net=-13.6bp hit=0.46 | K&mom agree: n=120 gross=+2.5bp net=-8.5bp hit=0.47 | mean|r_h|=29bp
+ h=3: IC=+0.100 (1st2/3 +0.097, last1/3 +0.110)  IC(past 3h ret)=-0.010 IC(last-1h ret)=-0.147
+    K sign: n=300 gross=+3.0bp net=-8.0bp hit=0.52 | K cons>=5: n=119 gross=-0.4bp net=-11.4bp hit=0.50 | K sign last1/3: n=100 gross=+8.7bp net=-2.3bp hit=0.53
+    mom_h: n=299 gross=+0.1bp net=-10.9bp hit=0.52 | K&mom agree: n=117 gross=+4.2bp net=-6.8bp hit=0.55 | mean|r_h|=42bp
+ h=4: IC=+0.046 (1st2/3 +0.010, last1/3 +0.152)  IC(past 4h ret)=-0.120 IC(last-1h ret)=-0.111
+    K sign: n=300 gross=+0.8bp net=-10.2bp hit=0.51 | K cons>=5: n=113 gross=+0.4bp net=-10.6bp hit=0.53 | K sign last1/3: n=100 gross=+9.3bp net=-1.7bp hit=0.53
+    mom_h: n=300 gross=-10.1bp net=-21.1bp hit=0.45 | K&mom agree: n=123 gross=-11.4bp net=-22.4bp hit=0.45 | mean|r_h|=55bp
+ h=6: IC=-0.064 (1st2/3 -0.056, last1/3 -0.071)  IC(past 6h ret)=-0.129 IC(last-1h ret)=-0.051
+    K sign: n=300 gross=-7.3bp net=-18.3bp hit=0.47 | K cons>=5: n=123 gross=-10.6bp net=-21.6bp hit=0.50 | K sign last1/3: n=100 gross=-11.1bp net=-22.1bp hit=0.42
+    mom_h: n=300 gross=-8.9bp net=-19.9bp hit=0.41 | K&mom agree: n=130 gross=-18.7bp net=-29.7bp hit=0.37 | mean|r_h|=75bp
+== ETHUSDT W=300
+ h=1: IC=+0.157 (1st2/3 +0.161, last1/3 +0.159)  IC(past 1h ret)=-0.097 IC(last-1h ret)=-0.120
+    K sign: n=300 gross=+1.8bp net=-9.2bp hit=0.55 | K cons>=5: n=140 gross=+4.8bp net=-6.2bp hit=0.63 | K sign last1/3: n=100 gross=+1.5bp net=-9.5bp hit=0.56
+    mom_h: n=300 gross=-1.1bp net=-12.1bp hit=0.45 | K&mom agree: n=130 gross=+0.8bp net=-10.2bp hit=0.49 | mean|r_h|=30bp
+ h=2: IC=+0.159 (1st2/3 +0.090, last1/3 +0.277)  IC(past 2h ret)=-0.059 IC(last-1h ret)=-0.160
+    K sign: n=300 gross=+7.0bp net=-4.0bp hit=0.58 | K cons>=5: n=116 gross=+6.2bp net=-4.8bp hit=0.56 | K sign last1/3: n=100 gross=+11.1bp net=+0.1bp hit=0.63
+    mom_h: n=300 gross=+0.2bp net=-10.8bp hit=0.45 | K&mom agree: n=143 gross=+7.6bp net=-3.4bp hit=0.54 | mean|r_h|=41bp
+ h=3: IC=+0.098 (1st2/3 +0.113, last1/3 +0.025)  IC(past 3h ret)=-0.034 IC(last-1h ret)=-0.186
+    K sign: n=300 gross=+1.6bp net=-9.4bp hit=0.56 | K cons>=5: n=114 gross=+4.9bp net=-6.1bp hit=0.57 | K sign last1/3: n=100 gross=-3.7bp net=-14.7bp hit=0.55
+    mom_h: n=299 gross=-0.9bp net=-11.9bp hit=0.49 | K&mom agree: n=138 gross=+0.6bp net=-10.4bp hit=0.55 | mean|r_h|=55bp
+ h=4: IC=+0.051 (1st2/3 +0.079, last1/3 -0.056)  IC(past 4h ret)=-0.157 IC(last-1h ret)=-0.146
+    K sign: n=300 gross=+0.8bp net=-10.2bp hit=0.51 | K cons>=5: n=136 gross=+8.9bp net=-2.1bp hit=0.50 | K sign last1/3: n=100 gross=-13.1bp net=-24.1bp hit=0.52
+    mom_h: n=300 gross=-13.0bp net=-24.0bp hit=0.44 | K&mom agree: n=138 gross=-13.3bp net=-24.3bp hit=0.44 | mean|r_h|=72bp
+ h=6: IC=+0.035 (1st2/3 +0.040, last1/3 +0.039)  IC(past 6h ret)=-0.164 IC(last-1h ret)=-0.099
+    K sign: n=300 gross=-1.3bp net=-12.3bp hit=0.52 | K cons>=5: n=124 gross=-8.3bp net=-19.3bp hit=0.49 | K sign last1/3: n=100 gross=+5.2bp net=-5.8bp hit=0.54
+    mom_h: n=300 gross=-15.6bp net=-26.6bp hit=0.43 | K&mom agree: n=131 gross=-19.4bp net=-30.4bp hit=0.44 | mean|r_h|=97bp
+== SOLUSDT W=300
+ h=1: IC=+0.065 (1st2/3 +0.057, last1/3 +0.073)  IC(past 1h ret)=-0.090 IC(last-1h ret)=-0.129
+    K sign: n=300 gross=-0.3bp net=-11.3bp hit=0.56 | K cons>=5: n=129 gross=-2.6bp net=-13.6bp hit=0.53 | K sign last1/3: n=100 gross=+1.2bp net=-9.8bp hit=0.54
+    mom_h: n=294 gross=-2.3bp net=-13.3bp hit=0.46 | K&mom agree: n=130 gross=-2.8bp net=-13.8bp hit=0.53 | mean|r_h|=37bp
+ h=2: IC=+0.038 (1st2/3 -0.039, last1/3 +0.161)  IC(past 2h ret)=-0.107 IC(last-1h ret)=-0.149
+    K sign: n=300 gross=-1.2bp net=-12.2bp hit=0.50 | K cons>=5: n=111 gross=-4.1bp net=-15.1bp hit=0.48 | K sign last1/3: n=100 gross=+2.2bp net=-8.8bp hit=0.56
+    mom_h: n=299 gross=-5.4bp net=-16.4bp hit=0.47 | K&mom agree: n=140 gross=-6.7bp net=-17.7bp hit=0.49 | mean|r_h|=52bp
+ h=3: IC=+0.058 (1st2/3 +0.057, last1/3 +0.057)  IC(past 3h ret)=-0.048 IC(last-1h ret)=-0.154
+    K sign: n=300 gross=+0.1bp net=-10.9bp hit=0.54 | K cons>=5: n=114 gross=+5.6bp net=-5.4bp hit=0.54 | K sign last1/3: n=100 gross=-8.2bp net=-19.2bp hit=0.53
+    mom_h: n=297 gross=-3.8bp net=-14.8bp hit=0.44 | K&mom agree: n=131 gross=-4.2bp net=-15.2bp hit=0.47 | mean|r_h|=67bp
+ h=4: IC=-0.036 (1st2/3 -0.046, last1/3 -0.033)  IC(past 4h ret)=-0.129 IC(last-1h ret)=-0.141
+    K sign: n=300 gross=-5.1bp net=-16.1bp hit=0.52 | K cons>=5: n=126 gross=-17.2bp net=-28.2bp hit=0.46 | K sign last1/3: n=100 gross=-8.3bp net=-19.3bp hit=0.50
+    mom_h: n=296 gross=-9.7bp net=-20.7bp hit=0.44 | K&mom agree: n=126 gross=-16.8bp net=-27.8bp hit=0.46 | mean|r_h|=85bp
+ h=6: IC=-0.010 (1st2/3 -0.001, last1/3 -0.029)  IC(past 6h ret)=-0.056 IC(last-1h ret)=-0.058
+    K sign: n=300 gross=-2.9bp net=-13.9bp hit=0.52 | K cons>=5: n=141 gross=-25.1bp net=-36.1bp hit=0.49 | K sign last1/3: n=100 gross=-8.9bp net=-19.9bp hit=0.49
+    mom_h: n=300 gross=-6.6bp net=-17.6bp hit=0.47 | K&mom agree: n=115 gross=-12.4bp net=-23.4bp hit=0.50 | mean|r_h|=116bp

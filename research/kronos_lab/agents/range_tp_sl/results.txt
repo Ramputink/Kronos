@@ -1,0 +1,120 @@
+
+=== BTCUSDT n=300 (train 200, test 100) ===
+kronos_env  raw: mean width 4.79% | realised range 2.96% | both inside 44.0% | high inside 69.3% | low inside 71.0%
+kronos_med  raw: mean width 2.71% | realised range 2.96% | both inside 11.3% | high inside 41.0% | low inside 51.3%
+corr(log width kronos_env, log realised range) = 0.324
+corr(log width kronos_sym, log realised range) = 0.324
+corr(log width kronos_med, log realised range) = 0.321
+corr(log width atr, log realised range) = 0.371
+corr(log width vol, log realised range) = 0.307
+OOS R2 log-range [atr only] = -0.066  coefs [-2.011  0.549]
+OOS R2 log-range [kronos only] = 0.002  coefs [-2.458  0.372]
+OOS R2 log-range [atr+kronos] = -0.038  coefs [-1.958  0.47   0.09 ]
+corr(kronos up-down width skew, realised up-down) = -0.189
+target 50% kronos_env  k=1.17 test containment 53.0% mean width 5.42%
+target 50% kronos_sym  k=0.96 test containment 54.0% mean width 4.42%
+target 50% kronos_med  k=2.42 test containment 51.0% mean width 5.69%
+target 50% atr         k=0.76 test containment 44.0% mean width 3.93%
+target 50% vol         k=1.01 test containment 52.0% mean width 3.85%
+target 50% const       k=20.24 test containment 56.0% mean width 4.05%
+target 70% kronos_env  k=1.96 test containment 76.0% mean width 9.08%
+target 70% kronos_sym  k=1.35 test containment 73.0% mean width 6.23%
+target 70% kronos_med  k=3.68 test containment 67.0% mean width 8.65%
+target 70% atr         k=1.02 test containment 60.0% mean width 5.28%
+target 70% vol         k=1.36 test containment 67.0% mean width 5.16%
+target 70% const       k=25.53 test containment 64.0% mean width 5.11%
+-- all (n=300): buy&hold 24h mean 0.059%  (gross)
+   kronos_env  GRID gross -0.150% net -0.227% stopped 28% | LONG BRACKET gross -0.104% net -0.214%
+   kronos_sym  GRID gross -0.090% net -0.197% stopped 29% | LONG BRACKET gross -0.068% net -0.178%
+   kronos_med  GRID gross -0.061% net -0.137% stopped 31% | LONG BRACKET gross -0.006% net -0.116%
+   atr         GRID gross -0.121% net -0.229% stopped 33% | LONG BRACKET gross -0.085% net -0.195%
+   vol         GRID gross -0.134% net -0.242% stopped 31% | LONG BRACKET gross -0.102% net -0.212%
+   const       GRID gross -0.151% net -0.259% stopped 32% | LONG BRACKET gross -0.072% net -0.182%
+-- test (n=100): buy&hold 24h mean 0.152%  (gross)
+   kronos_env  GRID gross +0.004% net -0.072% stopped 24% | LONG BRACKET gross +0.065% net -0.045%
+   kronos_sym  GRID gross -0.010% net -0.116% stopped 27% | LONG BRACKET gross +0.003% net -0.107%
+   kronos_med  GRID gross +0.046% net -0.028% stopped 33% | LONG BRACKET gross +0.156% net +0.046%
+   atr         GRID gross -0.073% net -0.178% stopped 40% | LONG BRACKET gross +0.024% net -0.086%
+   vol         GRID gross -0.044% net -0.152% stopped 33% | LONG BRACKET gross +0.045% net -0.065%
+   const       GRID gross -0.042% net -0.147% stopped 36% | LONG BRACKET gross +0.089% net -0.021%
+shuffled-kronos-width baseline (20 reps, test): containment 71.1% width 8.96% grid net -0.070% (sd 0.055)
+
+=== ETHUSDT n=300 (train 200, test 100) ===
+kronos_env  raw: mean width 6.60% | realised range 4.02% | both inside 40.3% | high inside 65.7% | low inside 71.0%
+kronos_med  raw: mean width 3.84% | realised range 4.02% | both inside 10.3% | high inside 42.0% | low inside 51.3%
+corr(log width kronos_env, log realised range) = 0.285
+corr(log width kronos_sym, log realised range) = 0.285
+corr(log width kronos_med, log realised range) = 0.326
+corr(log width atr, log realised range) = 0.400
+corr(log width vol, log realised range) = 0.343
+OOS R2 log-range [atr only] = -0.061  coefs [-1.659  0.629]
+OOS R2 log-range [kronos only] = -0.113  coefs [-2.336  0.349]
+OOS R2 log-range [atr+kronos] = -0.066  coefs [-1.642  0.559  0.072]
+corr(kronos up-down width skew, realised up-down) = -0.146
+target 50% kronos_env  k=1.24 test containment 55.0% mean width 7.46%
+target 50% kronos_sym  k=0.96 test containment 54.0% mean width 5.79%
+target 50% kronos_med  k=2.48 test containment 52.0% mean width 7.96%
+target 50% atr         k=0.75 test containment 49.0% mean width 5.17%
+target 50% vol         k=1.08 test containment 55.0% mean width 5.36%
+target 50% const       k=27.12 test containment 56.0% mean width 5.42%
+target 70% kronos_env  k=1.94 test containment 75.0% mean width 11.65%
+target 70% kronos_sym  k=1.43 test containment 70.0% mean width 8.59%
+target 70% kronos_med  k=3.90 test containment 77.0% mean width 12.54%
+target 70% atr         k=1.03 test containment 68.0% mean width 7.18%
+target 70% vol         k=1.35 test containment 68.0% mean width 6.70%
+target 70% const       k=35.80 test containment 75.0% mean width 7.16%
+-- all (n=300): buy&hold 24h mean 0.127%  (gross)
+   kronos_env  GRID gross -0.192% net -0.268% stopped 28% | LONG BRACKET gross -0.068% net -0.178%
+   kronos_sym  GRID gross -0.112% net -0.216% stopped 30% | LONG BRACKET gross -0.041% net -0.151%
+   kronos_med  GRID gross -0.130% net -0.205% stopped 28% | LONG BRACKET gross -0.057% net -0.167%
+   atr         GRID gross -0.169% net -0.275% stopped 31% | LONG BRACKET gross -0.092% net -0.202%
+   vol         GRID gross -0.110% net -0.218% stopped 31% | LONG BRACKET gross +0.045% net -0.065%
+   const       GRID gross -0.161% net -0.267% stopped 28% | LONG BRACKET gross -0.020% net -0.130%
+-- test (n=100): buy&hold 24h mean 0.053%  (gross)
+   kronos_env  GRID gross -0.113% net -0.192% stopped 25% | LONG BRACKET gross -0.072% net -0.182%
+   kronos_sym  GRID gross -0.036% net -0.136% stopped 30% | LONG BRACKET gross +0.037% net -0.073%
+   kronos_med  GRID gross -0.036% net -0.116% stopped 23% | LONG BRACKET gross -0.009% net -0.119%
+   atr         GRID gross -0.097% net -0.201% stopped 32% | LONG BRACKET gross +0.050% net -0.060%
+   vol         GRID gross -0.068% net -0.173% stopped 32% | LONG BRACKET gross +0.084% net -0.026%
+   const       GRID gross -0.105% net -0.208% stopped 25% | LONG BRACKET gross -0.030% net -0.140%
+shuffled-kronos-width baseline (20 reps, test): containment 72.9% width 13.17% grid net -0.140% (sd 0.065)
+
+=== SOLUSDT n=300 (train 200, test 100) ===
+kronos_env  raw: mean width 7.86% | realised range 4.69% | both inside 44.0% | high inside 66.7% | low inside 75.0%
+kronos_med  raw: mean width 4.43% | realised range 4.69% | both inside 8.0% | high inside 39.3% | low inside 53.3%
+corr(log width kronos_env, log realised range) = 0.362
+corr(log width kronos_sym, log realised range) = 0.362
+corr(log width kronos_med, log realised range) = 0.368
+corr(log width atr, log realised range) = 0.494
+corr(log width vol, log realised range) = 0.468
+OOS R2 log-range [atr only] = -0.062  coefs [-1.351  0.738]
+OOS R2 log-range [kronos only] = -0.206  coefs [-1.926  0.476]
+OOS R2 log-range [atr+kronos] = -0.073  coefs [-1.328  0.652  0.088]
+corr(kronos up-down width skew, realised up-down) = -0.222
+target 50% kronos_env  k=1.14 test containment 54.0% mean width 9.44%
+target 50% kronos_sym  k=0.92 test containment 48.0% mean width 7.66%
+target 50% kronos_med  k=2.47 test containment 52.0% mean width 10.70%
+target 50% atr         k=0.80 test containment 48.0% mean width 7.33%
+target 50% vol         k=1.11 test containment 49.0% mean width 6.86%
+target 50% const       k=29.02 test containment 43.0% mean width 5.80%
+target 70% kronos_env  k=1.77 test containment 76.0% mean width 14.73%
+target 70% kronos_sym  k=1.24 test containment 63.0% mean width 10.32%
+target 70% kronos_med  k=3.82 test containment 75.0% mean width 16.54%
+target 70% atr         k=1.00 test containment 67.0% mean width 9.20%
+target 70% vol         k=1.44 test containment 70.0% mean width 8.93%
+target 70% const       k=40.98 test containment 63.0% mean width 8.20%
+-- all (n=300): buy&hold 24h mean 0.182%  (gross)
+   kronos_env  GRID gross -0.132% net -0.207% stopped 28% | LONG BRACKET gross +0.055% net -0.055%
+   kronos_sym  GRID gross -0.142% net -0.249% stopped 32% | LONG BRACKET gross -0.022% net -0.132%
+   kronos_med  GRID gross -0.048% net -0.116% stopped 28% | LONG BRACKET gross +0.042% net -0.068%
+   atr         GRID gross -0.115% net -0.223% stopped 31% | LONG BRACKET gross +0.013% net -0.097%
+   vol         GRID gross -0.100% net -0.208% stopped 30% | LONG BRACKET gross +0.042% net -0.068%
+   const       GRID gross -0.144% net -0.251% stopped 32% | LONG BRACKET gross +0.034% net -0.076%
+-- test (n=100): buy&hold 24h mean 0.293%  (gross)
+   kronos_env  GRID gross +0.010% net -0.065% stopped 24% | LONG BRACKET gross +0.331% net +0.221%
+   kronos_sym  GRID gross -0.112% net -0.214% stopped 37% | LONG BRACKET gross +0.121% net +0.011%
+   kronos_med  GRID gross +0.012% net -0.060% stopped 25% | LONG BRACKET gross +0.159% net +0.049%
+   atr         GRID gross -0.016% net -0.123% stopped 33% | LONG BRACKET gross +0.180% net +0.070%
+   vol         GRID gross +0.020% net -0.087% stopped 30% | LONG BRACKET gross +0.192% net +0.082%
+   const       GRID gross -0.105% net -0.216% stopped 37% | LONG BRACKET gross +0.118% net +0.008%
+shuffled-kronos-width baseline (20 reps, test): containment 65.3% width 13.32% grid net -0.107% (sd 0.081)

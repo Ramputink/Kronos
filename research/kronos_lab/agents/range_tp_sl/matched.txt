@@ -1,0 +1,12 @@
+BTCUSDT n=300
+  width=3.02% test containment: kronos_env=22% kronos_sym=25% kronos_med=15% atr=27% vol=29% const=34%
+  width=4.54% test containment: kronos_env=41% kronos_sym=54% kronos_med=30% atr=46% vol=63% const=63%
+  width=6.05% test containment: kronos_env=55% kronos_sym=68% kronos_med=46% atr=66% vol=74% const=77%
+ETHUSDT n=300
+  width=4.17% test containment: kronos_env=25% kronos_sym=26% kronos_med=12% atr=33% vol=38% const=41%
+  width=6.25% test containment: kronos_env=40% kronos_sym=50% kronos_med=30% atr=55% vol=61% const=64%
+  width=8.34% test containment: kronos_env=52% kronos_sym=63% kronos_med=45% atr=72% vol=77% const=82%
+SOLUSDT n=300
+  width=4.59% test containment: kronos_env=25% kronos_sym=30% kronos_med=8% atr=28% vol=28% const=24%
+  width=6.88% test containment: kronos_env=44% kronos_sym=47% kronos_med=35% atr=48% vol=57% const=51%
+  width=9.17% test containment: kronos_env=54% kronos_sym=60% kronos_med=41% atr=69% vol=77% const=69%
