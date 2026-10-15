@@ -13,7 +13,8 @@ import pandas as pd
 import worker as W
 
 import os
-DRY = os.environ.get('DRYRUN') == '1'   # mechanics check: keeps the seal, fake 'test' = 2025-01..2025-06 (inside VAL)
+DRY = os.environ.get('DRYRUN') == '1'
+SAMPLE = float(os.environ.get('SAMPLE', '1'))   # mechanics check: keeps the seal, fake 'test' = 2025-01..2025-06 (inside VAL)
 OUT = W.OUT
 TEST_START = pd.Timestamp('2025-01-01') if DRY else W.VAL_END
 
@@ -114,6 +115,8 @@ def stream_candidates(cap):
                 except Exception:
                     continue
                 k = m['cfg_hash'] + m['coin']
+                if SAMPLE < 1 and int(m['cfg_hash'][:8], 16) % 100000 >= SAMPLE * 100000:
+                    continue  # deterministic random sample by config hash
                 if k in seen:
                     continue
                 seen.add(k)

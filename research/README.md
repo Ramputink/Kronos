@@ -36,14 +36,13 @@ mejores: UNI +33.9 %, EGLD +18.5 %, CRV +17.7 %, ALGO +15.2 %, BNB +14.5 %). Per
 ## 6. Búsqueda nocturna masiva (`kronos_lab/overnight/`)
 10 procesos de CPU + búsqueda densa en GPU (MPS) durante 8.9 h: **2.048 millones de configuraciones, 2.155 millones
 de pruebas (config × moneda), 7,89 millones de candidatos** (CAGR > 20 % y Sharpe > 0.8 en TRAIN y en VALIDACIÓN).
-- El TEST (2025-07-01 → 2026-10) **sigue sellado**. Los candidatos (3,9 GB) se quedan en local, en
-  `~/kronos_lab/overnight/out/`. Aquí solo se suben el código, el pre-registro, las estadísticas y el resumen.
-- Siguiente paso, para abrir el TEST una sola vez:
-  `cd ~/kronos_lab/overnight && ~/.venvs/kronos/bin/python -W ignore morning_test.py`
-  Compara la tasa de confirmación de los candidatos con la de configuraciones aleatorias y calcula la cartera de
-  todos los candidatos.
-- Con este número de pruebas, la gran mayoría de candidatos serán suerte. Lo relevante será si la tasa de
-  confirmación supera a la del azar.
+- **TEST abierto el 2026-10-15** (`kronos_lab/overnight/INFORME_TEST.md`): de una muestra aleatoria de 596.560
+  candidatos se confirma un 6,3 %, por debajo del 9,4 % de las configuraciones aleatorias, así que es sobreajuste.
+  La cartera de todos los candidatos da +1,0 % anual, y las carteras elegidas ex-ante, entre +1,7 % y +5,5 % en
+  15 meses.
+- Con 1.000–2.000 €, la opción razonable es la regla simple RSI(14) régimen + vol-target en spot. Con comisiones
+  de Bybit EU, en este TEST: solo ETH +30,6 %, BTC+ETH+SOL+BNB +22,1 %, las 9 large caps +10,5 %; frente a BTC
+  buy&hold −22,6 %. Las caídas fueron de −25 a −35 %.
 
 ## Conclusión transversal
 La palanca más fiable no ha sido la señal sino: pocas operaciones (diario, no 1h), salir a liquidez en tendencias
