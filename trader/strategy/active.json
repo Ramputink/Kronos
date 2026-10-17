@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "updated": "2026-10-16T00:00:00Z",
+  "capital": {
+    "capital_eur": 1000,
+    "eur_usdt": 1.16,
+    "capital_usdt": 1160,
+    "weights": {"rsi_regime_l4": 0.5, "rsi_regime_l9": 0.3, "breakout_c4_basket": 0.2},
+    "unallocated_usdt": 232,
+    "_note": "Operator target capital 1000 EUR (~1160 USDT at protected real.eur_usdt_fallback). Weights 0.5/0.3/0.2. The 0.2 sleeve (232 USDT) is RESERVED for the breakout C4 basket, which the per-coin spec format cannot express (it needs cross-sectional top-10 ranking by 60d momentum, a 15-day hold and a BTC>EMA200 gate). It stays in cash until H-0004 (per-coin proxy) or a C4 spec extension passes the research loop. protected.paper.bankroll_usdt (2000) is only the ceiling."
+  },
+  "strategies": [
+    {
+      "id": "rsi_regime_l4",
+      "status": "paper",
+      "spec": {"tf": "1d", "mode": "SPOT", "comps": [{"t": "rsi_reg", "p": {"n": 14, "up": 55, "gap": 5}}], "comb": "and", "k": 1, "adx": 0, "vt": 0.5, "stop": 0},
+      "coins": ["BTC", "ETH", "SOL", "BNB"],
+      "allocation_usdt": 580,
+      "activated_at": "2026-10-20",
+      "hypothesis_id": "H-0001",
+      "evidence": "research/kronos_lab/overnight/INFORME_TEST.md section 2 option C: BTC+ETH+SOL+BNB +22.1% total over the 15-month TEST at Bybit EU spot fee 0.25% (worst DD -322 EUR per 1000) vs BTC buy&hold -22.6%. CAVEAT: coin set chosen with the TEST already seen (optimistic). Spec hash cd9ff45458116162a26b8d3c8fb059ec = winner of research/kronos_lab/indicators/INFORME.md (DSR 0.55, N=960).",
+      "screener_veto": false
+    },
+    {
+      "id": "rsi_regime_l9",
+      "status": "paper",
+      "spec": {"tf": "1d", "mode": "SPOT", "comps": [{"t": "rsi_reg", "p": {"n": 14, "up": 55, "gap": 5}}], "comb": "and", "k": 1, "adx": 0, "vt": 0.5, "stop": 0},
+      "coins": ["BTC", "ETH", "SOL", "XRP", "BNB", "DOGE", "ADA", "LINK", "AVAX"],
+      "allocation_usdt": 348,
+      "activated_at": "2026-10-20",
+      "hypothesis_id": "H-0002",
+      "evidence": "research/kronos_lab/overnight/INFORME_TEST.md section 2 option D: 9 large caps (engine.UNIV, fixed before the TEST) +10.5% total over 15 months at Bybit EU costs (worst DD -360 EUR per 1000); research/kronos_lab/indicators/INFORME.md: portfolio +9.1%/yr at 0.25% fee. Cleanest seed (no post-hoc coin choice).",
+      "screener_veto": false
+    }
+  ]
+}

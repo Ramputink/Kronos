@@ -1,0 +1,51 @@
+{
+ "id": "H-0001",
+ "created": "2026-10-16T00:00:00Z",
+ "author": "seed@build",
+ "title": "RSI(14) regime 55/50 + vol-target 0.5, spot, BTC/ETH/SOL/BNB (seed provenance)",
+ "rationale": "Provenance of active strategy rsi_regime_l4. Winner of the pre-registered 960-config indicator study (research/kronos_lab/indicators/INFORME.md, DSR 0.55); option C of INFORME_TEST.md (+22.1% total TEST at Bybit EU costs vs BTC b&h -22.6%). Coin set was picked after seeing the TEST (optimistic). HONESTY NOTE: the vault TEST window [2025-07-01, 2026-10-13] was already opened by hand on 2026-10-15 (research/kronos_lab/overnight/INFORME_TEST.md), so a look at it cannot give fresh evidence for this family; do NOT spend a look on it. The only clean evidence is the forward paper record (promotion rules).",
+ "family": "rsi_reg",
+ "base_spec": {
+  "tf": "1d",
+  "mode": "SPOT",
+  "comps": [
+   {
+    "t": "rsi_reg",
+    "p": {
+     "n": 14,
+     "up": 55,
+     "gap": 5
+    }
+   }
+  ],
+  "comb": "and",
+  "k": 1,
+  "adx": 0,
+  "vt": 0.5,
+  "stop": 0
+ },
+ "grid": {},
+ "coins": [
+  "BTC",
+  "ETH",
+  "SOL",
+  "BNB"
+ ],
+ "trainval_criterion": {
+  "min_coins_passing": 2,
+  "cagr_tr": 0.1,
+  "cagr_va": 0.1,
+  "sh_tr": 0.6,
+  "sh_va": 0.6,
+  "mdd": -0.45,
+  "entries": 8
+ },
+ "test_criterion": {
+  "portfolio_cagr_min": 0.1,
+  "beat_bh": true,
+  "beat_random_rate": true,
+  "dsr_min": 0.5
+ },
+ "max_trials": 4,
+ "hash": "532d950e9bfa3ee307a0545b12844c2ea7e155500dbc2bf54772d661423e122c"
+}

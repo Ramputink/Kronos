@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- PROTECTED (trader/fleet). Template for air: setup_air.sh substitutes @HOME@ @REPO@ @VENV@ @RUNNER@
+     and installs it into ~/Library/LaunchAgents. Every 15 min loop.sh decides (in UTC) which cycle is due. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.phil-crypto.tick</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>@REPO@/trader/loop.sh</string>
+    <string>tick</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key><string>@VENV@/bin:@HOME@/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    <key>PHIL_RUNNER</key><string>@RUNNER@</string>
+    <key>PHIL_PYTHON</key><string>@VENV@/bin/python</string>
+  </dict>
+  <key>WorkingDirectory</key><string>@REPO@</string>
+  <key>StartInterval</key><integer>900</integer>
+  <key>RunAtLoad</key><false/>
+  <key>ProcessType</key><string>Background</string>
+  <key>StandardOutPath</key><string>@HOME@/.phil-crypto/logs/tick.log</string>
+  <key>StandardErrorPath</key><string>@HOME@/.phil-crypto/logs/tick.log</string>
+</dict>
+</plist>

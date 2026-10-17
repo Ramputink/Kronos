@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "research": {"enabled": true, "every_hours": 6, "max_minutes": 60, "max_sweeps_per_day": 4},
+  "screener": {"enabled": true, "at_utc": "00:20", "coins": ["BTC", "ETH", "SOL", "BNB"]},
+  "data_update": {"spot_every_minutes": 60}
+}

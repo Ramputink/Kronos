@@ -1,0 +1,68 @@
+{
+ "id": "H-0003",
+ "created": "2026-10-16T00:00:00Z",
+ "author": "seed@build",
+ "title": "RSI regime threshold x ADX gate on 9 large caps (does an ADX gate cut whipsaw net of 0.30% costs?)",
+ "rationale": "Expected sign: ADX>=20 gate raises Sharpe and cuts entries (fewer whipsaws, lower cost drag at Bybit EU 0.30%/side) with at most a small CAGR loss; up=60 lowers exposure further. Playbook finding: the reliable lever is few trades + going to cash in downtrends. Small grid (12 specs) on purpose: brute force overfits (overnight 6.3% vs 9.4% random). Partially contaminated: ADX{0,20,25} x RSI was in the 960-config study whose TEST was opened; a look is only worth spending once the vault cutoff moves past 2026-10-13.",
+ "family": "rsi_reg+adx",
+ "base_spec": {
+  "tf": "1d",
+  "mode": "SPOT",
+  "comps": [
+   {
+    "t": "rsi_reg",
+    "p": {
+     "n": 14,
+     "up": 55,
+     "gap": 5
+    }
+   }
+  ],
+  "comb": "and",
+  "k": 1,
+  "adx": 20,
+  "vt": 0.5,
+  "stop": 0
+ },
+ "grid": {
+  "comps.0.p.up": [
+   50,
+   55,
+   60
+  ],
+  "adx": [
+   0,
+   15,
+   20,
+   25
+  ]
+ },
+ "coins": [
+  "BTC",
+  "ETH",
+  "SOL",
+  "XRP",
+  "BNB",
+  "DOGE",
+  "ADA",
+  "LINK",
+  "AVAX"
+ ],
+ "trainval_criterion": {
+  "min_coins_passing": 4,
+  "cagr_tr": 0.1,
+  "cagr_va": 0.1,
+  "sh_tr": 0.6,
+  "sh_va": 0.6,
+  "mdd": -0.45,
+  "entries": 8
+ },
+ "test_criterion": {
+  "portfolio_cagr_min": 0.1,
+  "beat_bh": true,
+  "beat_random_rate": true,
+  "dsr_min": 0.5
+ },
+ "max_trials": 108,
+ "hash": "00720cd1271be3d1686a924edfad24d49852226a3a7c64dcbfa00bb418a8d0b1"
+}

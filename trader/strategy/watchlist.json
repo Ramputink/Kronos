@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "_note": "Watcher rules for fleet/watch.py (berry, every 15 min). Schema: CONTRACTS.md §9 Watchers. Ops: < <= > >= cross_above cross_below (cross_* compare with the value seen on the previous run). Actions: note (row only) | trigger_forward (row + trigger file -> air runs a TRIGGERED cycle that may only settle, retro and pause/resume). Metrics rsi14_1d and dist_from_high50_1d are extensions pending contract amendment.",
+  "max_trigger_files_per_day": 4,
+  "rules": [
+    {"id": "btc_drop_6pct_24h", "coin": "BTC", "metric": "ret_24h", "op": "<", "value": -0.06, "cooldown_min": 360, "action": "trigger_forward"},
+    {"id": "eth_drop_8pct_24h", "coin": "ETH", "metric": "ret_24h", "op": "<", "value": -0.08, "cooldown_min": 360, "action": "trigger_forward"},
+    {"id": "sol_drop_10pct_24h", "coin": "SOL", "metric": "ret_24h", "op": "<", "value": -0.10, "cooldown_min": 360, "action": "trigger_forward"},
+    {"id": "bnb_drop_8pct_24h", "coin": "BNB", "metric": "ret_24h", "op": "<", "value": -0.08, "cooldown_min": 360, "action": "trigger_forward"},
+    {"id": "btc_crash_3pct_1h", "coin": "BTC", "metric": "ret_1h", "op": "<", "value": -0.03, "cooldown_min": 240, "action": "trigger_forward"},
+    {"id": "btc_pump_4pct_1h", "coin": "BTC", "metric": "ret_1h", "op": ">", "value": 0.04, "cooldown_min": 240, "action": "note"},
+    {"id": "eth_move_5pct_4h", "coin": "ETH", "metric": "ret_4h", "op": "<", "value": -0.05, "cooldown_min": 360, "action": "note"},
+    {"id": "btc_vol_spike", "coin": "BTC", "metric": "vol_ratio_24h_30d", "op": ">", "value": 2.5, "cooldown_min": 720, "action": "note"},
+    {"id": "eth_vol_spike", "coin": "ETH", "metric": "vol_ratio_24h_30d", "op": ">", "value": 2.5, "cooldown_min": 720, "action": "note"},
+    {"id": "btc_rsi_regime_on", "coin": "BTC", "metric": "rsi14_1d", "op": "cross_above", "value": 55, "cooldown_min": 720, "action": "note"},
+    {"id": "btc_rsi_regime_off", "coin": "BTC", "metric": "rsi14_1d", "op": "cross_below", "value": 50, "cooldown_min": 720, "action": "note"},
+    {"id": "eth_rsi_regime_on", "coin": "ETH", "metric": "rsi14_1d", "op": "cross_above", "value": 55, "cooldown_min": 720, "action": "note"},
+    {"id": "eth_rsi_regime_off", "coin": "ETH", "metric": "rsi14_1d", "op": "cross_below", "value": 50, "cooldown_min": 720, "action": "note"},
+    {"id": "sol_rsi_regime_on", "coin": "SOL", "metric": "rsi14_1d", "op": "cross_above", "value": 55, "cooldown_min": 720, "action": "note"},
+    {"id": "sol_rsi_regime_off", "coin": "SOL", "metric": "rsi14_1d", "op": "cross_below", "value": 50, "cooldown_min": 720, "action": "note"},
+    {"id": "bnb_rsi_regime_on", "coin": "BNB", "metric": "rsi14_1d", "op": "cross_above", "value": 55, "cooldown_min": 720, "action": "note"},
+    {"id": "bnb_rsi_regime_off", "coin": "BNB", "metric": "rsi14_1d", "op": "cross_below", "value": 50, "cooldown_min": 720, "action": "note"},
+    {"id": "btc_new_high_50d", "coin": "BTC", "metric": "dist_from_high50_1d", "op": ">", "value": 0.0, "cooldown_min": 1440, "action": "note"},
+    {"id": "eth_new_high_50d", "coin": "ETH", "metric": "dist_from_high50_1d", "op": ">", "value": 0.0, "cooldown_min": 1440, "action": "note"},
+    {"id": "btc_below_ema200", "coin": "BTC", "metric": "dist_from_ema200_1d", "op": "cross_below", "value": 0.0, "cooldown_min": 1440, "action": "note"}
+  ]
+}

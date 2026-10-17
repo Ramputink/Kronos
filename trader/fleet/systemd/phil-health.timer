@@ -1,0 +1,12 @@
+# PROTECTED (trader/fleet). protected.schedule.health_every_minutes = 15.
+[Unit]
+Description=phil-crypto fleet health check timer
+
+[Timer]
+OnBootSec=3min
+OnCalendar=*:2/15
+Persistent=true
+RandomizedDelaySec=30
+
+[Install]
+WantedBy=timers.target

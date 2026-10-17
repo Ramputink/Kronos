@@ -1,0 +1,12 @@
+# PROTECTED (trader/fleet). protected.schedule.watchers_every_minutes = 15.
+[Unit]
+Description=phil-crypto watchers timer
+
+[Timer]
+OnBootSec=2min
+OnCalendar=*:0/15
+Persistent=true
+AccuracySec=30s
+
+[Install]
+WantedBy=timers.target

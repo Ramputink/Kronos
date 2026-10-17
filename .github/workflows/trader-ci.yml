@@ -1,0 +1,138 @@
+name: trader-ci
+
+# Phil-crypto guard (PROTECTED). Independent of loop.sh and the local pre-commit hook: the loop could be
+# bypassed or buggy, CI on the pushed range cannot. See trader/CONTRACTS.md section 7.
+#
+# Operator identity: an "operator:" commit counts only with a valid SSH signature from the allowed signers.
+# Trust anchor = repository variable PHIL_ALLOWED_SIGNERS (Settings > Secrets and variables > Variables; a
+# pushed commit cannot change it). It is MANDATORY: both jobs FAIL while it is empty (without it an unsigned
+# "operator:" subject would be trusted). real_trading_enabled=true is checked against this anchor only.
+# The committer e-mail (noreply@github.com included) never makes a commit an operator commit.
+#
+# REQUIRED repository settings (they cannot be expressed in this file):
+#   - repository variable PHIL_ALLOWED_SIGNERS = the operator's allowed-signers line(s);
+#   - branch protection / ruleset on phil-crypto: require the status checks
+#     "Agent/operator boundary (PR into phil-crypto)" and "Config, journal, strategy, sources, fast tests",
+#     block force pushes AND deletion, restrict who can push. The PR-only check name cannot be satisfied by a
+#     run on phil-crypto-staging (that run reports "Agent/operator boundary"), so the fast-forward of
+#     phil-crypto is always judged by its own run whose base is phil-crypto's current tip;
+#   - ruleset on phil-crypto-staging: block force pushes and branch deletion. Staging runs are ADVISORY: a
+#     staging push is judged by the guard of the previous staging tip, which may itself have failed; only the
+#     PR run (guard from phil-crypto's tip, whole range) gates phil-crypto;
+#   - loop hosts push to phil-crypto-staging (PHIL_PUSH_BRANCH=phil-crypto-staging); an operator opens a PR
+#     staging -> phil-crypto and, once its checks pass, fast-forwards phil-crypto to the PR head.
+# A push event runs the workflow file of the pushed commit, so the boundary job NEVER runs guard code taken
+# from the pushed head: it uses the BASE commit's guard (already accepted) or, when the base is unknown (new
+# branch, force push), the guard of the protected branch phil-crypto, and fails if neither is usable.
+
+on:
+  push:
+    branches: [phil-crypto, phil-crypto-staging]
+  pull_request:
+    branches: [phil-crypto]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trader-ci-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  boundary:
+    name: ${{ github.event_name == 'pull_request' && 'Agent/operator boundary (PR into phil-crypto)' || 'Agent/operator boundary' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"   # bigsur/berry/air run 3.9: the guard must too
+      - name: No agent commit touches protected paths, rewrites a ledger or flips real trading
+        env:
+          EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+          PHIL_ALLOWED_SIGNERS: ${{ vars.PHIL_ALLOWED_SIGNERS }}
+        run: |
+          if [ "$EVENT" = "pull_request" ]; then RANGE="$PR_BASE..$PR_HEAD";
+          elif [ "$EVENT" = "push" ]; then RANGE="$BEFORE..$AFTER";
+          else RANGE="HEAD~1..HEAD"; fi
+          echo "checking $RANGE"
+          # --- guard-select: begin (extracted and run by trader/tests/test_guard.py) ---
+          if [ -z "$(printf '%s' "${PHIL_ALLOWED_SIGNERS:-}" | tr -d '[:space:]')" ]; then
+            echo "::error::repository variable PHIL_ALLOWED_SIGNERS is empty: operator commits cannot be verified"
+            exit 1
+          fi
+          GUARD_FILES="trader/__init__.py trader/core/__init__.py trader/core/config.py trader/core/validate.py"
+          # Never run guard code from the pushed head. Base first; unknown / zero base (new branch, force
+          # push) -> the protected branch's guard, unless that IS the pushed head (force push / creation of
+          # phil-crypto itself) -> fail. validate.py then checks the whole first-parent history.
+          TRUST="${RANGE%%..*}"
+          HEAD_SHA="${RANGE##*..}"
+          if ! git cat-file -e "$TRUST^{commit}" 2>/dev/null || \
+             ! git cat-file -e "$TRUST:trader/core/validate.py" 2>/dev/null; then
+            git fetch --quiet --no-tags origin "+refs/heads/phil-crypto:refs/remotes/origin/phil-crypto" || true
+            PROT="$(git rev-parse -q --verify "refs/remotes/origin/phil-crypto^{commit}" || true)"
+            HEADC="$(git rev-parse -q --verify "$HEAD_SHA^{commit}" || true)"
+            if [ -z "$PROT" ] || ! git cat-file -e "$PROT:trader/core/validate.py" 2>/dev/null; then
+              echo "::error::base $TRUST unknown and origin/phil-crypto has no guard: refusing to trust the pushed head"
+              exit 1
+            fi
+            if [ "$PROT" = "$HEADC" ]; then
+              echo "::error::base $TRUST unknown and origin/phil-crypto IS the pushed head (force push or re-creation)"
+              exit 1
+            fi
+            TRUST="$PROT"
+          fi
+          GUARD="$RUNNER_TEMP/guard"
+          rm -rf "$GUARD"; mkdir -p "$GUARD"
+          git archive "$TRUST" $GUARD_FILES | tar -x -C "$GUARD"
+          echo "guard code from $TRUST"
+          # --- guard-select: end ---
+          TRADER_ROOT="$PWD/trader" python -I -B "$GUARD/trader/core/validate.py" --diff "$RANGE" --quick
+
+  integrity:
+    name: Config, journal, strategy, sources, fast tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - name: Install runtime dependencies (the allowed set only)
+        run: python -m pip install --quiet numpy pandas numba requests
+      - name: Every trader/**/*.py compiles
+        run: python -m compileall -q trader
+      - name: validate.py (config ceilings, real flag provenance + signature, journal, strategy)
+        env:
+          PHIL_ALLOWED_SIGNERS: ${{ vars.PHIL_ALLOWED_SIGNERS }}
+        run: |
+          if [ -z "$(printf '%s' "${PHIL_ALLOWED_SIGNERS:-}" | tr -d '[:space:]')" ]; then
+            echo "::error::repository variable PHIL_ALLOWED_SIGNERS is empty: operator commits cannot be verified"
+            exit 1
+          fi
+          python -I -B trader/core/validate.py
+      - name: Fast tests (each < 3 min, offline)
+        env:
+          PHIL_CI: "1"
+          PHIL_RUNNER: ci
+        run: |
+          git config --global user.email ci@example.invalid
+          git config --global user.name trader-ci
+          fail=0
+          for t in trader/tests/test_*.py; do
+            case "$t" in *_net.py) echo "skip (network) $t"; continue;; esac
+            echo "::group::$t"
+            if ! python "$t"; then echo "::error::$t failed"; fail=1; fi
+            echo "::endgroup::"
+          done
+          exit "$fail"

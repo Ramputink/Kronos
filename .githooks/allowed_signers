@@ -1,0 +1,15 @@
+# Phil-crypto operator signing keys (guard area, PROTECTED). ssh "allowed signers" format, one key per line:
+#   <principal e-mail> ssh-ed25519 AAAA...  [comment]
+#
+# While this file holds no key, "operator:" commits are recognised by their subject only (validate.py prints
+# a warning, and real_trading_enabled=true is refused outright). Once a key is listed here, CI and validate.py
+# accept an "operator:" commit only if it carries a valid SSH signature from a listed key, checked against the
+# version of this file in the commit's PARENT (a commit cannot add the key that signs it).
+#
+# Operator setup (once per machine):
+#   git config gpg.format ssh
+#   git config user.signingkey ~/.ssh/id_ed25519.pub
+#   git config commit.gpgsign true
+# then add "<you@example> $(cat ~/.ssh/id_ed25519.pub)" below in a signed "operator:" commit.
+# Out-of-repo anchor (recommended for CI): repository variable PHIL_ALLOWED_SIGNERS with the same lines; it
+# overrides this file and cannot be changed by a pushed commit.

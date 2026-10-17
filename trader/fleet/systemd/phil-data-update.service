@@ -1,0 +1,17 @@
+# PROTECTED (trader/fleet). systemd --user unit for berry, installed by fleet/setup_berry.sh.
+# Incremental Bybit spot candles (closed bars only) into ~/.phil-crypto/data/spot for the watchers;
+# air fetches its own copy in the forward cycle, berry never writes git.
+[Unit]
+Description=phil-crypto spot data update (hourly)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/.phil-crypto/runner/code
+Environment=PYTHONPATH=%h/.phil-crypto/runner/code
+Environment=PHIL_RUNNER=berry
+Environment=TRADER_JOURNAL_DIR=%h/.phil-crypto/journal
+ExecStart=%h/.phil-crypto/venv/bin/python -m trader.core.data update --source spot
+TimeoutStartSec=1200
+Nice=10

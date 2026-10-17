@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "_note": "PROTECTED. Only commits whose message starts with 'operator:' may change this file. Schema and meaning: trader/CONTRACTS.md section 2.",
+
+  "costs": {
+    "spot": {"fee_side": 0.0025, "slippage_side": 0.0005, "available_in_eu": true,
+             "_note": "Bybit EU spot taker 0.25% + 5 bp slippage, charged per side on turnover"},
+    "perp": {"fee_side": 0.00055, "slippage_side": 0.0005, "funding": true, "available_in_eu": false,
+             "status": "not_available_in_EU",
+             "_note": "listed for research comparison only; never executable, never paper-traded"},
+    "legacy_research": {"spot_side": 0.0015, "perp_side": 0.00105,
+             "_note": "costs used by research/kronos_lab (worker.py COST, engine.py COSTS); only for regression tests reproducing old numbers"}
+  },
+
+  "vault": {
+    "vault_cutoff": "2025-07-01",
+    "train_end": "2024-01-01",
+    "warmup_days": 210,
+    "looks_per_month": 8,
+    "look_ttl_hours": 6,
+    "_note": "research view = bars with open time < vault_cutoff. TRAIN = [first+warmup, train_end), VAL = [train_end, vault_cutoff), TEST = [vault_cutoff, forward_start) sealed."
+  },
+
+  "forward": {
+    "forward_start": null,
+    "_note": "set by operator the day paper trading starts (YYYY-MM-DD). Until then the forward period is empty."
+  },
+
+  "data": {
+    "dir": "~/.phil-crypto/data",
+    "research_source": "linear",
+    "paper_source": "spot",
+    "seed_dir": "/Users/matveypro/kronos_lab/indicators/data",
+    "api": "https://api.bybit.com/v5/market",
+    "_note": "env TRADER_DATA_DIR overrides dir. Layout <dir>/<source>/<COIN>_<tf>.csv and <dir>/linear/<COIN>_funding.csv"
+  },
+
+  "universe": ["BTC", "ETH", "SOL", "XRP", "ADA", "AVAX", "LINK", "DOGE", "BNB", "LTC", "DOT", "ATOM", "NEAR", "APT",
+               "BCH", "TRX", "ETC", "XLM", "DASH", "ZEC", "VET", "THETA", "ALGO", "COMP", "CRV", "RUNE", "SUSHI",
+               "EGLD", "UNI"],
+  "timeframes": ["1d", "4h"],
+  "bars_per_year": {"1d": 365, "4h": 2190},
+
+  "paper": {
+    "bankroll_usdt": 2000,
+    "max_strategies": 6,
+    "max_allocation_per_strategy_usdt": 1000,
+    "max_coins_per_strategy": 12,
+    "allowed_modes": ["SPOT"],
+    "allowed_timeframes": ["1d"],
+    "min_order_usdt": 5,
+    "run_at_utc": "00:10"
+  },
+
+  "real": {
+    "real_trading_enabled": false,
+    "exchange": "bybit_eu",
+    "category": "spot",
+    "api_base": "https://api.bybit.eu",
+    "per_order_eur": 20,
+    "daily_eur": 50,
+    "max_open_positions": 4,
+    "min_order_usdt": 5,
+    "max_slippage_bps": 30,
+    "eur_usdt_fallback": 1.16,
+    "allowed_coins": ["BTC", "ETH", "SOL", "BNB"],
+    "allowed_strategy_ids": [],
+    "secrets_file": "~/.phil-crypto/secrets.env",
+    "api_key_env": "BYBIT_API_KEY",
+    "api_secret_env": "BYBIT_API_SECRET",
+    "require_no_withdraw_permission": true,
+    "_note": "real_trading_enabled may only be flipped by the operator (commit prefix 'operator:'). validate.py hard ceilings: per_order_eur <= 100, daily_eur <= 250."
+  },
+
+  "promotion": {
+    "min_forward_days": 90,
+    "require_net_positive": true,
+    "require_beats_random_baseline": true,
+    "random_baseline_n": 500,
+    "random_percentile_min": 0.80,
+    "require_beats_buy_and_hold": true,
+    "_note": "eligibility only writes a proposal; promotion to real requires the operator to add the id to real.allowed_strategy_ids AND set real_trading_enabled true."
+  },
+
+  "screener": {
+    "model": "claude-haiku-5-5",
+    "invocation": "claude_cli",
+    "max_calls_per_day": 60,
+    "veto_min_forward_days": 30,
+    "veto_min_resolved_forecasts": 100,
+    "_note": "screener may veto entries only while its Brier score beats the baseline Brier over >= veto_min_forward_days and >= veto_min_resolved_forecasts."
+  },
+
+  "research": {
+    "max_trials_per_hypothesis": 5000,
+    "random_baseline_n": 2000,
+    "dsr_min": 0.5
+  },
+
+  "schedule": {
+    "timezone": "UTC",
+    "forward_cycle": "00:10",
+    "deep_retro": "06:00",
+    "research_every_hours": 6,
+    "watchers_every_minutes": 15,
+    "health_every_minutes": 15
+  },
+
+  "fleet": {
+    "brain": "air",
+    "hosts": {
+      "air":    {"ssh": "air",    "os": "macos", "roles": ["brain", "cycles", "screener", "git_writer"], "python": "/usr/bin/env python3"},
+      "bigsur": {"ssh": "bigsur", "os": "macos", "roles": ["sweep"], "python": "~/.phil-crypto/venv/bin/python",
+                 "max_disk_gb": 5, "max_ram_mb": 8192, "max_procs": 7},
+      "berry":  {"ssh": "berry",  "os": "linux", "roles": ["data", "watchers", "health"], "python": "~/.phil-crypto/venv/bin/python",
+                 "max_disk_gb": 10},
+      "m2":     {"ssh": "local",  "os": "macos", "roles": ["sweep", "gpu"], "optional": true, "python": "/Users/matveypro/.venvs/kronos/bin/python",
+                 "max_disk_gb": 20, "max_ram_mb": 12288, "max_procs": 10}
+    },
+    "remote_root": "~/.phil-crypto/runner",
+    "inbox_dir": "~/.phil-crypto/inbox",
+    "max_result_kb": 1024,
+    "lease_ttl_s": 5400
+  }
+}

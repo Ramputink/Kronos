@@ -1,0 +1,72 @@
+{
+ "id": "H-0004",
+ "created": "2026-10-16T00:00:00Z",
+ "author": "seed@build",
+ "title": "Per-coin proxy of breakout C4: Donchian 50 breakout AND close > EMA200, spot, 9 large caps",
+ "rationale": "goal15 C4 (breakout 50d + EMA200 + BTC regime gate) was the best >15% candidate: OOS-A 2024-06..2026-06 SPOT CAGR +33.5%, Sharpe 0.92, DSR 0.75, maxDD -39%; but it failed the strict forward check (+15% vs BTC +29% in 4 months) and needs cross-sectional ranking + a BTC gate the spec format cannot express. This tests the per-coin core only. Expected sign: positive vs b&h in bear regimes (cash under EMA200), lags b&h in strong bull runs; vol-target 0.5 expected to reduce DD by ~1/3. If it fails, C4's edge lived in the ranking/BTC gate, which then needs a contract extension (open issue).",
+ "family": "donch+ma",
+ "base_spec": {
+  "tf": "1d",
+  "mode": "SPOT",
+  "comps": [
+   {
+    "t": "donch",
+    "p": {
+     "N": 50,
+     "M": 20
+    }
+   },
+   {
+    "t": "ma",
+    "p": {
+     "kind": "ema",
+     "n": 200
+    }
+   }
+  ],
+  "comb": "and",
+  "k": 2,
+  "adx": 0,
+  "vt": 0.5,
+  "stop": 0
+ },
+ "grid": {
+  "comps.0.p.M": [
+   10,
+   20,
+   50
+  ],
+  "vt": [
+   0,
+   0.5
+  ]
+ },
+ "coins": [
+  "BTC",
+  "ETH",
+  "SOL",
+  "XRP",
+  "BNB",
+  "DOGE",
+  "ADA",
+  "LINK",
+  "AVAX"
+ ],
+ "trainval_criterion": {
+  "min_coins_passing": 4,
+  "cagr_tr": 0.1,
+  "cagr_va": 0.1,
+  "sh_tr": 0.6,
+  "sh_va": 0.6,
+  "mdd": -0.45,
+  "entries": 8
+ },
+ "test_criterion": {
+  "portfolio_cagr_min": 0.1,
+  "beat_bh": true,
+  "beat_random_rate": true,
+  "dsr_min": 0.5
+ },
+ "max_trials": 54,
+ "hash": "ad62dc4938ded9038f8acad70c5e99056347d93a5b3c06f4b79843adf5904d6e"
+}

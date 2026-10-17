@@ -1,0 +1,2 @@
+# local market data store (when TRADER_DATA_DIR / data.dir points inside trader/)
+data/

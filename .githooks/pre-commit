@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+# Phil-crypto boundary guard (guard area, PROTECTED). Activate with:  git config core.hooksPath .githooks
+#
+# Refuses a commit that an agent may not make: any staged change outside the agent whitelist of
+# trader/CONTRACTS.md section 7, a rewritten append-only journal, an edited committed hypothesis,
+# protected.json caps out of bounds, real_trading_enabled flipped, or a trader/**/*.py that no longer compiles.
+#
+# Operator commits ("operator: ...") may touch anything. git runs pre-commit BEFORE the message
+# exists, so the message is recovered from the parent `git commit` command line (-m / --message / -F).
+# The same script also works as a commit-msg hook (ln -s pre-commit .githooks/commit-msg), where git
+# passes the message file as $1; that path is exact and is preferred when installed.
+# CI (.github/workflows/trader-ci.yml) re-checks every pushed commit independently of this hook.
+set -euo pipefail
+
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT"
+# Only guard repos that carry the trader package.
+[ -f trader/core/validate.py ] || exit 0
+
+PY="${PHIL_PYTHON:-}"
+if [ -z "$PY" ]; then
+  if command -v python3 >/dev/null 2>&1; then PY=python3; else PY=python; fi
+fi
+
+MSG_FILE=""
+TMP_MSG=""
+cleanup() { [ -n "$TMP_MSG" ] && rm -f "$TMP_MSG"; return 0; }
+trap cleanup EXIT
+
+if [ "$(basename "$0")" = "commit-msg" ] && [ -n "${1:-}" ] && [ -f "$1" ]; then
+  MSG_FILE="$1"
+else
+  # Recover the pending message from the invoking `git commit` (best effort; unknown => agent rules).
+  ARGS="$(ps -o args= -p "$PPID" 2>/dev/null || true)"
+  MSG=""
+  case "$ARGS" in
+    *" -m operator:"*|*" -moperator:"*|*" --message operator:"*|*" --message=operator:"*|\
+    *" -m 'operator:"*|*' -m "operator:'*)
+      MSG="operator: (from command line)";;
+  esac
+  if [ -z "$MSG" ]; then
+    # -F <file> / --file=<file>
+    F="$(printf '%s\n' "$ARGS" | sed -n -E 's/.*(^| )(-F|--file)[ =]([^ ]+).*/\3/p' | head -n 1)"
+    if [ -n "$F" ] && [ -f "$F" ]; then MSG="$(head -n 1 "$F")"; fi
+  fi
+  if [ -z "$MSG" ] && [ -n "${PHIL_COMMIT_MSG:-}" ]; then
+    MSG="$PHIL_COMMIT_MSG"   # loop.sh passes its cycle(...) message here
+  fi
+  if [ -n "$MSG" ]; then
+    TMP_MSG="$(mktemp "${TMPDIR:-/tmp}/phil-msg.XXXXXX")"
+    printf '%s\n' "$MSG" > "$TMP_MSG"
+    MSG_FILE="$TMP_MSG"
+  fi
+fi
+
+VARGS=(--staged)
+[ -n "$MSG_FILE" ] && VARGS+=(--commit-msg-file "$MSG_FILE")
+
+set +e
+OUT="$("$PY" -I -B trader/core/validate.py "${VARGS[@]}")"
+RC=$?
+set -e
+if [ "$RC" -ne 0 ]; then
+  echo "pre-commit: Phil-crypto guard refused this commit:" >&2
+  printf '%s\n' "$OUT" | "$PY" -c 'import json,sys
+d=json.load(sys.stdin)
+for e in d.get("errors", []): print("  - " + e)' >&2 2>/dev/null || printf '%s\n' "$OUT" >&2
+  echo "  (operator commits: git commit -m \"operator: ...\"; agents may only touch the whitelist in trader/CONTRACTS.md section 7)" >&2
+  exit 1
+fi
+exit 0

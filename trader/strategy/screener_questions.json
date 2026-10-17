@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "_note": "Scored questions are settled by core/forecast.py against realised spot candles (resolver types: close_gt, ret_gt, ret_lt, ret_bucket, vol_gt). Questions with \"scored\": false are asked for context only, are never logged to forecasts.jsonl and can never feed the veto gate (they cannot be settled from candles). score = probability 0-100 of the resolver's 'yes'.",
+  "questions": [
+    {"id": "q_up_1d", "kind": "binary", "tf": "1d", "horizon_bars": 1,
+     "text": "Will {coin} close the next daily bar (24h) above the last daily close?",
+     "resolver": {"type": "close_gt"}, "baseline": "base_rate_365d"},
+    {"id": "q_drop5_1d", "kind": "score", "tf": "1d", "horizon_bars": 1,
+     "text": "Probability (0-100) that {coin} falls more than 5% over the next 24h (next daily close vs last daily close)",
+     "resolver": {"type": "ret_lt", "x": -0.05}, "baseline": "base_rate_365d"},
+    {"id": "q_up_7d", "kind": "binary", "tf": "1d", "horizon_bars": 7,
+     "text": "Will {coin} close higher in 7 days than at the last close?",
+     "resolver": {"type": "close_gt"}, "baseline": "base_rate_365d"},
+    {"id": "q_ret_bucket_7d", "kind": "choice", "tf": "1d", "horizon_bars": 7,
+     "text": "What will {coin}'s 7-day return (close in 7 days vs last close) be?",
+     "options": ["< -5%", "-5%..+5%", "> +5%"],
+     "resolver": {"type": "ret_bucket", "edges": [-0.05, 0.05]}, "baseline": "base_rate_365d"},
+    {"id": "q_score_trend_14d", "kind": "score", "tf": "1d", "horizon_bars": 14,
+     "text": "Probability (0-100) that {coin} gains more than 3% over 14 days",
+     "resolver": {"type": "ret_gt", "x": 0.03}, "baseline": "base_rate_365d"},
+    {"id": "q_highvol_7d", "kind": "binary", "tf": "1d", "horizon_bars": 7,
+     "text": "Will {coin}'s realised annualised volatility of daily log returns over the next 7 days exceed 60%?",
+     "resolver": {"type": "vol_gt", "x": 0.60}, "baseline": "base_rate_365d"},
+    {"id": "ctx_event_24h", "kind": "binary", "scored": false,
+     "text": "Is there a scheduled high-impact event for {coin} in the next 24h (token unlock, mainnet/hard fork, ETF decision, major exchange listing/delisting, macro release such as CPI/FOMC)? Answer from your own knowledge only and name it in 'note'."}
+  ]
+}

@@ -1,0 +1,56 @@
+{
+ "id": "H-0002",
+ "created": "2026-10-16T00:00:00Z",
+ "author": "seed@build",
+ "title": "RSI(14) regime 55/50 + vol-target 0.5, spot, 9 large caps (seed provenance)",
+ "rationale": "Provenance of active strategy rsi_regime_l9. Same rule on the universe fixed before the TEST (engine.UNIV): +10.5% total over 15 months at Bybit EU costs, portfolio +9.1%/yr at 0.25% fee (INFORME.md). Cleanest seed; fails the >15% target, so the bar is 'beats random and b&h forward'. HONESTY NOTE: the vault TEST window [2025-07-01, 2026-10-13] was already opened by hand on 2026-10-15 (research/kronos_lab/overnight/INFORME_TEST.md), so a look at it cannot give fresh evidence for this family; do NOT spend a look on it. The only clean evidence is the forward paper record (promotion rules).",
+ "family": "rsi_reg",
+ "base_spec": {
+  "tf": "1d",
+  "mode": "SPOT",
+  "comps": [
+   {
+    "t": "rsi_reg",
+    "p": {
+     "n": 14,
+     "up": 55,
+     "gap": 5
+    }
+   }
+  ],
+  "comb": "and",
+  "k": 1,
+  "adx": 0,
+  "vt": 0.5,
+  "stop": 0
+ },
+ "grid": {},
+ "coins": [
+  "BTC",
+  "ETH",
+  "SOL",
+  "XRP",
+  "BNB",
+  "DOGE",
+  "ADA",
+  "LINK",
+  "AVAX"
+ ],
+ "trainval_criterion": {
+  "min_coins_passing": 4,
+  "cagr_tr": 0.1,
+  "cagr_va": 0.1,
+  "sh_tr": 0.6,
+  "sh_va": 0.6,
+  "mdd": -0.45,
+  "entries": 8
+ },
+ "test_criterion": {
+  "portfolio_cagr_min": 0.1,
+  "beat_bh": true,
+  "beat_random_rate": true,
+  "dsr_min": 0.5
+ },
+ "max_trials": 9,
+ "hash": "a14a81c3704054368a3f13c82a03fbe102f2194928fed71fadb7fb7951a8ae44"
+}

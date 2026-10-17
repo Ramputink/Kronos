@@ -1,0 +1,16 @@
+# PROTECTED (trader/fleet). systemd --user unit for berry, installed by fleet/setup_berry.sh.
+# Probes the fleet, writes ~/.phil-crypto/outbox/fleet-health.json and rsyncs the outbox into air's inbox.
+[Unit]
+Description=phil-crypto fleet health check (every 15 min)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/.phil-crypto/runner/code
+Environment=PYTHONPATH=%h/.phil-crypto/runner/code
+Environment=PHIL_RUNNER=berry
+Environment=TRADER_JOURNAL_DIR=%h/.phil-crypto/journal
+ExecStart=%h/.phil-crypto/venv/bin/python -m trader.fleet.health run --push
+TimeoutStartSec=600
+Nice=10

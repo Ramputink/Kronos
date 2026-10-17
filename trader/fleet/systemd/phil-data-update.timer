@@ -1,0 +1,12 @@
+# PROTECTED (trader/fleet). strategy/schedule.json data_update.spot_every_minutes = 60 (5 min after the hour,
+# so the 00:00 UTC daily bar is closed and fetched before air's 00:10 forward cycle).
+[Unit]
+Description=phil-crypto spot data update timer
+
+[Timer]
+OnBootSec=5min
+OnCalendar=*:05
+Persistent=true
+
+[Install]
+WantedBy=timers.target

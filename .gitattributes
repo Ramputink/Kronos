@@ -1,0 +1,8 @@
+# --- trader (guard area) ---
+# Append-only logs that several runners may extend concurrently: a union merge keeps both sides' lines
+# instead of stopping the push. Ledgers that must stay single-writer (trials, looks, paper, real,
+# forecasts) are deliberately NOT here: a conflict there must fail loudly. validate.py still checks that
+# every commit only appends to them.
+trader/journal/cycles.log merge=union
+trader/journal/watch-triggers.jsonl merge=union
+# --- end trader ---

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- PROTECTED (trader/fleet). Template for bigsur (sweep host): setup_bigsur.sh substitutes @HOME@ @HOUR@ @MINUTE@.
+     Daily safety net for the 5 GB disk quota: removes sweep job dirs older than 7 days that dispatch.cleanup
+     did not remove, and trims the numba cache when it grows past 1 GB. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.phil-crypto.sweep-gc</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/sh</string>
+    <string>-c</string>
+    <string>R="@HOME@/.phil-crypto/runner"; find "$R/jobs" -mindepth 1 -maxdepth 1 -name 'J-*' -mtime +7 -exec rm -rf {} + 2&gt;/dev/null; if [ -d "$R/numba-cache" ] &amp;&amp; [ "$(du -sk "$R/numba-cache" | cut -f1)" -gt 1048576 ]; then rm -rf "$R/numba-cache"; fi; date -u; du -sk "$R" 2&gt;/dev/null</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>@HOUR@</integer><key>Minute</key><integer>@MINUTE@</integer></dict>
+  <key>RunAtLoad</key><false/>
+  <key>ProcessType</key><string>Background</string>
+  <key>StandardOutPath</key><string>@HOME@/.phil-crypto/logs/sweep-gc.log</string>
+  <key>StandardErrorPath</key><string>@HOME@/.phil-crypto/logs/sweep-gc.log</string>
+</dict>
+</plist>

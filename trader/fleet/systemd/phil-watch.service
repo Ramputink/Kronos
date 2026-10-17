@@ -1,0 +1,19 @@
+# PROTECTED (trader/fleet). systemd --user unit for berry, installed by fleet/setup_berry.sh.
+# Runs the watchers (fleet/watch.py, strategy/watchlist.json); their trigger rows/files go to the outbox,
+# which is then rsynced into air's inbox (trigger files are moved, not copied).
+[Unit]
+Description=phil-crypto market watchers (every 15 min)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/.phil-crypto/runner/code
+Environment=PYTHONPATH=%h/.phil-crypto/runner/code
+Environment=PHIL_RUNNER=berry
+Environment=PHIL_OUTBOX=%h/.phil-crypto/outbox
+Environment=TRADER_JOURNAL_DIR=%h/.phil-crypto/journal
+ExecStart=%h/.phil-crypto/venv/bin/python -m trader.fleet.watch run
+ExecStartPost=%h/.phil-crypto/venv/bin/python -m trader.fleet.health push
+TimeoutStartSec=300
+Nice=5

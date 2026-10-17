@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- PROTECTED (trader/fleet). Template for air: setup_air.sh substitutes @HOME@ @REPO@ @VENV@ @RUNNER@ and
+     @HOUR@/@MINUTE@ = protected schedule.deep_retro (06:00 UTC) converted to LOCAL time. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.phil-crypto.deep_retro</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>@REPO@/trader/loop.sh</string>
+    <string>deep_retro</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key><string>@VENV@/bin:@HOME@/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    <key>PHIL_RUNNER</key><string>@RUNNER@</string>
+    <key>PHIL_PYTHON</key><string>@VENV@/bin/python</string>
+  </dict>
+  <key>WorkingDirectory</key><string>@REPO@</string>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>@HOUR@</integer><key>Minute</key><integer>@MINUTE@</integer></dict>
+  <key>RunAtLoad</key><false/>
+  <key>ProcessType</key><string>Background</string>
+  <key>StandardOutPath</key><string>@HOME@/.phil-crypto/logs/deep_retro.log</string>
+  <key>StandardErrorPath</key><string>@HOME@/.phil-crypto/logs/deep_retro.log</string>
+</dict>
+</plist>
